@@ -1,0 +1,131 @@
+
+/*top bar*/
+.fixed-nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(80, 80, 80);
+    opacity: 0.8;
+}
+
+/*this is how close the image is from the top of the page
+this can be changed to more than 0px, but when the top bar has
+an opacity of lower than 1, a white space will be shown*/
+.content {
+  margin-top: 0px;
+}
+
+.fixed-nav-bar li, .fixed-nav-bar a {
+/*menu button height in mobile*/
+  height: 50px;
+/*menu button height in tablet & desktop*/
+  line-height: 50px;
+}
+/*keeps the site in the 960 grid when in desktop view*/
+.menu {
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+/*controls the colour of the links and visited links, otherwise they'd be blue*/
+.menu a, .menu a:visited {
+  font-weight: bold;
+  color: #ffffff;
+}
+/*changes the colour of a link when hovering with cursor*/
+.menu a:hover, .menu a:target {
+  color: #c4c4c4;
+}
+/*keeps menu items on top bar*/
+.menu-items {
+  display: inline-block;
+}
+/*site name position*/
+.sitename {
+  display: inline-block;
+  /*margin right 66% has been used to control where buttons are in desktop.
+  Is there a better way to do this?*/
+  margin-right: 75%;
+  margin-left: 10px;
+}
+/*for the top bar buttons and sitename*/
+.menu-items li {
+  /*inline block, otherwise list will go into a bullet pointed list*/
+  display: inline-block;
+  /*so buttons aren't too close to eachother*/
+  margin-left: 10px;
+}
+/*controls the properties of the menu icon for mobile*/
+.show, .hide {
+  display: none;
+  padding-left: 40px;
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+.show {
+/*the image for closed menu*/
+  background-image: url(../assets/threelines.png);
+}
+.hide {
+/*the image for open menu*/
+  background-image: url(../assets/threelinesvertical.png);
+}
+/*media query for 720px*/
+@media only screen and (max-width: 856px) {
+  .menu {
+    position: relative;
+    width: 100%;
+  }
+  /*sitename has a smaller margin on mobile*/
+  .sitename {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    margin-left: 0px;
+  }
+  /*properties for the dropdown menu*/
+    .menu-items {
+        display: none;
+        width: 100%;
+        margin-top: 50px;
+        background-color: rgb(80, 80, 80);
+    }
+  .menu-items li {
+    display: block;
+    /*keeps dropdown menu items centred*/
+    text-align: center;
+  }
+  /*position for menu button*/
+  .show, .hide {
+    position: absolute;
+    top: 0;
+    right: 15px;
+  }
+  /*button*/
+  .show {
+    display: inline-block;
+  }
+  /*
+  .hide {
+    display: none;
+  }
+  */
+  /*makes sure both menu icons don't display at once*/
+  #menu:target .show {
+    display: none;
+  }
+  /*shows the menu*/
+  #menu:target .hide, #menu:target .menu-items {
+    display: inline-block;
+  }
+}
+/*media query for 365px, only changes size of top left logo at the moment*/
+@media only screen and (max-width: 365px) {
+  .sitename, .show, .hide {
+    font-size: 14px;
+  }
+}
