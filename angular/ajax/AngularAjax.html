@@ -1,0 +1,48 @@
+﻿<html>
+<head>
+    <title>Rich People</title>
+
+    <style>
+        table, th, td {
+            border: 1px solid grey;
+            border-collapse: collapse;
+            padding: 5px;
+            font-family: Arial;
+        }
+        h2 {
+            font-family: Arial;
+        }
+    </style>
+
+</head>
+<body>
+    <h2>Rich People</h2>
+    <div ng-app="" ng-controller="peopleController">                <!--attaches the controller class to the view-->
+
+        <table>
+            <tr>
+                <th>Name</th>                                       <!--setting the titles for the table-->
+                <th>Age</th>
+                <th>Company</th>
+            </tr>
+
+            <tr ng-repeat="people in people">                       <!--iterates over the objects properties,so it will go through every object in json1.json-->
+                <td>{{ people.name }}</td>                          <!--it will get the name for every person-->
+                <td>{{ people.age }}</td>                           <!--it will get the age for every person-->
+                <td>{{ people.company }}</td>                       <!--it will get the company for every person-->
+            </tr>
+        </table>
+    </div>
+
+    <script>
+         function peopleController($scope,$http) {                  //function called "peopleController" which gets the json file
+            var url = "json1.json";                                 //the url for the json file, in this case it is just a local file
+
+            $http.get(url).then(function(response) {                //http.get request, then passes the response as an argument and puts it in the people scope
+               $scope.people = response.data;                       //sets scope.people to equal response.data so it can be used by the application
+            });                                                     //as you can see in line 30 onwards, to access the data I have typed people.age which is using the people scope and then the property name
+         }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+</body>
+</html>
