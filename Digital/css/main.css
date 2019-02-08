@@ -1,0 +1,776 @@
+@font-face {
+    font-family: MyriadLight;
+    src: url(../fonts/Myriad_Pro_Regular.ttf);
+}
+
+@font-face {
+    font-family: MyriadBold;
+    src: url(../fonts/Myriad_Pro_Bold.ttf);
+}
+
+h1, h2, h3, h4, h5, h6, p, li {
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  margin: 0px;
+  overflow-y: scroll;
+}
+
+body {
+  margin: 0px;
+  background-color: #1f1f1f;
+  overflow-x: hidden;
+}
+
+/*Image Preloader*/
+body::after {
+  display:none;
+  content: url("../assets/DigitalLogoHover.png");
+}
+
+p {
+  margin: 0px;
+  font-family: MyriadLight;
+}
+
+b {
+  font-family: MyriadBold
+}
+
+h5 {
+  margin: 0px;
+  color: white;
+  font-family: MyriadBold;
+  font-size: 20px;
+}
+
+.logo {
+  content: url("../assets/DigitalLogo.png");
+}
+
+.logo:hover {
+  content: url("../assets/DigitalLogoHover.png");
+}
+
+.nav-container {
+  width: 100%;
+  padding-top: 50px;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-buttons {
+  margin-top: 20px;
+}
+
+.nav-buttons ul{
+  padding: 0;
+}
+
+.nav-buttons li{
+  font-family: MyriadLight;
+  list-style-type: none;
+  font-size: 1.3rem;
+  padding: 10px 50px 10px 50px;
+  border-radius: 50px;
+}
+
+.nav-buttons li:hover {
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(0, #C02675), color-stop(100, #DB1653));
+}
+
+
+ul {
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.active li {
+  font-family: MyriadBold;
+}
+
+a:hover {
+  color: grey;
+  transition: 1s ease;
+}
+#search {
+  margin: auto;
+}
+
+#search-btn {
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(0, #C02675), color-stop(100, #DB1653));
+  color:white;
+  font: MyriadLight;
+  padding: 10px 20px;
+  border-radius:0 50px 50px 0;
+  -moz-border-radius:0 50px 50px 0;
+  -webkit-border-radius:0 50px 50px 0;
+  -o-border-radius:0 50px 50px 0;
+  border:0 none;
+  font-weight:bold;
+  margin-left: 0;
+  outline: none;
+}
+
+#search-box {
+  background: #323232;
+  color:white;
+  font: MyriadLight;
+  padding: 10px;
+   border-radius: 50px 0 0 50px;
+  -moz-border-radius:50px 0 0 50px;
+  -webkit-border-radius:50px 0 0 50px;
+  -o-border-radius:50px 0 0 50px;
+  border:0 none;
+  width: 8vw;
+  outline: none;
+ }
+
+.line-container {
+  display: flex;
+  margin-top: 20px;
+  width: 100%;
+  height: 3rem;
+  display: inline-flex;
+  align-items: center;
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(0, #C02675), color-stop(100, #DB1653));
+}
+
+.dayButton{
+  border-radius: 15px;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  line-height: 2rem;
+  width: 15%;
+  margin: 0 auto;
+  cursor: pointer;
+  outline: none;
+  transition: font-size 0.2s, background 0.2s, color 0.2s;
+}
+.selected {
+  border: 2px solid #fff;
+  background-color: transparent;
+  font-family: MyriadBold;
+  font-size: 1rem;
+  color
+}
+
+
+.tv-container {
+  width: 100%;
+  display: inline-flex;
+}
+
+#channel-container {
+  width: 300px;
+  height: 100%;
+  background-color: #1f1f1f;
+  box-shadow: 7px 0px 18px 2px rgba(0,0,0,0.26);
+}
+
+.channel-row{
+  height: 210px;
+  padding: 0;
+  margin-bottom: 5px;
+  width: 100vw;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  white-space: nowrap;
+  cursor: -webkit-grabbing; cursor: -moz-grabbing;
+}
+
+.channel-row::-webkit-scrollbar-thumb {
+  background: #C02675;
+}
+
+.show-block {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 30vw;
+  height: 200px;
+  padding: 10px;
+  margin: 0 3px;
+  color: #fff;
+  overflow: hidden;
+  white-space:normal;
+  background-color: #323232;
+}
+
+.on-demand-container {
+  width: 300px;
+  height: 205px;
+  background-color: #1f1f1f;
+  box-shadow: 7px 0px 18px 2px rgba(0,0,0,0.26);
+}
+
+.ondemand-wrapper {
+  height: 95%;
+}
+
+.channel-container {
+  width: 10vw;
+  height: 200px;
+  padding: 5px;
+  margin: 0 3px;
+}
+
+.channel-container>h5{
+  text-align: center;
+  margin: auto;
+  line-height: 200px;
+}
+
+.block-container {
+  width: 500px;
+  height: 200px;
+  background-color: #323232;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.block-row-container {
+  width: 100%;
+  height: 95%;
+  background-color: #323232;
+  margin-top: 30px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+.short-block-container {
+  width: 300px;
+  height: 200px;
+  background-color: #323232;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#ondemand-list-netflix li img {
+  width: 300px;
+  margin-left: 20px;
+}
+#ondemand-list-amazon li img {
+  width: 220px;
+  margin-left: 20px;
+}
+#ondemand-list-now li img {
+  width: 116px;
+  margin-left: 20px;
+}
+
+.block-image {
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.content {
+  padding-left: 100px;
+}
+
+.content>img {
+  width: 300px;
+  padding-left: 20px;
+}
+.arrowbox {
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrowbox>img {
+  height: 20%;
+}
+
+.text-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.box-title {
+  margin: 0px;
+  color: #FFF;
+  font-family: MyriadBold;
+  font-size: 1.5rem;
+}
+
+.box-time {
+  color: #FFF;
+  font-family: MyriadBold;
+  padding-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.box-desc {
+  width: 95%;
+  color: #FFF;
+  font-family: MyriadLight;
+  font-size: 1em;
+  font-weight: 100;
+}
+
+.box-progress {
+  width: 100%;
+  height: 8%;
+  background-image:-webkit-gradient(linear, right top, left top, color-stop(0, #C02675), color-stop(100, #DB1653));
+  position: absolute;
+  bottom: 0;
+}
+
+.arrowbox>img {
+  height: 20%;
+}
+
+.text-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.box-title-next {
+  margin: 0px;
+  color: #FFF;
+  font-family: MyriadBold;
+  font-size: 1.5rem;
+}
+
+.box-time-next {
+  color: #FFF;
+  font-family: MyriadLight;
+}
+
+.text-container-next {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 12px; /* remove scrollbar space */
+    transition: height 1s ease;
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+::-webkit-scrollbar:hover {
+    height: 10px; /* remove scrollbar space */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #474646;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C02675;
+}
+
+
+/* News Page CSS */
+#news-grid {
+  margin: 0 auto;
+  max-width: 1680px;
+  padding-left: 15px;
+}
+
+/* clear fix */
+#news-grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* 5 columns, percentage width */
+.grid-item,
+.grid-sizer {
+  width: 24%;
+}
+
+.gutter-sizer {
+  width: 1%;
+  height: 5px;
+}
+
+.grid-item {
+  color: white;
+  font-family: MyriadLight;
+  float: left;
+  background: #ed308d;
+  height: auto;
+  border-radius: 5px;
+  border-color: hsla(0, 0%, 0%, 0.7);
+  margin-bottom: 5px;
+}
+
+#news-grid .type1{ background: #a948fb; }
+#news-grid .type2{ background: #c4236f; }
+#news-grid .type3{ background: #fb4848; }
+
+.grid-item img {
+  width: 100%;
+}
+
+.grid-item h2 {
+  font-family: MyriadBold;
+  font-size: 20px;
+  padding: 15px 10px;
+  margin: auto;
+}
+
+.grid-item p {
+  padding: 5px 20px;
+  font-size: 0.9rem;
+}
+
+.news-link {
+  text-align: right;
+  padding-right: 15px;
+  padding-bottom: 15px;
+}
+
+#newsFooter {
+  padding: 0.4rem;
+  background-color: #1b1b1b;
+  text-align: center;
+  font-family: MyriadLight;
+  color: #505050;
+}
+
+/*Signup and Login*/
+.login-form {
+  font-family: MyriadLight;
+  color: white;
+  display: block;
+  width: 35%;
+  margin: 0 auto;
+  border-radius: 50px;
+  border: 3px solid #c4236f;
+}
+
+.login {
+  width: 50%;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* Movie CSS */
+
+.movie-container {
+  width: 100%;
+  height: 70%;
+  margin: 0 auto;
+  background-color: #292929;
+  position: relative;
+}
+
+.movie-pic-container {
+  width: 100%;
+  height: 65%;
+  position: relative;
+  overflow: hidden;
+}
+
+.text {
+  padding-left: 10px;
+  padding-bottom: 20px;
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+.text > h3 {
+  font-family: MyriadBold;
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.text > h4 {
+  display: none;
+}
+
+#movieRating{
+  width: 30px;
+  height: 30px;
+  background-color: #ea0945;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text > p {
+  font-family: MyriadLight;
+  color: white;
+  margin-bottom: 5px;
+}
+
+#movieFocus {
+  width: 100%;
+  min-width: 1600px;
+  height: 100%;
+  filter: blur(4px) brightness(50%);
+}
+
+#movieDesc {
+  width: 40%;
+}
+
+#movieList {
+  padding: 0px;
+}
+
+.movie-list-wrapper {
+  width: 100%;
+  height: 35%;
+  bottom: 0;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 5px; /* remove scrollbar space */
+    transition: height 1s ease;
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+::-webkit-scrollbar:hover {
+    height: 10px; /* remove scrollbar space */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #474646;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C02675;
+}
+
+.movie-list-wrapper ul {
+  width: 100%;
+  height: 100%;
+  list-style-type: none;
+}
+
+.movie-list-wrapper li {
+  width: 100%;
+  height: 100%;
+  padding-left: 10px;
+}
+
+.movie-list-wrapper img {
+  width: 130px;
+  height: 195px;
+  opacity: 0.2;
+  transition: opacity 1s ease
+}
+
+.movie-list-wrapper img:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.selected{
+  opacity: 1 !important;
+}
+
+/*Search CSS*/
+.result-block {
+  display: flex;
+  padding: 25px;
+  background-repeat: no-repeat;
+}
+.backdrop-image{
+  position: fixed;
+  min-width: 1150px;
+  width: 100vw;
+  min-height: 615px;
+}
+.query-image img {
+  min-width: 150px;
+  width: 20vw;
+  max-width: 500px;
+}
+.query-info {
+  padding-left: 20px;
+  color: #fff;
+  font-family: MyriadLight;
+}
+.query-info h1 {
+  font-family: MyriadBold;
+  font-size: 3rem;
+  margin: 0;
+  color: #C02675;
+}
+.query-info h2 {
+  margin: 3rem 0 0 0;
+  font-size: 1.3rem;
+}
+.query-info h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+.imdblink:hover {
+  color: yellow;
+}
+
+footer img {
+  width: 200px;
+
+}
+
+
+@media only screen and (max-width : 1050px) {
+  .nav-buttons li{
+    font-size: 1.1rem;
+    padding: 10px 20px 10px 20px;
+    border-radius: 50px;
+  }
+
+  .dayButton {
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (max-width : 900px) {
+  .nav-buttons {
+    margin-top: 0;
+  }
+
+  .nav-container {
+    padding-top: 25px;
+  }
+
+  .dayButton {
+    width: auto;
+    line-height: 1.4rem;
+  }
+
+  .show-block {
+    width: 40vw;
+  }
+
+  .news-grid {
+    max-width: 900px;
+  }
+
+  .grid-item,
+  .grid-sizer {
+    width: 45%;
+  }
+
+  .gutter-sizer {
+    width: 5%;
+  }
+
+  .query-info h1 {
+    font-family: MyriadBold;
+    font-size: 2rem;
+    margin: 0;
+    color: #C02675;
+  }
+  .query-info h2 {
+    margin: 1rem 0 0 0;
+    font-size: 1rem;
+  }
+  .query-info h3 {
+    margin: 0;
+    font-size: 1rem;
+  }
+  .query-info h4 {
+    margin: 0.5rem 0;
+    font-size: 0.8em;
+  }
+
+
+
+  @media only screen and (max-width : 655px) {
+  .active {
+    display: none
+  }
+
+    ul, menu, dir {
+      -webkit-padding-start: 12px;
+  }
+
+    .nav-buttons li{
+      font-size: 0.9rem;
+      padding: 10px 10px 10px 10px;
+    }
+
+    .news-grid {
+      padding-left: 2%;
+      max-width: 600px;
+    }
+
+    .line-break {
+      display: block;
+    }
+
+    .grid-item,
+    .grid-sizer {
+      width: 95%;
+    }
+
+    .gutter-sizer {
+      width: 0;
+    }
+
+    #ondemand-list-netflix li img {
+      width: 150px;
+      margin-left: 10px;
+    }
+    #ondemand-list-amazon li img {
+      width: 150px;
+      margin-left: 10px;
+    }
+    #ondemand-list-now li img {
+      width: 75px;
+      margin-left: 10px;
+    }
+
+    .ondname {
+      width: 25%;
+      height: 30%;
+      display: inline-flex;
+      align-items: center;
+      padding-left: 20px;
+    }
+    .block-image {
+      width: 100%;
+      height: 100%;
+      display: inline-flex;
+      align-items: center;
+      padding-left: 0px;
+  }
+}
+}
