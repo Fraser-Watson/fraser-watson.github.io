@@ -14,8 +14,8 @@
 
 body {
   font: normal 1em/1.2em "Ropa Sans", sans-serif;
-  background-color: #FAFAFA;
-  color: #FAFAFA;
+  background-color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
 }
 
 h1, h2 {
