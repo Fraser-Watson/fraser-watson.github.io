@@ -58,7 +58,6 @@ a:link, a:visited, a:hover, a:active {
   position: relative;
   background: url(../assets/background.jpg);
   background-size: cover;
-  background-attachment: fixed;
  } 
 
  /*keeps content looking okay in desktop view*/
