@@ -175,16 +175,17 @@ a:link, a:visited, a:hover, a:active {
 
 html, body {margin:auto;padding:0;}
 .page-title {
-  position: relative;
-  top: 0px;
-  left: 36%;
-  max-width: 250px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
   
 }
 
 .hero-title {
   background: rgba(0, 0, 0, 0.5);
-  padding: 10px 10px 15px 15px;
+  padding: 15px 15px 15px 15px;
 }
 
 .hero-title::before {

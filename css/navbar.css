@@ -10,6 +10,7 @@
     height: 50px;
     background-color: rgb(80, 80, 80);
     opacity: 0.8;
+    
 }
 
 /*this is how close the image is from the top of the page
@@ -109,6 +110,8 @@ an opacity of lower than 1, a white space will be shown*/
   .show {
     display: inline-block;
   }
+
+  
   /*
   .hide {
     display: none;
