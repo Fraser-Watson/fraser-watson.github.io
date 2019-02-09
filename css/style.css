@@ -61,7 +61,7 @@ a:link, a:visited, a:hover, a:active {
 
 .content {
   position: relative;
-  background: url(../assets/background.png);
+  background: url(../assets/background.jpg);
   /*so the image fits*/
   background-size: cover;
   overflow: hidden;
