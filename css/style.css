@@ -1,5 +1,5 @@
 /*font*/
-@import url('https://fonts.googleapis.com/css?family=Ropa+Sans');
+@import url('https://fonts.googleapis.com/css?family=Cabin');
 
 /*stops the browser setting auto padding, chrome does this*/
 * {
@@ -13,13 +13,13 @@
 }
 
 body {
-  font: normal 1em/1.2em "Ropa Sans", sans-serif;
+  font: normal 1em/1.2em "Cabin", sans-serif;
   background-color: rgb(255, 255, 255);
   color: rgb(255, 255, 255);
 }
 
 h1, h2 {
-  font-family: "Ropa Sans", sans-serif;
+    font-family: 'Cabin', sans-serif;
 }
 
 h1 {
