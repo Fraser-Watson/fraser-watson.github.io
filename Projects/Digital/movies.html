@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="scripts/movieScript.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <div class="nav-container">
+      <nav class="navigation">
+        <img class="logo" alt="logo">
+        <div class="nav-buttons">
+          <ul>
+            <a href="index.html"><li>TV GUIDE</li></a>
+            <a href="movies.html" class="active"><li>MOVIES</li></a>
+            <a href="ondemand.html"><li>ON DEMAND</li></a>
+            <a href="news.html"><li>NEWS</li></a>
+            <span class="line-break">
+            <form id="search" action="search.html" style="display:inline;" method="get">
+              <input id="search-box" name="q" size="40" type="text" placeholder="Search"/>
+              <input id="search-btn" value="Go" type="submit"/>
+            </form>
+            </span>
+          </ul>
+        </div>
+      </nav>
+    </div>
+      <div class="movie-container">
+        <div class="movie-pic-container">
+          <img id="movieFocus"></img>
+          <div class="text">
+            <h3 id="movieTitle"></h3>
+            <h4 id="originTitle"></h4>
+            <p id="movieDesc"></p>
+            <p id="movieRating"></p>
+          </div>
+
+        </div>
+        <div class="movie-list-wrapper dragscroll">
+          <ul id="movieList">
+          </ul>
+        </div>
+      </div>
+      <script src="scripts/dragscroll.js"></script>
+  </body>
+</html>
+
+
+<!--
+    <div id="movieFocus">
+      <h3 id="movieTitle"></h3>
+      <h4 id="originTitle"></h4>
+      <p id="movieRating"></p>
+      <p id="movieDesc"></p>
+    </div>
+    <div id="movieListWrapper">
+      <ul id="movieList">
+      </ul>
+    </div>
+  -->
