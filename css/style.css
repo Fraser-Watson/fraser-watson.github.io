@@ -91,8 +91,8 @@ main {
 }
 
 #header h2 {
-  border-left: dotted 1px #fff;
-  border-right: dotted 1px #fff;
+  border-right:1px dotted white;
+  border-left:1px dotted white;
   display: inline-block;
   padding-right: 1rem;
   padding-left: 1rem;
