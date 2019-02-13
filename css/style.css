@@ -15,6 +15,7 @@ p {
   margin-left: 26%;
   margin-right: 26%;
 }
+
 h1 {
   font-weight: 400;
   font-size: 2.5rem;
@@ -137,8 +138,8 @@ footer h3 {
 }
 
 
-/* Screen Sizes 500px and Up */
-@media (min-width: 600px) {
+/* Screen Sizes 600px and Up */
+@media (max-width: 600px) {
   #landing {
     display: flex;
     height: 100%;
@@ -154,8 +155,13 @@ footer h3 {
 
 }
 
-/* Screen Sizes 700px and Up */
-@media (min-width: 1000px) {
+.desc{
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+/* Screen Sizes 600px and Up */
+@media (max-width: 1000px) {
   .btn {
     padding: 1rem 3rem;
   }
