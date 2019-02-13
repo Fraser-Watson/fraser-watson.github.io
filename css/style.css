@@ -167,9 +167,15 @@ footer h3 {
   margin-right: 15%;
 }
 
-/* Screen Sizes 600px and Up */
+/* Screen Sizes 1000px and Up */
 @media (min-width: 1000px) {
   .btn {
     padding: 1rem 3rem;
+  }
+}
+
+@media (max-width: 550px) {
+  img {
+    width: 80%;
   }
 }
