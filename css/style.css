@@ -137,6 +137,10 @@ footer h3 {
     -30px 0px 40px rgba(0, 0, 0, 0.1);
 }
 
+.dark {
+  
+}
+
 
 /* Screen Sizes 600px and Up */
 @media (min-width: 600px) {
