@@ -106,6 +106,12 @@ main {
   animation-delay: 0.4s;
 }
 
+.delay2 {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
