@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="css/style.css"
+    />
+    <script type="text/javascript" src="js/burger.js"></script>
+    <title>CryptoTracker</title>
+  </head>
+
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <div class="logo">
+          <a href="index.html"
+            ><img src="./img/logo.png" alt="CryptoTracker"
+          /></a>
+        </div>
+        <div class="nav">
+          <ul>
+            <li><a href="index.html">Rates</a></li>
+            <li class="current"><a href="#">News</a></li>
+            <li><a href="wallet.html">Wallet</a></li>
+            <li><a href="#">User</a></li>
+            <span class="burger-open">
+              <a href="#" onclick="openBurgerMenu()">
+                <i class="fas fa-bars"> </i>
+              </a>
+            </span>
+          </ul>
+        </div>
+        <div id="burger-menu" class="burger-nav">
+          <a href="#" class="btn-close" onclick="closeBurgerMenu()">&times;</a>
+          <a href="index.html">Rates</a>
+          <a href="#">News</a>
+          <a href="wallet.html">Wallet</a>
+          <a href="#">User</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-body">
+      <div class="icon">
+        <i class="fas fa-newspaper" style="font-size:48px;color:#55C0FA;"></i>
+      </div>
+      <div class="title">
+        <h1>News</h1>
+      </div>
+      <div class="news-container">
+        <div class="news-coin-container">
+          <div class="news-coin-btc">
+            <div class="news-coinbox">
+              <div class="news-coin-image">
+                <img
+                  src="https://cdn.worldvectorlogo.com/logos/bitcoin.svg"
+                  alt="bitcoin"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="news-coin-eth">
+            <div class="news-coinbox">
+              <div class="news-coin-image">
+                <img
+                  src="http://introtocrypto.com/wp-content/uploads/2017/08/ether@2x.png"
+                  alt="ethereum"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="news-coin-ltc">
+            <div class="news-coinbox">
+              <div class="news-coin-image">
+                <img
+                  src="https://cdn.worldvectorlogo.com/logos/litecoin.svg"
+                  alt="litecoin"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="news-coin-xrp">
+            <div class="news-coinbox">
+              <div class="news-coin-image">
+                <img
+                  src="https://cdn.worldvectorlogo.com/logos/ripple-2.svg"
+                  alt="ripple"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="news-content-container">
+          <div class="news-content-title">
+            <h2><span class="news-coin-name">Bitcoin</span></h2>
+            <div class="news-inthe">
+              <p>In The News:</p>
+            </div>
+          </div>
+
+          <div class="news-content-grid">
+            <div class="news-story-image">
+              <img
+                src="https://news.bitcoin.com/wp-content/uploads/2019/02/shutterstock_758302231-1520x1024.jpg"
+                alt="bitcoin"
+              />
+            </div>
+
+            <div class="news-story-text">
+              <div class="news-story-title">
+                <h3>
+                  Survey: Nearly Half of Millennial Traders Have More Faith in
+                  Crypto Than Stock Market
+                </h3>
+              </div>
+              <div class="news-story-preview">
+                <p>
+                  Nearly half of millennial traders have more faith in
+                  cryptocurrency exchanges than they do in traditional ones.
+                  They are also enthusiastic about the prospect of traditional
+                  financial institutions offering crypto assets.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="page-line"></div>
+          <div class="news-content-grid">
+            <div class="news-story-image">
+              <img
+                src="https://news.bitcoin.com/wp-content/uploads/2019/02/shutterstock_561383218_1000-1520x1024.jpg"
+                alt="bitcoin"
+              />
+            </div>
+
+            <div class="news-story-text">
+              <div class="news-story-title">
+                <h3>
+                  Coinbase Wallet App Adds Bitcoin Cash Support
+                </h3>
+              </div>
+              <div class="news-story-preview">
+                <p>
+                  Coinbase announced on Tuesday that users of its wallet app can
+                  now directly store their bitcoin cash. The app update will be
+                  rolled out to all iOS and Android users in the next few weeks.
+                  Both Cashaddr and legacy address formats are supported
+                  alongside Bitcoin Cash Testnet for developers.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="page-line"></div>
+          <div class="news-content-grid">
+            <div class="news-story-image">
+              <img
+                src="https://news.bitcoin.com/wp-content/uploads/2019/02/bank-of-spain-1520x1024.jpg"
+                alt="bitcoin"
+              />
+            </div>
+
+            <div class="news-story-text">
+              <div class="news-story-title">
+                <h3>
+                  Bank of Spain Report: Bitcoin Is a Solution for a System
+                  Without Censorship
+                </h3>
+              </div>
+              <div class="news-story-preview">
+                <p>
+                  A recent report published by the Bank of Spain states that
+                  Bitcoin is a solution for the creation of a system without
+                  censorship. This is in contrast to public comments made by
+                  most central bankers who are prone to attack cryptocurrency
+                  with little insight into why it is needed.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
