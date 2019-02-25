@@ -1,9 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Abel");
 
 body {
-  font-family: "Abel", sans-serif;
+  font-family: 'Abel', sans-serif; font-weight:500; font-style:normal;
   font-size: 20px;
-  text-rendering: geometricPrecision;
   padding: 0;
   margin: 0;
   background-color: #f2f4f7;
