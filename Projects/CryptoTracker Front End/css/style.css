@@ -66,6 +66,13 @@ ul {
 .navbar .logo {
   float: left;
   margin-left: 10px;
+  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s;
+  opacity: 1;
+}
+
+.navbar .logo:hover {
+  opacity: 0.6;
 }
 
 .navbar .nav {
@@ -143,6 +150,55 @@ ul {
   justify-content: center;
 }
 
+.animate {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.delay {
+  -webkit-animation-delay: 0.0s;
+  -moz-animation-delay: 0.0s;
+  animation-delay: 0.0s;
+}
+
+.delay2 {
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+.delay3 {
+  -webkit-animation-delay: 0.6s;
+  -moz-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
 .coinbox {
   width: 350px;
   height: 300px;
@@ -155,6 +211,7 @@ ul {
   -webkit-box-shadow: 5px 5px 100px -22px rgba(0, 0, 0, 0.13);
   -moz-box-shadow: 5px 5px 100px -22px rgba(0, 0, 0, 0.13);
   box-shadow: 5px 5px 100px -22px rgba(0, 0, 0, 0.13);
+  transition: 0.1s;
 }
 
 .coinimage img {
@@ -194,75 +251,21 @@ ul {
   padding-left: 30px;
 }
 
-/* btc spans */
+/* spans */
 
-.hr-hi-btc {
+.hr-hi {
   font-weight: normal;
 }
 
-.hr-low-btc {
+.hr-low {
   font-weight: normal;
 }
 
-.hr-vol-btc {
+.hr-vol {
   font-weight: normal;
 }
 
-.mkt-cap-btc {
-  font-weight: normal;
-}
-
-/* eth spans */
-
-.hr-hi-eth {
-  font-weight: normal;
-}
-
-.hr-low-eth {
-  font-weight: normal;
-}
-
-.hr-vol-eth {
-  font-weight: normal;
-}
-
-.mkt-cap-eth {
-  font-weight: normal;
-}
-
-/* ltc spans */
-
-.hr-hi-ltc {
-  font-weight: normal;
-}
-
-.hr-low-ltc {
-  font-weight: normal;
-}
-
-.hr-vol-ltc {
-  font-weight: normal;
-}
-
-.mkt-cap-ltc {
-  font-weight: normal;
-}
-
-/* xrp spans */
-
-.hr-hi-xrp {
-  font-weight: normal;
-}
-
-.hr-low-xrp {
-  font-weight: normal;
-}
-
-.hr-vol-xrp {
-  font-weight: normal;
-}
-
-.mkt-cap-xrp {
+.mkt-cap {
   font-weight: normal;
 }
 
@@ -273,7 +276,7 @@ ul {
 .news-coin-container {
   max-width: 100px;
   margin-top: 35px;
-  margin-left: 1%;
+  margin-left: 10px;
   display: grid;
   grid-gap: 20px;
   float: left;
@@ -298,12 +301,17 @@ ul {
 /*  News Content  */
 
 .news-container {
-  margin: auto;
+  margin: auto; 
+}
+
+.news-flex{
+  display: flex;
+  margin-right: 10px;
 }
 
 .news-content-container {
   float: left;
-  width: 89%;
+  flex: 1 1 auto;
   height: auto;
   margin-top: 35px;
   margin-bottom: 50px;
@@ -346,7 +354,8 @@ ul {
 .news-story-preview p {
   letter-spacing: -0.5px;
   font-size: 0.95em;
-  overflow: hidden;
+  /*overflow: hidden;*/
+  overflow: none;
   text-overflow: "ellipsis";
   display: -webkit-box;
   -webkit-line-clamp: 4; /* number of lines to show */

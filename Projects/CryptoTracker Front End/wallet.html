@@ -17,11 +17,13 @@
       href="css/style.css"
     />
     <script type="text/javascript" src="js/burger.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <title>CryptoTracker</title>
   </head>
 
   <body>
-    <header class="navbar">
+    <div id="app">
+    <header class="fade animate fadeIn delay1 navbar">
       <div class="container">
         <div class="logo">
           <a href="index.html"
@@ -53,26 +55,26 @@
 
     <div class="container-body">
       <div class="icon">
-        <i class="fas fa-wallet" style="font-size:48px;color:#55C0FA;"></i>
+        <i class="fade animate fadeIn delay2 fas fa-wallet" style="font-size:48px;color:#55C0FA;"></i>
       </div>
-      <div class="title">
+      <div class="fade animate fadeIn delay2 title">
         <h1>Wallet</h1>
       </div>
 
-      <div class="wallet-balance">
+      <div class="fade animate fadeIn delay2 wallet-balance">
         <h2>$683.54</h2>
       </div>
-      <div class="wallet-desc">
+      <div class="fade animate fadeIn delay2 wallet-desc">
         <p>Main Portfolio Balance</p>
       </div>
 
-      <div class="wallet-graph">
+      <div class="fade animate fadeIn delay3 wallet-graph">
         <img src="img/graph.png" alt="Graph" />
       </div>
 
       <div class="page-line"></div>
 
-      <div class="wallet-box-container">
+      <div class="fade animate fadeIn delay3 wallet-box-container">
         <div class="wallet-box">
           <div class="wallet-box-icon">
             <img
@@ -224,5 +226,6 @@
         </div>
       </div>
     </div>
+  </div>
   </body>
 </html>
