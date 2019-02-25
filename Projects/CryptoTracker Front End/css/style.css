@@ -229,26 +229,26 @@ ul {
 }
 
 .price {
-  font-weight: bold;
+  font-weight: 800;
   font-size: 30px;
 }
 
 .hr-hi-container p {
-  font-weight: bold;
+  font-weight: 800;
 }
 
 .hr-low-container p {
-  font-weight: bold;
+  font-weight: 800;
 }
 
 .hr-vol-container {
-  font-weight: bold;
+  font-weight: 800;
   padding-left: 30px;
   padding-top: 5px;
 }
 
 .mkt-cap-container {
-  font-weight: bold;
+  font-weight: 800;
   padding-left: 30px;
 }
 
@@ -329,7 +329,7 @@ ul {
   margin-left: 35px;
   text-align: left;
   font-size: 30px;
-  font-weight: bold;
+  font-weight: 800;
 }
 
 .news-content-title h2 {
