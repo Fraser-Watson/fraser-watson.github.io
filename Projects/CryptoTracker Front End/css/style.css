@@ -367,6 +367,7 @@ ul {
 
 .news-content-title {
   margin-left: 35px;
+  margin-bottom: 30px;
   text-align: left;
   font-size: 30px;
   font-weight: 400;
@@ -374,7 +375,7 @@ ul {
 
 .news-content-title h2 {
   margin: 0;
-  margin-top: 37px;
+  margin-top: 25px;
 }
 
 .news-inthe p {
@@ -495,7 +496,7 @@ ul {
 }
 
 .wallet-box-value p {
-  font-size: 17px;
+  font-size: 19px;
   margin: 0;
 }
 
@@ -702,7 +703,7 @@ ul {
   }
 
   .news-story-preview p {
-    display: none;
+    overflow: hidden;
     text-overflow: "ellipsis";
     display: -webkit-box;
     -webkit-line-clamp: 3; /* number of lines to show */
