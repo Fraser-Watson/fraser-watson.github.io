@@ -4,6 +4,7 @@ body {
   font-family: 'Abel', sans-serif;
   font-size: 20px;
   letter-spacing: -0.3px;
+  -webkit-font-smoothing: antialiased;
   padding: 0;
   margin: 0;
   background-color: #f2f4f7;
@@ -253,7 +254,7 @@ ul {
 .price {
   display: flex;
   justify-content: center;
-  font-weight: bold;
+  font-weight: 1000;
   font-size: 30px;
 }
 
@@ -264,25 +265,25 @@ ul {
 .hr-hi-container p {
   display: flex;
   justify-content: center;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .hr-low-container p {
   display: flex;
   justify-content: center;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .hr-vol-container {
   display: flex;
   justify-content: center;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .mkt-cap-container {
   display: flex;
   justify-content: center;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 /* spans */
@@ -362,7 +363,7 @@ ul {
   margin-left: 35px;
   text-align: left;
   font-size: 30px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .news-content-title h2 {
