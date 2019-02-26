@@ -2,17 +2,10 @@
 
 
 body {
-<<<<<<< HEAD
   font-weight: 300;
   font-family: 'Lato', sans-serif;
   font-size: 15px;
   letter-spacing: -0.5px;
-=======
-  font-family: 'Abel', sans-serif;
-  font-size: 20px;
-  letter-spacing: -0.3px;
-  -webkit-font-smoothing: antialiased;
->>>>>>> 6fc07ca7c0ad974c34df092bab4a588f345c94ce
   padding: 0;
   margin: 0;
   background-color: #f2f4f7;
@@ -265,11 +258,7 @@ ul {
 .price {
   display: flex;
   justify-content: center;
-<<<<<<< HEAD
   font-weight: 400;
-=======
-  font-weight: 1000;
->>>>>>> 6fc07ca7c0ad974c34df092bab4a588f345c94ce
   font-size: 30px;
 }
 
@@ -280,41 +269,25 @@ ul {
 .hr-hi-container p {
   display: flex;
   justify-content: center;
-<<<<<<< HEAD
   font-weight: 400;
-=======
-  font-weight: 600;
->>>>>>> 6fc07ca7c0ad974c34df092bab4a588f345c94ce
 }
 
 .hr-low-container p {
   display: flex;
   justify-content: center;
-<<<<<<< HEAD
   font-weight: 400;
-=======
-  font-weight: 600;
->>>>>>> 6fc07ca7c0ad974c34df092bab4a588f345c94ce
 }
 
 .hr-vol-container {
   display: flex;
   justify-content: center;
-<<<<<<< HEAD
   font-weight: 400;
-=======
-  font-weight: 600;
->>>>>>> 6fc07ca7c0ad974c34df092bab4a588f345c94ce
 }
 
 .mkt-cap-container {
   display: flex;
   justify-content: center;
-<<<<<<< HEAD
   font-weight: 400;
-=======
-  font-weight: 600;
->>>>>>> 6fc07ca7c0ad974c34df092bab4a588f345c94ce
 }
 
 /* spans */
@@ -394,11 +367,7 @@ ul {
   margin-left: 35px;
   text-align: left;
   font-size: 30px;
-<<<<<<< HEAD
   font-weight: 400;
-=======
-  font-weight: 600;
->>>>>>> 6fc07ca7c0ad974c34df092bab4a588f345c94ce
 }
 
 .news-content-title h2 {
