@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
 
 
 body {
@@ -258,54 +258,55 @@ ul {
 .price {
   display: flex;
   justify-content: center;
-  font-weight: 400;
+  font-weight: 4500;
   font-size: 30px;
 }
 
 .price-container p {
+ font-weight: 600;
  margin-top: 10px;
 }
 
 .hr-hi-container p {
   display: flex;
   justify-content: center;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .hr-low-container p {
   display: flex;
   justify-content: center;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .hr-vol-container {
   display: flex;
   justify-content: center;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .mkt-cap-container {
   display: flex;
   justify-content: center;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 /* spans */
 
 .hr-hi {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .hr-low {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .hr-vol {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .mkt-cap {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /* --- News --- */
