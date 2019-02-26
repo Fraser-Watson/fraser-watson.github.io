@@ -4,7 +4,8 @@
 body {
   font-weight: 300;
   font-family: 'Roboto Condensed', sans-serif;
-  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-size: 15px;
   letter-spacing: -0.5px;
   padding: 0;
