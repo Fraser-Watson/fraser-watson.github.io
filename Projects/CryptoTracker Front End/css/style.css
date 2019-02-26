@@ -116,6 +116,7 @@ ul {
   position: absolute;
   top:6px;
   left: 22px;
+
   font-size: 38px;
 }
 
@@ -201,55 +202,84 @@ ul {
 }
 
 .coinbox {
-  width: 350px;
-  height: 300px;
+  width: 300px;
+  height: 405px;
   background: #fafafa;
   position: relative;
   border-radius: 10px;
   margin-left: 25px;
   margin-right: 25px;
   margin-bottom: 50px;
+  background: -webkit-linear-gradient(top, #EBEBEB 25%, white 1%);
   -webkit-box-shadow: 5px 5px 100px -22px rgba(0, 0, 0, 0.13);
   -moz-box-shadow: 5px 5px 100px -22px rgba(0, 0, 0, 0.13);
   box-shadow: 5px 5px 100px -22px rgba(0, 0, 0, 0.13);
   transition: 0.1s;
 }
 
+.coinimage{
+  display: flex;
+  justify-content: center;
+}
+
 .coinimage img {
   width: 100px;
-  padding: 30px;
+  height:100px;
   float: left;
+  margin-top: 20px;
+}
+
+.box-page-line {
+  width: 100px;
+  height: 3px;
+  background: #e2e2e2;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
 /* data inside box */
 
 .coinbox p {
   font-size: 21px;
-  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 0;
 }
 
 .price {
+  display: flex;
+  justify-content: center;
   font-weight: bold;
   font-size: 30px;
 }
 
+.price-container p {
+ margin-top: 10px;
+}
+
 .hr-hi-container p {
+  display: flex;
+  justify-content: center;
   font-weight: bold;
 }
 
 .hr-low-container p {
+  display: flex;
+  justify-content: center;
   font-weight: bold;
 }
 
 .hr-vol-container {
+  display: flex;
+  justify-content: center;
   font-weight: bold;
-  padding-left: 30px;
-  padding-top: 5px;
 }
 
 .mkt-cap-container {
+  display: flex;
+  justify-content: center;
   font-weight: bold;
-  padding-left: 30px;
 }
 
 /* spans */
@@ -530,14 +560,16 @@ ul {
   }
 
   .coinbox {
-    width: 350px;
-    height: 300px;
+    width: 300px;
+    height: 405px;
     background: #fafafa;
     position: relative;
     border-radius: 10px;
-    margin-left: 8px;
-    margin-right: 8px;
-    margin-bottom: 16px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 50px;
+    background: -webkit-linear-gradient(top, #EBEBEB 25%, white 1%);
+    transition: 0.1s;
   }
 
   /* --- News ---*/
@@ -610,6 +642,13 @@ ul {
   }
 
   .coinbox {
+    width: 300px;
+    height: 405px;
+    background: #fafafa;
+    position: relative;
+    border-radius: 10px;
+    background: -webkit-linear-gradient(top, #EBEBEB 25%, white 1%);
+    transition: 0.1s;
     margin-left: 8px;
     margin-right: 8px;
     margin-bottom: 16px;
@@ -703,11 +742,15 @@ ul {
   /* --- Rates --- */
 
   .coinbox {
-    width: 350px;
-    height: 300px;
+    width: 300px;
+    height: 405px;
     background: #fafafa;
     position: relative;
     border-radius: 10px;
+    background: -webkit-linear-gradient(top, #EBEBEB 25%, white 1%);
+    transition: 0.1s;
+    margin-left: 8px;
+    margin-right: 8px;
     margin-bottom: 16px;
   }
 
