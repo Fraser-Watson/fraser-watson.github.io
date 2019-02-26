@@ -477,7 +477,7 @@ ul {
 .wallet-box-left {
   float: left;
   max-width: 150px;
-  margin-top: 23px;
+  margin-top: 25px;
   margin-left: 10px;
 }
 
@@ -486,7 +486,7 @@ ul {
 }
 
 .wallet-box-name h3 {
-  font-size: 21px;
+  font-size: 19px;
   margin: 0;
 }
 
@@ -495,28 +495,28 @@ ul {
 }
 
 .wallet-box-value p {
-  font-size: 19px;
+  font-size: 17px;
   margin: 0;
 }
 
 .wallet-box-right {
   float: right;
   margin-right: 20px;
-  margin-top: 23px;
+  margin-top: 25px;
 }
 
 .wallet-box-right p {
-  font-size: 19px;
+  font-size: 17px;
   margin: 0;
 }
 
 .wallet-box-delta {
-  font-size: 19px;
+  font-size: 17px;
   float: right;
 }
 
 .wallet-box-rate h4 {
-  font-size: 19px;
+  font-size: 17px;
   margin: 0;
 }
 
