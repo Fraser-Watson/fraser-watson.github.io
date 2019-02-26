@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Abel');
-
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700');
 
 
 body {
   font-weight: 300;
-  font-family: 'Abel', sans-serif;  
+  font-family: 'Roboto Condensed', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 15px;
