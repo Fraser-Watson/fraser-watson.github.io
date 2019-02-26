@@ -61,10 +61,12 @@ ul {
 }
 
 .navbar li {
-  font-weight: 300;
+  font-weight: 400;
+  letter-spacing: -1.5px;
   float: left;
   display: inline;
   padding: 0 20px 0 20px;
+
 }
 
 .navbar .logo {
