@@ -93,7 +93,7 @@
     },
     mounted () {
       axios
-        .get('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,ETH,LTC,XRP,OMG,EOS,NEO,DASH,XMR&tsyms=USD')
+        .get('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,ETH,LTC,XRP,OMG,EOS,NEO,DASH,XMR&tsyms=USD&api_key=0bf19dd98d2e5dba83157ffb931d95419799e96b6edf0a1f30a6f934f3a72469')
         .then(response => {
             this.priceBtc = response.data.DISPLAY.BTC.USD.PRICE
             this.hrHiBtc = response.data.DISPLAY.BTC.USD.HIGH24HOUR
