@@ -61,6 +61,7 @@ ul {
 }
 
 .navbar li {
+  font-weight: 300;
   float: left;
   display: inline;
   padding: 0 20px 0 20px;
