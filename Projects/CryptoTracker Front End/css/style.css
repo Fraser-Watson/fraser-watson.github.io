@@ -1,8 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Abel');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400');
+
 
 body {
-  font-family: 'Abel', sans-serif;
-  font-size: 20px;
+  font-weight: 300;
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  letter-spacing: -0.5px;
   padding: 0;
   margin: 0;
   background-color: #f2f4f7;
@@ -53,7 +56,7 @@ ul {
 .navbar a {
   color: black;
   text-decoration: none;
-  font-size: 23px;
+  font-size: 22px;
   transition: 0.3s;
 }
 
@@ -130,6 +133,7 @@ ul {
 /* --- Title ---*/
 
 .title {
+  font-size: 20px;
   margin-top: 50px;
   margin-left: 1%;
 }
@@ -214,6 +218,7 @@ ul {
   -moz-box-shadow: 30px 30px 100px -22px rgba(0, 0, 0, 0.20);
   box-shadow: 30px 30px 100px -22px rgba(0, 0, 0, 0.20);
   transition: 0.1s;
+ 
 }
 
 .coinimage{
@@ -227,6 +232,7 @@ ul {
   height:100px;
   float: left;
   margin-top: 20px;
+  margin-bottom: 8px;
   -webkit-filter: drop-shadow(5px 5px 5px rgb(202, 202, 202));
   filter: drop-shadow(5px 5px 5px rgb(202, 202, 202));
 }
@@ -244,7 +250,7 @@ ul {
 /* data inside box */
 
 .coinbox p {
-  font-size: 21px;
+  font-size: 18.5px;
   margin-top: 20px;
   margin-bottom: 0;
 }
@@ -252,7 +258,7 @@ ul {
 .price {
   display: flex;
   justify-content: center;
-  font-weight: bold;
+  font-weight: 400;
   font-size: 30px;
 }
 
@@ -263,43 +269,43 @@ ul {
 .hr-hi-container p {
   display: flex;
   justify-content: center;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 .hr-low-container p {
   display: flex;
   justify-content: center;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 .hr-vol-container {
   display: flex;
   justify-content: center;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 .mkt-cap-container {
   display: flex;
   justify-content: center;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 /* spans */
 
 .hr-hi {
-  font-weight: normal;
+  font-weight: 300;
 }
 
 .hr-low {
-  font-weight: normal;
+  font-weight: 300;
 }
 
 .hr-vol {
-  font-weight: normal;
+  font-weight: 300;
 }
 
 .mkt-cap {
-  font-weight: normal;
+  font-weight: 300;
 }
 
 /* --- News --- */
@@ -361,7 +367,7 @@ ul {
   margin-left: 35px;
   text-align: left;
   font-size: 30px;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 .news-content-title h2 {
@@ -385,8 +391,8 @@ ul {
 }
 
 .news-story-preview p {
-  letter-spacing: -0.5px;
-  font-size: 0.95em;
+  letter-spacing: 0px;
+  font-size: 1.1em;
   /*overflow: hidden;*/
   overflow: none;
   text-overflow: "ellipsis";
@@ -417,6 +423,7 @@ ul {
 }
 
 .wallet-balance h2 {
+  font-size: 30px;
   margin: 0;
 }
 
@@ -425,6 +432,7 @@ ul {
 }
 
 .wallet-desc p {
+  font-size: 20px;
   margin: 0;
 }
 
@@ -476,6 +484,7 @@ ul {
 }
 
 .wallet-box-name h3 {
+  font-size: 21px;
   margin: 0;
 }
 
@@ -484,6 +493,7 @@ ul {
 }
 
 .wallet-box-value p {
+  font-size: 19px;
   margin: 0;
 }
 
@@ -494,14 +504,17 @@ ul {
 }
 
 .wallet-box-right p {
+  font-size: 19px;
   margin: 0;
 }
 
 .wallet-box-delta {
+  font-size: 19px;
   float: right;
 }
 
 .wallet-box-rate h4 {
+  font-size: 19px;
   margin: 0;
 }
 
@@ -573,6 +586,7 @@ ul {
     background: -webkit-linear-gradient(top, #EBEBEB 25%, white 1%);
     transition: 0.1s;
   }
+
 
   /* --- News ---*/
 
