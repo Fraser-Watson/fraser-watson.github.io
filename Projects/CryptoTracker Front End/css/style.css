@@ -10,6 +10,7 @@ body {
   padding: 0;
   margin: 0;
   background-color: #f2f4f7;
+  color: #424242;
 }
 
 /* global */
@@ -84,7 +85,7 @@ ul {
 
 .navbar .nav {
   float: right;
-  margin-top: 15px;
+  margin-top: 17px;
 }
 
 .navbar a:hover {
@@ -140,6 +141,10 @@ ul {
   font-size: 20px;
   margin-top: 50px;
   margin-left: 1%;
+}
+
+.title h1{
+  font-weight: 600;
 }
 
 .icon {
@@ -222,8 +227,8 @@ ul {
   -moz-box-shadow: 30px 30px 100px -22px rgba(0, 0, 0, 0.20);
   box-shadow: 30px 30px 100px -22px rgba(0, 0, 0, 0.20);
   transition: 0.1s;
- 
 }
+
 
 .coinimage{
   display: flex;
@@ -490,7 +495,7 @@ ul {
 }
 
 .wallet-box-name h3 {
-  font-size: 19px;
+  font-size: 21px;
   margin: 0;
 }
 
@@ -510,17 +515,16 @@ ul {
 }
 
 .wallet-box-right p {
-  font-size: 17px;
+  font-size: 20px;
   margin: 0;
 }
 
 .wallet-box-delta {
-  font-size: 17px;
   float: right;
 }
 
 .wallet-box-rate h4 {
-  font-size: 17px;
+  font-size: 20px;
   margin: 0;
 }
 
@@ -566,7 +570,6 @@ ul {
   .navbar .nav {
     margin-right: 1%;
     float: right;
-    margin-top: 15px;
   }
 
   /* --- Rates --- */
