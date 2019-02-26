@@ -220,6 +220,7 @@ ul {
 .coinimage{
   display: flex;
   justify-content: center;
+  
 }
 
 .coinimage img {
@@ -227,6 +228,8 @@ ul {
   height:100px;
   float: left;
   margin-top: 20px;
+  -webkit-filter: drop-shadow(5px 5px 5px rgb(202, 202, 202));
+  filter: drop-shadow(5px 5px 5px rgb(202, 202, 202));
 }
 
 .box-page-line {
@@ -565,8 +568,8 @@ ul {
     background: #fafafa;
     position: relative;
     border-radius: 10px;
-    margin-left: 25px;
-    margin-right: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
     margin-bottom: 50px;
     background: -webkit-linear-gradient(top, #EBEBEB 25%, white 1%);
     transition: 0.1s;
