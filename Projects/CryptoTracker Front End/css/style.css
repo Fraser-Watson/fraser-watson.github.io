@@ -1,8 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Abel:400&amp;subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Abel");
 
 body {
-  font-family: 'Abel', sans-serif; font-weight:500; font-style:normal;
+  font-family: "Abel", sans-serif;
   font-size: 20px;
+  text-rendering: geometricPrecision;
   padding: 0;
   margin: 0;
   background-color: #f2f4f7;
@@ -228,26 +229,26 @@ ul {
 }
 
 .price {
-  font-weight: 800;
+  font-weight: bold;
   font-size: 30px;
 }
 
 .hr-hi-container p {
-  font-weight: 800;
+  font-weight: bold;
 }
 
 .hr-low-container p {
-  font-weight: 800;
+  font-weight: bold;
 }
 
 .hr-vol-container {
-  font-weight: 800;
+  font-weight: bold;
   padding-left: 30px;
   padding-top: 5px;
 }
 
 .mkt-cap-container {
-  font-weight: 800;
+  font-weight: bold;
   padding-left: 30px;
 }
 
@@ -328,7 +329,7 @@ ul {
   margin-left: 35px;
   text-align: left;
   font-size: 30px;
-  font-weight: 800;
+  font-weight: bold;
 }
 
 .news-content-title h2 {
