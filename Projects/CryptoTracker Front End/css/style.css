@@ -211,9 +211,9 @@ ul {
   margin-right: 25px;
   margin-bottom: 50px;
   background: -webkit-linear-gradient(top, #EBEBEB 25%, white 1%);
-  -webkit-box-shadow: 5px 5px 100px -22px rgba(0, 0, 0, 0.13);
-  -moz-box-shadow: 5px 5px 100px -22px rgba(0, 0, 0, 0.13);
-  box-shadow: 5px 5px 100px -22px rgba(0, 0, 0, 0.13);
+  -webkit-box-shadow: 30px 30px 100px -22px rgba(0, 0, 0, 0.20);
+  -moz-box-shadow: 30px 30px 100px -22px rgba(0, 0, 0, 0.20);
+  box-shadow: 30px 30px 100px -22px rgba(0, 0, 0, 0.20);
   transition: 0.1s;
 }
 
@@ -654,7 +654,7 @@ ul {
     transition: 0.1s;
     margin-left: 8px;
     margin-right: 8px;
-    margin-bottom: 16px;
+    margin-bottom: 40px;
   }
 
   /* --- News ---*/
@@ -754,7 +754,6 @@ ul {
     transition: 0.1s;
     margin-left: 8px;
     margin-right: 8px;
-    margin-bottom: 16px;
   }
 
   /*--- News ---*/
