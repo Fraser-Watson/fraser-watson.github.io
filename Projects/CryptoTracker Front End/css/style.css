@@ -267,7 +267,9 @@ ul {
   background: #00000070;
   display: none;
 	justify-content: center;
-	align-items: center;
+  align-items: center;
+  animation-name:popupopen;
+  animation-duration: 0.5s;
 }
 
 .popup-content{
@@ -282,7 +284,7 @@ ul {
   -moz-box-shadow: 30px 30px 100px -22px rgba(0, 0, 0, 0.20);
   box-shadow: 30px 30px 100px -22px rgba(0, 0, 0, 0.20);
   animation-name:popupopen;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
 }
 
 .detail-header{
