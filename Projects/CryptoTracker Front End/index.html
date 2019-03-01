@@ -1,338 +1,703 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="css/style.css"
-    />
-    <title>CryptoTracker</title>
-  </head>
 
-  <body>
-    <div id="app">
-      <header class="navbar">
-        <div class="container">
-          <div class="logo">
-            <a href="index.html"
-              ><img src="./img/logo.png" alt="CryptoTracker"
-            /></a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+  <title>CryptoTracker</title>
+</head>
+
+<body>
+  <div id="app">
+    <header class="navbar">
+      <div class="container">
+        <div class="logo">
+          <a href="index.html"><img src="./img/logo.png" alt="CryptoTracker" /></a>
+        </div>
+        <div class="nav">
+          <ul>
+            <li class="current"><a href="#">Rates</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="wallet.html">Wallet</a></li>
+            <li><a href="#">User</a></li>
+            <span class="burger-open">
+              <a href="#" onclick="openBurgerMenu()">
+                <i class="fas fa-bars"> </i>
+              </a>
+            </span>
+          </ul>
+        </div>
+        <div id="burger-menu" class="burger-nav">
+          <a href="#" class="btn-close" onclick="closeBurgerMenu()">&times;</a>
+          <a href="#">Rates</a>
+          <a href="news.html">News</a>
+          <a href="wallet.html">Wallet</a>
+          <a href="#">User</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-body">
+      <div class="icon">
+        <i class="fade animate fadeIn delay2 fas fa-chart-line" style="font-size:48px;color:#55C0FA;"></i>
+      </div>
+      <div class="title fade animate fadeIn delay2">
+        <h1>Current Rates</h1>
+      </div>
+
+      <div class="coingrid fade animate fadeIn delay3">
+        <div class="coinbox" id="btnBtc">
+          <div class="coinimage">
+            <img src="https://cdn.worldvectorlogo.com/logos/bitcoin.svg" alt="bitcoin" />
           </div>
-          <div class="nav">
-            <ul>
-              <li class="current"><a href="#">Rates</a></li>
-              <li><a href="news.html">News</a></li>
-              <li><a href="wallet.html">Wallet</a></li>
-              <li><a href="#">User</a></li>
-              <span class="burger-open">
-                <a href="#" onclick="openBurgerMenu()">
-                  <i class="fas fa-bars"> </i>
-                </a>
-              </span>
-            </ul>
+
+          <div class="price-container">
+            <p>
+              <span class="price">{{ priceBtc }}</span>
+            </p>
           </div>
-          <div id="burger-menu" class="burger-nav">
-            <a href="#" class="btn-close" onclick="closeBurgerMenu()"
-              >&times;</a
-            >
-            <a href="#">Rates</a>
-            <a href="news.html">News</a>
-            <a href="wallet.html">Wallet</a>
-            <a href="#">User</a>
+          <div class="hr-hi-container">
+            <p>
+              High (24hr): <span class="hr-hi"> {{ hrHiBtc }}</span>
+            </p>
+          </div>
+          <div class="hr-low-container">
+            <p>
+              Low (24hr): <span class="hr-low"> {{ hrLowBtc }}</span>
+            </p>
+          </div>
+          <div class="box-page-line"></div>
+          <div class="hr-vol-container">
+            <p>
+              Volume (24hr): <span class="hr-vol">{{ volBtc }}</span>
+            </p>
+          </div>
+          <div class="mkt-cap-container">
+            <p>
+              Market Cap: <span class="mkt-cap">{{ mktCapBtc }}</span>
+            </p>
           </div>
         </div>
-      </header>
 
-      <div class="container-body">
-        <div class="icon">
-          <i
-            class="fade animate fadeIn delay2 fas fa-chart-line"
-            style="font-size:48px;color:#55C0FA;"
-          ></i>
+        <div class="coinbox" id="btnEth">
+          <div class="coinimage">
+            <img src="http://introtocrypto.com/wp-content/uploads/2017/08/ether@2x.png" alt="ethereum" />
+          </div>
+          <div class="price-container">
+            <p>
+              <span class="price">{{ priceEth }}</span>
+            </p>
+          </div>
+          <div class="hr-hi-container">
+            <p>
+              High (24hr): <span class="hr-hi"> {{ hrHiEth }}</span>
+            </p>
+          </div>
+          <div class="hr-low-container">
+            <p>
+              Low (24hr): <span class="hr-low"> {{ hrLowEth }}</span>
+            </p>
+            <div class="box-page-line"></div>
+          </div>
+          <div class="hr-vol-container">
+            <p>
+              Volume (24hr): <span class="hr-vol">{{ volEth }}</span>
+            </p>
+          </div>
+          <div class="mkt-cap-container">
+            <p>
+              Market Cap: <span class="mkt-cap">{{ mktCapEth }}</span>
+            </p>
+          </div>
         </div>
-        <div class="title fade animate fadeIn delay2">
-          <h1>Current Rates</h1>
+
+        <div class="coinbox" id="btnLtc">
+          <div class="coinimage">
+            <img src="https://cdn.worldvectorlogo.com/logos/litecoin.svg" alt="litecoin" />
+          </div>
+          <div class="price-container">
+            <p>
+              <span class="price">{{ priceLtc }}</span>
+            </p>
+          </div>
+          <div class="hr-hi-container">
+            <p>
+              High (24hr): <span class="hr-hi"> {{ hrHiLtc }}</span>
+            </p>
+          </div>
+          <div class="hr-low-container">
+            <p>
+              Low (24hr): <span class="hr-low"> {{ hrLowLtc }}</span>
+            </p>
+            <div class="box-page-line"></div>
+          </div>
+          <div class="hr-vol-container">
+            <p>
+              Volume (24hr): <span class="hr-vol">{{ volLtc }}</span>
+            </p>
+          </div>
+          <div class="mkt-cap-container">
+            <p>
+              Market Cap: <span class="mkt-cap">{{ mktCapLtc }}</span>
+            </p>
+          </div>
         </div>
 
-        <div class="coingrid fade animate fadeIn delay3">
-          <div class="coinbox">
-            <div class="coinimage">
-              <img
-                src="https://cdn.worldvectorlogo.com/logos/bitcoin.svg"
-                alt="bitcoin"
-              />
-            </div>
-            <div class="price-container">
-                <p>
-                  <span class="price" >{{ priceBtc }}</span>
-                </p>
-              </div>
-            <div class="hr-hi-container">
-              <p>High (24hr): <span class="hr-hi"> {{ hrHiBtc }}</span></p>
-            </div>
-            <div class="hr-low-container">
-              <p>Low (24hr): <span class="hr-low"> {{ hrLowBtc }}</span></p>
-            </div>
-            <div class="box-page-line"></div>
-            <div class="hr-vol-container">
-              <p>
-                Volume (24hr): <span class="hr-vol">{{ volBtc }}</span>
-              </p>
-            </div>
-            <div class="mkt-cap-container">
-              <p>
-                Market Cap: <span class="mkt-cap">{{ mktCapBtc }}</span>
-              </p>
-            </div>
+        <div class="coinbox" id="btnXrp">
+          <div class="coinimage">
+            <img src="https://bitcoinist.com/wp-content/uploads/2016/08/Ripple-logo.png" alt="ripple" />
           </div>
-
-          <div class="coinbox">
-            <div class="coinimage">
-              <img
-                src="http://introtocrypto.com/wp-content/uploads/2017/08/ether@2x.png"
-                alt="ethereum"
-              />
-            </div>
-            <div class="price-container">
-              <p>
-                <span class="price">{{ priceEth }}</span>
-              </p>
-            </div>
-            <div class="hr-hi-container">
-              <p>High (24hr): <span class="hr-hi"> {{ hrHiEth }}</span></p>
-            </div>
-            <div class="hr-low-container">
-              <p>Low (24hr): <span class="hr-low"> {{ hrLowEth }}</span></p>
-              <div class="box-page-line"></div> 
-            </div>
-            <div class="hr-vol-container">
-              <p>
-                Volume (24hr): <span class="hr-vol">{{ volEth }}</span>
-              </p>
-            </div>
-            <div class="mkt-cap-container">
-              <p>
-                Market Cap: <span class="mkt-cap">{{ mktCapEth }}</span>
-              </p>
-            </div>
+          <div class="price-container">
+            <p>
+              <span class="price">{{ priceXrp }}</span>
+            </p>
           </div>
-
-          <div class="coinbox">
-            <div class="coinimage">
-              <img
-                src="https://cdn.worldvectorlogo.com/logos/litecoin.svg"
-                alt="litecoin"
-              />
-            </div>
-            <div class="price-container">
-              <p>
-                <span class="price">{{ priceLtc }}</span>
-              </p>
-            </div>
-            <div class="hr-hi-container">
-              <p>High (24hr): <span class="hr-hi"> {{ hrHiLtc }}</span></p>
-            </div>
-            <div class="hr-low-container">
-              <p>Low (24hr): <span class="hr-low"> {{ hrLowLtc }}</span></p>
-              <div class="box-page-line"></div>
-            </div>
-            <div class="hr-vol-container">
-              <p>Volume (24hr): <span class="hr-vol">{{ volLtc }}</span></p>
-            </div>
-            <div class="mkt-cap-container">
-              <p>Market Cap: <span class="mkt-cap">{{ mktCapLtc }}</span></p>
-            </div>
+          <div class="hr-hi-container">
+            <p>
+              High (24hr): <span class="hr-hi"> {{ hrHiXrp }}</span>
+            </p>
           </div>
-
-          <div class="coinbox">
-            <div class="coinimage">
-              <img
-                src="https://bitcoinist.com/wp-content/uploads/2016/08/Ripple-logo.png"
-                alt="ripple"
-              />
-            </div>
-            <div class="price-container">
-              <p>
-                <span class="price">{{ priceXrp }}</span>
-              </p>
-            </div>
-            <div class="hr-hi-container">
-              <p>High (24hr): <span class="hr-hi"> {{ hrHiXrp }}</span></p>
-            </div>
-            <div class="hr-low-container">
-              <p>Low (24hr): <span class="hr-low"> {{ hrLowXrp }}</span></p>
-            </div>
-            <div class="box-page-line"></div>
-            <div class="hr-vol-container">
-              <p>
-                Volume (24hr): <span class="hr-vol">{{ volXrp }}</span>
-              </p>
-            </div>
-            <div class="mkt-cap-container">
-              <p>
-                Market Cap: <span class="mkt-cap">{{ mktCapXrp }}</span>
-              </p>
-            </div>
+          <div class="hr-low-container">
+            <p>
+              Low (24hr): <span class="hr-low"> {{ hrLowXrp }}</span>
+            </p>
           </div>
-
-          <div class="coinbox">
-            <div class="coinimage">
-              <img src="https://cdn.worldvectorlogo.com/logos/omisego.svg"
-              alt=" ethereum" />
-            </div>
-            <div class="price-container">
-              <p>
-                <span class="price">{{ priceOmg }}</span>
-              </p>
-            </div>
-            <div class="hr-hi-container">
-              <p>High (24hr): <span class="hr-hi"> {{ hrHiOmg }}</span></p>
-            </div>
-            <div class="hr-low-container">
-              <p>Low (24hr): <span class="hr-low"> {{ hrLowOmg }}</span></p>
-            </div>
-            <div class="box-page-line"></div>
-            <div class="hr-vol-container">
-              <p>
-                Volume (24hr): <span class="hr-vol">{{ volOmg }}</span>
-              </p>
-            </div>
-            <div class="mkt-cap-container">
-              <p>
-                Market Cap: <span class="mkt-cap">{{ mktCapOmg }}</span>
-              </p>
-            </div>
+          <div class="box-page-line"></div>
+          <div class="hr-vol-container">
+            <p>
+              Volume (24hr): <span class="hr-vol">{{ volXrp }}</span>
+            </p>
           </div>
-
-          <div class="coinbox">
-            <div class="coinimage">
-              <img src="https://cdn.worldvectorlogo.com/logos/eos-3.svg"
-              alt="Eos" />
-            </div>
-            <div class="price-container">
-              <p>
-                <span class="price">{{ priceEos }}</span>
-              </p>
-            </div>
-            <div class="hr-hi-container">
-              <p>High (24hr): <span class="hr-hi"> {{ hrHiEos }}</span></p>
-            </div>
-            <div class="hr-low-container">
-              <p>Low (24hr): <span class="hr-low"> {{ hrLowEos }}</span></p>
-            </div>
-            <div class="box-page-line"></div>
-            <div class="hr-vol-container">
-              <p>
-                Volume (24hr): <span class="hr-vol">{{ volEos }}</span>
-              </p>
-            </div>
-            <div class="mkt-cap-container">
-              <p>
-                Market Cap: <span class="mkt-cap">{{ mktCapEos }}</span>
-              </p>
-            </div>
+          <div class="mkt-cap-container">
+            <p>
+              Market Cap: <span class="mkt-cap">{{ mktCapXrp }}</span>
+            </p>
           </div>
+        </div>
 
-          <div class="coinbox">
-            <div class="coinimage">
-              <img src="https://cdn.worldvectorlogo.com/logos/gas-1.svg" alt="
+        <div class="coinbox" id="btnOmg">
+          <div class="coinimage">
+            <img src="https://cdn.worldvectorlogo.com/logos/omisego.svg" alt=" ethereum" />
+          </div>
+          <div class="price-container">
+            <p>
+              <span class="price">{{ priceOmg }}</span>
+            </p>
+          </div>
+          <div class="hr-hi-container">
+            <p>
+              High (24hr): <span class="hr-hi"> {{ hrHiOmg }}</span>
+            </p>
+          </div>
+          <div class="hr-low-container">
+            <p>
+              Low (24hr): <span class="hr-low"> {{ hrLowOmg }}</span>
+            </p>
+          </div>
+          <div class="box-page-line"></div>
+          <div class="hr-vol-container">
+            <p>
+              Volume (24hr): <span class="hr-vol">{{ volOmg }}</span>
+            </p>
+          </div>
+          <div class="mkt-cap-container">
+            <p>
+              Market Cap: <span class="mkt-cap">{{ mktCapOmg }}</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="coinbox" id="btnEos">
+          <div class="coinimage">
+            <img src="https://cdn.worldvectorlogo.com/logos/eos-3.svg" alt="Eos" />
+          </div>
+          <div class="price-container">
+            <p>
+              <span class="price">{{ priceEos }}</span>
+            </p>
+          </div>
+          <div class="hr-hi-container">
+            <p>
+              High (24hr): <span class="hr-hi"> {{ hrHiEos }}</span>
+            </p>
+          </div>
+          <div class="hr-low-container">
+            <p>
+              Low (24hr): <span class="hr-low"> {{ hrLowEos }}</span>
+            </p>
+          </div>
+          <div class="box-page-line"></div>
+          <div class="hr-vol-container">
+            <p>
+              Volume (24hr): <span class="hr-vol">{{ volEos }}</span>
+            </p>
+          </div>
+          <div class="mkt-cap-container">
+            <p>
+              Market Cap: <span class="mkt-cap">{{ mktCapEos }}</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="coinbox" id="btnNeo">
+          <div class="coinimage">
+            <img src="https://cdn.worldvectorlogo.com/logos/gas-1.svg" alt="
               Neo" />
-            </div>
-            <div class="price-container">
-              <p>
-                <span class="price">{{ priceNeo }}</span>
-              </p>
-            </div>
-            <div class="hr-hi-container">
-              <p>High (24hr): <span class="hr-hi"> {{ hrHiNeo }}</span></p>
-            </div>
-            <div class="hr-low-container">
-              <p>Low (24hr): <span class="hr-low"> {{ hrLowNeo }}</span></p>
-            </div>
-            <div class="box-page-line"></div>
-            <div class="hr-vol-container">
-              <p>
-                Volume (24hr): <span class="hr-vol">{{ volNeo }}</span>
-              </p>
-            </div>
-            <div class="mkt-cap-container">
-              <p>
-                Market Cap: <span class="mkt-cap">{{ mktCapNeo }}</span>
-              </p>
-            </div>
           </div>
-
-          <div class="coinbox">
-            <div class="coinimage">
-              <img src="https://cdn.worldvectorlogo.com/logos/dash-3.svg"alt="dash" />
-            </div>
-            <div class="price-container">
-              <p>
-                <span class="price">{{ priceDash }}</span>
-              </p>
-            </div>
-            <div class="hr-hi-container">
-              <p>High (24hr): <span class="hr-hi"> {{ hrHiDash }}</span></p>
-            </div>
-            <div class="hr-low-container">
-              <p>Low (24hr): <span class="hr-low"> {{ hrLowDash }}</span></p>
-            </div>
-            <div class="box-page-line"></div>
-            <div class="hr-vol-container">
-              <p>
-                Volume (24hr): <span class="hr-vol">{{ volDash }}</span>
-              </p>
-            </div>
-            <div class="mkt-cap-container">
-              <p>
-                Market Cap: <span class="mkt-cap">{{ mktCapDash }}</span>
-              </p>
-            </div>
+          <div class="price-container">
+            <p>
+              <span class="price">{{ priceNeo }}</span>
+            </p>
           </div>
+          <div class="hr-hi-container">
+            <p>
+              High (24hr): <span class="hr-hi"> {{ hrHiNeo }}</span>
+            </p>
+          </div>
+          <div class="hr-low-container">
+            <p>
+              Low (24hr): <span class="hr-low"> {{ hrLowNeo }}</span>
+            </p>
+          </div>
+          <div class="box-page-line"></div>
+          <div class="hr-vol-container">
+            <p>
+              Volume (24hr): <span class="hr-vol">{{ volNeo }}</span>
+            </p>
+          </div>
+          <div class="mkt-cap-container">
+            <p>
+              Market Cap: <span class="mkt-cap">{{ mktCapNeo }}</span>
+            </p>
+          </div>
+        </div>
 
-          <div class="coinbox">
-            <div class="coinimage">
-              <img src="https://cdn.worldvectorlogo.com/logos/monero.svg"alt="monero"/>
-            </div>
-            <div class="price-container">
-              <p>
-                <span class="price">{{ priceXmr }}</span>
-              </p>
-            </div>
-            <div class="hr-hi-container">
-              <p>High (24hr): <span class="hr-hi"> {{ hrHiXmr }}</span></p>
-            </div>
-            <div class="hr-low-container">
-              <p>Low (24hr): <span class="hr-low"> {{ hrLowXmr }}</span></p>
-            </div>
-            <div class="box-page-line"></div>
-            <div class="hr-vol-container">
-              <p>
-                Volume (24hr): <span class="hr-vol">{{ volXmr }}</span>
-              </p>
-            </div>
-            <div class="mkt-cap-container">
-              <p>
-                Market Cap: <span class="mkt-cap">{{ mktCapXmr }}</span>
-              </p>
-            </div>
+        <div class="coinbox" id="btnDash">
+          <div class="coinimage">
+            <img src="https://cdn.worldvectorlogo.com/logos/dash-3.svg" alt="dash" />
+          </div>
+          <div class="price-container">
+            <p>
+              <span class="price">{{ priceDash }}</span>
+            </p>
+          </div>
+          <div class="hr-hi-container">
+            <p>
+              High (24hr): <span class="hr-hi"> {{ hrHiDash }}</span>
+            </p>
+          </div>
+          <div class="hr-low-container">
+            <p>
+              Low (24hr): <span class="hr-low"> {{ hrLowDash }}</span>
+            </p>
+          </div>
+          <div class="box-page-line"></div>
+          <div class="hr-vol-container">
+            <p>
+              Volume (24hr): <span class="hr-vol">{{ volDash }}</span>
+            </p>
+          </div>
+          <div class="mkt-cap-container">
+            <p>
+              Market Cap: <span class="mkt-cap">{{ mktCapDash }}</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="coinbox" id="btnXmr">
+          <div class="coinimage">
+            <img src="https://cdn.worldvectorlogo.com/logos/monero.svg" alt="monero" />
+          </div>
+          <div class="price-container">
+            <p>
+              <span class="price">{{ priceXmr }}</span>
+            </p>
+          </div>
+          <div class="hr-hi-container">
+            <p>
+              High (24hr): <span class="hr-hi"> {{ hrHiXmr }}</span>
+            </p>
+          </div>
+          <div class="hr-low-container">
+            <p>
+              Low (24hr): <span class="hr-low"> {{ hrLowXmr }}</span>
+            </p>
+          </div>
+          <div class="box-page-line"></div>
+          <div class="hr-vol-container">
+            <p>
+              Volume (24hr): <span class="hr-vol">{{ volXmr }}</span>
+            </p>
+          </div>
+          <div class="mkt-cap-container">
+            <p>
+              Market Cap: <span class="mkt-cap">{{ mktCapXmr }}</span>
+            </p>
           </div>
         </div>
       </div>
     </div>
-    <script type="text/javascript" src="js/burger.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script type="text/javascript" src="js/vue.js"></script>
-  </body>
+    <div class="popup" id="popupBtc">
+      <div class="popup-content">
+        <div class="detail-header">
+          <span class="closeBtn" id="closeBtnBtc">&times;</span>
+          <div class="pop-up-price-container">
+            <div class="price-detail">
+              <h1>{{ priceBtc }}</h1>
+            </div>
+            <div class="lastupdated">
+              <h3>Last Update: <span class="lastupdated-bold">{{ updBtc }}</span></h3>
+            </div>
+          </div>
+          <div class="coin-nameimage-container">
+            <div class="coinimage-detail">
+              <img src="https://cdn.worldvectorlogo.com/logos/bitcoin.svg" alt="bitcoin" />
+            </div>
+            <div class="coin-name-detail">
+              <h1>Bitcoin</h1>
+            </div>
+          </div>
+        </div>
+        <div class="detail-main-container">
+          <div class="detail-main">
+            <p>Circulating Supply: <span class="hr-hi">{{ splyBtc }}</span></p>
+            </p>
+            <div class="detail-page-line"></div>
+            <p>High (24hr): <span class="hr-hi">{{ hrHiBtc }}</span></p>
+            <p>Low (24hr): <span class="hr-low">{{ hrLowBtc }}</span></p>
+            <div class="detail-page-line"></div>
+            <p>Volume (24hr): <span class="hr-vol">{{ volBtc }}</span></p>
+            <p>Change (24hr): <span class="hr-vol">{{ chgBtc }}</span></p>
+            <div class="detail-page-line"></div>
+            <p>Market Cap: <span class="mkt-cap">{{ mktCapBtc }}</span></p>
+            <p>Last Market:<span class="hr-vol"> {{ mktBtc }}</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup" id="popupEth">
+      <div class="popup-content">
+        <div class="detail-header">
+          <span class="closeBtn" id="closeBtnEth">&times;</span>
+          <div class="pop-up-price-container">
+            <div class="price-detail">
+              <h1>{{ priceEth }}</h1>
+            </div>
+            <div class="lastupdated">
+              <h3>Last Update: <span class="lastupdated-bold">{{ updEth }}</span></h3>
+            </div>
+          </div>
+          <div class="coin-nameimage-container">
+            <div class="coinimage-detail">
+              <img src="http://introtocrypto.com/wp-content/uploads/2017/08/ether@2x.png" alt="bitcoin" />
+            </div>
+            <div class="coin-name-detail">
+              <h1>Ethereum</h1>
+            </div>
+          </div>
+        </div>
+        <div class="detail-main-container">
+          <div class="detail-main">
+            <p>Circulating Supply: <span class="hr-hi">{{ splyEth }}</span></p>
+            </p>
+            <div class="detail-page-line"></div>
+            <p>High (24hr): <span class="hr-hi">{{ hrHiEth }}</span></p>
+            <p>Low (24hr): <span class="hr-low">{{ hrLowEth }}</span></p>
+            <div class="detail-page-line"></div>
+            <p>Volume (24hr): <span class="hr-vol">{{ volEth }}</span></p>
+            <p>Change (24hr): <span class="hr-vol">{{ chgEth }}</span></p>
+            <div class="detail-page-line"></div>
+            <p>Market Cap: <span class="mkt-cap">{{ mktCapEth }}</span></p>
+            <p>Last Market:<span class="hr-vol"> {{ mktEth }}</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup" id="popupLtc">
+      <div class="popup-content">
+        <div class="detail-header">
+          <span class="closeBtn" id="closeBtnLtc">&times;</span>
+          <div class="pop-up-price-container">
+            <div class="price-detail">
+              <h1>{{ priceLtc }}</h1>
+            </div>
+            <div class="lastupdated">
+              <h3>Last Update: <span class="lastupdated-bold">{{ updLtc }}</span></h3>
+            </div>
+          </div>
+          <div class="coin-nameimage-container">
+            <div class="coinimage-detail">
+              <img src="https://cdn.worldvectorlogo.com/logos/litecoin.svg" alt="bitcoin" />
+            </div>
+            <div class="coin-name-detail">
+              <h1>Litecoin</h1>
+            </div>
+          </div>
+        </div>
+        <div class="detail-main-container">
+          <div class="detail-main">
+            <p>Circulating Supply: <span class="hr-hi">{{ splyLtc }}</span></p>
+            </p>
+            <div class="detail-page-line"></div>
+            <p>High (24hr): <span class="hr-hi">{{ hrHiLtc }}</span></p>
+            <p>Low (24hr): <span class="hr-low">{{ hrLowLtc }}</span></p>
+            <div class="detail-page-line"></div>
+            <p>Volume (24hr): <span class="hr-vol">{{ volLtc }}</span></p>
+            <p>Change (24hr): <span class="hr-vol">{{ chgLtc }}</span></p>
+            <div class="detail-page-line"></div>
+            <p>Market Cap: <span class="mkt-cap">{{ mktCapLtc }}</span></p>
+            <p>Last Market:<span class="hr-vol"> {{ mktLtc }}</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup" id="popupXrp">
+      <div class="popup-content">
+        <div class="detail-header">
+          <span class="closeBtn" id="closeBtnXrp">&times;</span>
+          <div class="pop-up-price-container">
+            <div class="price-detail">
+              <h1>{{ priceXrp }}</h1>
+            </div>
+            <div class="lastupdated">
+              <h3>Last Update: <span class="lastupdated-bold">{{ updXrp }}</span></h3>
+            </div>
+          </div>
+          <div class="coin-nameimage-container">
+            <div class="coinimage-detail">
+              <img src="https://bitcoinist.com/wp-content/uploads/2016/08/Ripple-logo.png" alt="bitcoin" />
+            </div>
+            <div class="coin-name-detail">
+              <h1>Ripple</h1>
+            </div>
+          </div>
+        </div>
+        <div class="detail-main-container">
+          <div class="detail-main">
+            <p>Circulating Supply: <span class="hr-hi">{{ splyXrp }}</span></p>
+            </p>
+            <div class="detail-page-line"></div>
+            <p>High (24hr): <span class="hr-hi">{{ hrHiXrp }}</span></p>
+            <p>Low (24hr): <span class="hr-low">{{ hrLowXrp }}</span></p>
+            <div class="detail-page-line"></div>
+            <p>Volume (24hr): <span class="hr-vol">{{ volXrp }}</span></p>
+            <p>Change (24hr): <span class="hr-vol">{{ chgXrp }}</span></p>
+            <div class="detail-page-line"></div>
+            <p>Market Cap: <span class="mkt-cap">{{ mktCapXrp }}</span></p>
+            <p>Last Market:<span class="hr-vol"> {{ mktXrp }}</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup" id="popupOmg">
+      <div class="popup-content">
+        <div class="detail-header">
+          <span class="closeBtn" id="closeBtnOmg">&times;</span>
+          <div class="pop-up-price-container">
+            <div class="price-detail">
+              <h1>{{ priceOmg }}</h1>
+            </div>
+            <div class="lastupdated">
+              <h3>Last Update: <span class="lastupdated-bold">{{ updOmg }}</span></h3>
+            </div>
+          </div>
+          <div class="coin-nameimage-container">
+            <div class="coinimage-detail">
+              <img src="https://cdn.worldvectorlogo.com/logos/omisego.svg" alt="bitcoin" />
+            </div>
+            <div class="coin-name-detail">
+              <h1>OmiseGO</h1>
+            </div>
+          </div>
+        </div>
+        <div class="detail-main-container">
+          <div class="detail-main">
+            <p>Circulating Supply: <span class="hr-hi">{{ splyOmg }}</span></p>
+            </p>
+            <div class="detail-page-line"></div>
+            <p>High (24hr): <span class="hr-hi">{{ hrHiOmg }}</span></p>
+            <p>Low (24hr): <span class="hr-low">{{ hrLowOmg }}</span></p>
+            <div class="detail-page-line"></div>
+            <p>Volume (24hr): <span class="hr-vol">{{ volOmg }}</span></p>
+            <p>Change (24hr): <span class="hr-vol">{{ chgOmg }}</span></p>
+            <div class="detail-page-line"></div>
+            <p>Market Cap: <span class="mkt-cap">{{ mktCapOmg }}</span></p>
+            <p>Last Market:<span class="hr-vol"> {{ mktOmg }}</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup" id="popupEos">
+      <div class="popup-content">
+        <div class="detail-header">
+          <span class="closeBtn" id="closeBtnEos">&times;</span>
+          <div class="pop-up-price-container">
+            <div class="price-detail">
+              <h1>{{ priceEos }}</h1>
+            </div>
+            <div class="lastupdated">
+              <h3>Last Update: <span class="lastupdated-bold">{{ updEos }}</span></h3>
+            </div>
+          </div>
+          <div class="coin-nameimage-container">
+            <div class="coinimage-detail">
+              <img src="https://cdn.worldvectorlogo.com/logos/eos-3.svg" alt="bitcoin" />
+            </div>
+            <div class="coin-name-detail">
+              <h1>EOS</h1>
+            </div>
+          </div>
+        </div>
+        <div class="detail-main-container">
+          <div class="detail-main">
+            <p>Circulating Supply: <span class="hr-hi">{{ splyEos }}</span></p>
+            </p>
+            <div class="detail-page-line"></div>
+            <p>High (24hr): <span class="hr-hi">{{ hrHiEos }}</span></p>
+            <p>Low (24hr): <span class="hr-low">{{ hrLowEos }}</span></p>
+            <div class="detail-page-line"></div>
+            <p>Volume (24hr): <span class="hr-vol">{{ volEos }}</span></p>
+            <p>Change (24hr): <span class="hr-vol">{{ chgEos }}</span></p>
+            <div class="detail-page-line"></div>
+            <p>Market Cap: <span class="mkt-cap">{{ mktCapEos }}</span></p>
+            <p>Last Market:<span class="hr-vol"> {{ mktEos }}</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup" id="popupNeo">
+      <div class="popup-content">
+        <div class="detail-header">
+          <span class="closeBtn" id="closeBtnNeo">&times;</span>
+          <div class="pop-up-price-container">
+            <div class="price-detail">
+              <h1>{{ priceNeo }}</h1>
+            </div>
+            <div class="lastupdated">
+              <h3>Last Update: <span class="lastupdated-bold">{{ updNeo }}</span></h3>
+            </div>
+          </div>
+          <div class="coin-nameimage-container">
+            <div class="coinimage-detail">
+              <img src="https://cdn.worldvectorlogo.com/logos/gas-1.svg" alt="bitcoin" />
+            </div>
+            <div class="coin-name-detail">
+              <h1>Neo</h1>
+            </div>
+          </div>
+        </div>
+        <div class="detail-main-container">
+          <div class="detail-main">
+            <p>Circulating Supply: <span class="hr-hi">{{ splyNeo }}</span></p>
+            </p>
+            <div class="detail-page-line"></div>
+            <p>High (24hr): <span class="hr-hi">{{ hrHiNeo }}</span></p>
+            <p>Low (24hr): <span class="hr-low">{{ hrLowNeo }}</span></p>
+            <div class="detail-page-line"></div>
+            <p>Volume (24hr): <span class="hr-vol">{{ volNeo }}</span></p>
+            <p>Change (24hr): <span class="hr-vol">{{ chgNeo }}</span></p>
+            <div class="detail-page-line"></div>
+            <p>Market Cap: <span class="mkt-cap">{{ mktCapNeo }}</span></p>
+            <p>Last Market:<span class="hr-vol"> {{ mktNeo }}</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup" id="popupDash">
+      <div class="popup-content">
+        <div class="detail-header">
+          <span class="closeBtn" id="closeBtnDash">&times;</span>
+          <div class="pop-up-price-container">
+            <div class="price-detail">
+              <h1>{{ priceDash }}</h1>
+            </div>
+            <div class="lastupdated">
+              <h3>Last Update: <span class="lastupdated-bold">{{ updDash }}</span></h3>
+            </div>
+          </div>
+          <div class="coin-nameimage-container">
+            <div class="coinimage-detail">
+              <img src="https://cdn.worldvectorlogo.com/logos/dash-3.svg" alt="bitcoin" />
+            </div>
+            <div class="coin-name-detail">
+              <h1>Dash</h1>
+            </div>
+          </div>
+        </div>
+        <div class="detail-main-container">
+          <div class="detail-main">
+            <p>Circulating Supply: <span class="hr-hi">{{ splyDash }}</span></p>
+            </p>
+            <div class="detail-page-line"></div>
+            <p>High (24hr): <span class="hr-hi">{{ hrHiDash }}</span></p>
+            <p>Low (24hr): <span class="hr-low">{{ hrLowDash }}</span></p>
+            <div class="detail-page-line"></div>
+            <p>Volume (24hr): <span class="hr-vol">{{ volDash }}</span></p>
+            <p>Change (24hr): <span class="hr-vol">{{ chgDash }}</span></p>
+            <div class="detail-page-line"></div>
+            <p>Market Cap: <span class="mkt-cap">{{ mktCapDash }}</span></p>
+            <p>Last Market:<span class="hr-vol"> {{ mktDash }}</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup" id="popupXmr">
+      <div class="popup-content">
+        <div class="detail-header">
+          <span class="closeBtn" id="closeBtnXmr">&times;</span>
+          <div class="pop-up-price-container">
+            <div class="price-detail">
+              <h1>{{ priceXmr }}</h1>
+            </div>
+            <div class="lastupdated">
+              <h3>Last Update: <span class="lastupdated-bold">{{ updXmr }}</span></h3>
+            </div>
+          </div>
+          <div class="coin-nameimage-container">
+            <div class="coinimage-detail">
+              <img src="https://cdn.worldvectorlogo.com/logos/monero.svg" alt="bitcoin" />
+            </div>
+            <div class="coin-name-detail">
+              <h1>Monero</h1>
+            </div>
+          </div>
+        </div>
+        <div class="detail-main-container">
+          <div class="detail-main">
+            <p>Circulating Supply: <span class="hr-hi">{{ splyXmr }}</span></p>
+            </p>
+            <div class="detail-page-line"></div>
+            <p>High (24hr): <span class="hr-hi">{{ hrHiXmr }}</span></p>
+            <p>Low (24hr): <span class="hr-low">{{ hrLowXmr }}</span></p>
+            <div class="detail-page-line"></div>
+            <p>Volume (24hr): <span class="hr-vol">{{ volXmr }}</span></p>
+            <p>Change (24hr): <span class="hr-vol">{{ chgXmr }}</span></p>
+            <div class="detail-page-line"></div>
+            <p>Market Cap: <span class="mkt-cap">{{ mktCapXmr }}</span></p>
+            <p>Last Market:<span class="hr-vol"> {{ mktXmr }}</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script type="text/javascript" src="js/vue.js"></script>
+  <script type="text/javascript" src="js/burger.js"></script>
+  <script type="text/javascript" src="js/popup.js"></script>
+</body>
+
 </html>
