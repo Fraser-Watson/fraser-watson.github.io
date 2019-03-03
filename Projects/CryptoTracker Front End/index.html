@@ -122,7 +122,7 @@
             </p>
           </div>
           <div class="hr-vol-container">
-              <p>Change (24hr): <span class="hr-vol" v-bind:style="getColor(coins.RAW.LTC.CHANGE24HOUR)">{{ coins.RAW.LTC.USD.CHANGE24HOUR | currency }}</span></p>
+              <p>Change (24hr): <span class="hr-vol" v-bind:style="getColor(coins.RAW.LTC.USD.CHANGE24HOUR)">{{ coins.RAW.LTC.USD.CHANGE24HOUR | currency }}</span></p>
           </div>
           <div class="hr-vol-container">
               <p>% Change (24hr): <span class="hr-vol" v-bind:style="getColor(coins.RAW.LTC.USD.CHANGEPCT24HOUR)">{{ coins.RAW.LTC.USD.CHANGEPCT24HOUR | currency('%', 2, { symbolOnLeft: false }) }}</span></p>
