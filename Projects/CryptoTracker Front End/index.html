@@ -51,306 +51,290 @@
 
       <div class="coingrid fade animate fadeIn delay3">
         <div class="coinbox" id="btnBtc">
+        <div class="coincontent" v-if="coins.DISPLAY">
           <div class="coinimage">
             <img src="https://cdn.worldvectorlogo.com/logos/bitcoin.svg" alt="bitcoin" />
           </div>
 
           <div class="price-container">
             <p>
-              <span class="price">{{ priceBtc }}</span>
+              <span class="price">{{ coins.DISPLAY.BTC.USD.PRICE }}</span>
             </p>
           </div>
-          <div class="hr-hi-container">
-            <p>
-              High (24hr): <span class="hr-hi"> {{ hrHiBtc }}</span>
-            </p>
+          <div class="hr-vol-container">
+            <p>Change (24hr): <span class="hr-vol" v-bind:style="getColor(coins.RAW.BTC.USD.CHANGE24HOUR)">{{ coins.RAW.BTC.USD.CHANGE24HOUR | currency }}</span></p>
           </div>
-          <div class="hr-low-container">
-            <p>
-              Low (24hr): <span class="hr-low"> {{ hrLowBtc }}</span>
-            </p>
-          </div>
+          <div class="hr-vol-container">
+              <p>% Change (24hr): <span class="hr-vol" v-bind:style="getColor(coins.RAW.BTC.USD.CHANGEPCT24HOUR)">{{ coins.RAW.BTC.USD.CHANGEPCT24HOUR | currency('%', 2, { symbolOnLeft: false }) }}</span></p>
+            </div>
           <div class="box-page-line"></div>
           <div class="hr-vol-container">
             <p>
-              Volume (24hr): <span class="hr-vol">{{ volBtc }}</span>
+              Volume (24hr): <span class="hr-vol">{{ coins.DISPLAY.BTC.USD.VOLUME24HOUR }}</span>
             </p>
           </div>
           <div class="mkt-cap-container">
             <p>
-              Market Cap: <span class="mkt-cap">{{ mktCapBtc }}</span>
+              Market Cap: <span class="mkt-cap">{{ coins.DISPLAY.BTC.USD.MKTCAP }}</span>
             </p>
           </div>
         </div>
+        </div>
 
         <div class="coinbox" id="btnEth">
+            <div class="coincontent" v-if="coins.DISPLAY">
           <div class="coinimage">
             <img src="http://introtocrypto.com/wp-content/uploads/2017/08/ether@2x.png" alt="ethereum" />
           </div>
           <div class="price-container">
             <p>
-              <span class="price">{{ priceEth }}</span>
+              <span class="price" v-if="coins.DISPLAY">{{ coins.DISPLAY.ETH.USD.PRICE }}</span>
             </p>
-          </div>
-          <div class="hr-hi-container">
-            <p>
-              High (24hr): <span class="hr-hi"> {{ hrHiEth }}</span>
-            </p>
-          </div>
-          <div class="hr-low-container">
-            <p>
-              Low (24hr): <span class="hr-low"> {{ hrLowEth }}</span>
-            </p>
-            <div class="box-page-line"></div>
           </div>
           <div class="hr-vol-container">
+              <p>Change (24hr): <span class="hr-vol" v-bind:style="getColor(coins.RAW.ETH.USD.CHANGE24HOUR)">{{ coins.RAW.ETH.USD.CHANGE24HOUR | currency }}</span></p>
+          </div>
+          <div class="hr-vol-container">
+              <p>% Change (24hr): <span class="hr-vol" v-bind:style="getColor(coins.RAW.ETH.USD.CHANGEPCT24HOUR)">{{ coins.RAW.ETH.USD.CHANGEPCT24HOUR | currency('%', 2, { symbolOnLeft: false }) }}</span></p>
+            </div>
+          <div class="box-page-line"></div>
+          <div class="hr-vol-container">
             <p>
-              Volume (24hr): <span class="hr-vol">{{ volEth }}</span>
+              Volume (24hr): <span class="hr-vol" >{{ coins.DISPLAY.ETH.USD.VOLUME24HOUR }}</span>
             </p>
           </div>
           <div class="mkt-cap-container">
             <p>
-              Market Cap: <span class="mkt-cap">{{ mktCapEth }}</span>
+              Market Cap: <span class="mkt-cap">{{ coins.DISPLAY.ETH.USD.MKTCAP }}</span>
             </p>
+          </div>
           </div>
         </div>
 
         <div class="coinbox" id="btnLtc">
+            <div class="coincontent" v-if="coins.DISPLAY">
           <div class="coinimage">
             <img src="https://cdn.worldvectorlogo.com/logos/litecoin.svg" alt="litecoin" />
           </div>
           <div class="price-container">
             <p>
-              <span class="price">{{ priceLtc }}</span>
+              <span class="price" >{{ coins.DISPLAY.LTC.USD.PRICE }}</span>
             </p>
-          </div>
-          <div class="hr-hi-container">
-            <p>
-              High (24hr): <span class="hr-hi"> {{ hrHiLtc }}</span>
-            </p>
-          </div>
-          <div class="hr-low-container">
-            <p>
-              Low (24hr): <span class="hr-low"> {{ hrLowLtc }}</span>
-            </p>
-            <div class="box-page-line"></div>
           </div>
           <div class="hr-vol-container">
+              <p>Change (24hr): <span class="hr-vol" v-bind:style="getColor(coins.RAW.LTC.CHANGE24HOUR)">{{ coins.RAW.LTC.USD.CHANGE24HOUR | currency }}</span></p>
+          </div>
+          <div class="hr-vol-container">
+              <p>% Change (24hr): <span class="hr-vol" v-bind:style="getColor(coins.RAW.LTC.USD.CHANGEPCT24HOUR)">{{ coins.RAW.LTC.USD.CHANGEPCT24HOUR | currency('%', 2, { symbolOnLeft: false }) }}</span></p>
+            </div>
+          <div class="box-page-line"></div>
+          <div class="hr-vol-container">
             <p>
-              Volume (24hr): <span class="hr-vol">{{ volLtc }}</span>
+              Volume (24hr): <span class="hr-vol" >{{ coins.DISPLAY.LTC.USD.VOLUME24HOUR }}</span>
             </p>
           </div>
           <div class="mkt-cap-container">
             <p>
-              Market Cap: <span class="mkt-cap">{{ mktCapLtc }}</span>
+              Market Cap: <span class="mkt-cap" >{{ coins.DISPLAY.LTC.USD.MKTCAP }}</span>
             </p>
+          </div>
           </div>
         </div>
 
         <div class="coinbox" id="btnXrp">
+            <div class="coincontent" v-if="coins.DISPLAY">
           <div class="coinimage">
             <img src="https://bitcoinist.com/wp-content/uploads/2016/08/Ripple-logo.png" alt="ripple" />
           </div>
           <div class="price-container">
             <p>
-              <span class="price">{{ priceXrp }}</span>
+              <span class="price" >{{ coins.DISPLAY.XRP.USD.PRICE }}</span>
             </p>
           </div>
-          <div class="hr-hi-container">
-            <p>
-              High (24hr): <span class="hr-hi"> {{ hrHiXrp }}</span>
-            </p>
+          <div class="hr-vol-container">
+              <p>Change (24hr): <span class="hr-vol" v-bind:style="getColor(coins.RAW.XRP.USD.CHANGE24HOUR)">{{ coins.RAW.XRP.USD.CHANGE24HOUR | currency }}</span></p>
           </div>
-          <div class="hr-low-container">
-            <p>
-              Low (24hr): <span class="hr-low"> {{ hrLowXrp }}</span>
-            </p>
-          </div>
+          <div class="hr-vol-container">
+              <p>% Change (24hr): <span class="hr-vol" v-bind:style="getColor(coins.RAW.XRP.USD.CHANGEPCT24HOUR)">{{ coins.RAW.XRP.USD.CHANGEPCT24HOUR | currency('%', 2, { symbolOnLeft: false }) }}</span></p>
+            </div>
           <div class="box-page-line"></div>
           <div class="hr-vol-container">
             <p>
-              Volume (24hr): <span class="hr-vol">{{ volXrp }}</span>
+              Volume (24hr): <span class="hr-vol" >{{ coins.DISPLAY.XRP.USD.VOLUME24HOUR }}</span>
             </p>
           </div>
           <div class="mkt-cap-container">
             <p>
-              Market Cap: <span class="mkt-cap">{{ mktCapXrp }}</span>
+              Market Cap: <span class="mkt-cap">{{ coins.DISPLAY.XRP.USD.MKTCAP }}</span>
             </p>
+          </div>
           </div>
         </div>
 
         <div class="coinbox" id="btnOmg">
+            <div class="coincontent" v-if="coins.DISPLAY">
           <div class="coinimage">
             <img src="https://cdn.worldvectorlogo.com/logos/omisego.svg" alt=" ethereum" />
           </div>
           <div class="price-container">
             <p>
-              <span class="price">{{ priceOmg }}</span>
+              <span class="price" >{{ coins.DISPLAY.OMG.USD.PRICE }}</span>
             </p>
           </div>
-          <div class="hr-hi-container">
-            <p>
-              High (24hr): <span class="hr-hi"> {{ hrHiOmg }}</span>
-            </p>
+          <div class="hr-vol-container">
+              <p>Change (24hr): <span class="hr-vol" v-bind:style="getColor(coins.RAW.OMG.USD.CHANGE24HOUR)">{{ coins.RAW.OMG.USD.CHANGE24HOUR | currency }}</span></p>
           </div>
-          <div class="hr-low-container">
-            <p>
-              Low (24hr): <span class="hr-low"> {{ hrLowOmg }}</span>
-            </p>
-          </div>
+          <div class="hr-vol-container">
+              <p>% Change (24hr): <span class="hr-vol" v-bind:style="getColor(coins.RAW.OMG.USD.CHANGEPCT24HOUR)">{{ coins.RAW.OMG.USD.CHANGEPCT24HOUR | currency('%', 2, { symbolOnLeft: false }) }}</span></p>
+            </div>
           <div class="box-page-line"></div>
           <div class="hr-vol-container">
             <p>
-              Volume (24hr): <span class="hr-vol">{{ volOmg }}</span>
+              Volume (24hr): <span class="hr-vol" >{{ coins.DISPLAY.OMG.USD.VOLUME24HOUR }}</span>
             </p>
           </div>
           <div class="mkt-cap-container">
             <p>
-              Market Cap: <span class="mkt-cap">{{ mktCapOmg }}</span>
+              Market Cap: <span class="mkt-cap">{{ coins.DISPLAY.OMG.USD.MKTCAP }}</span>
             </p>
+          </div>
           </div>
         </div>
 
         <div class="coinbox" id="btnEos">
+            <div class="coincontent" v-if="coins.DISPLAY">
           <div class="coinimage">
             <img src="https://cdn.worldvectorlogo.com/logos/eos-3.svg" alt="Eos" />
           </div>
           <div class="price-container">
             <p>
-              <span class="price">{{ priceEos }}</span>
+              <span class="price" >{{ coins.DISPLAY.EOS.USD.PRICE }}</span>
             </p>
           </div>
-          <div class="hr-hi-container">
-            <p>
-              High (24hr): <span class="hr-hi"> {{ hrHiEos }}</span>
-            </p>
+          <div class="hr-vol-container">
+              <p>Change (24hr): <span class="hr-vol" v-bind:style="getColor(coins.RAW.EOS.USD.CHANGE24HOUR)">{{ coins.RAW.EOS.USD.CHANGE24HOUR | currency }}</span></p>
           </div>
-          <div class="hr-low-container">
-            <p>
-              Low (24hr): <span class="hr-low"> {{ hrLowEos }}</span>
-            </p>
-          </div>
+          <div class="hr-vol-container">
+              <p>% Change (24hr): <span class="hr-vol" v-bind:style="getColor(coins.RAW.EOS.USD.CHANGEPCT24HOUR)">{{ coins.RAW.EOS.USD.CHANGEPCT24HOUR | currency('%', 2, { symbolOnLeft: false }) }}</span></p>
+            </div>
           <div class="box-page-line"></div>
           <div class="hr-vol-container">
             <p>
-              Volume (24hr): <span class="hr-vol">{{ volEos }}</span>
+              Volume (24hr): <span class="hr-vol" >{{ coins.DISPLAY.EOS.USD.VOLUME24HOUR }}</span>
             </p>
           </div>
           <div class="mkt-cap-container">
             <p>
-              Market Cap: <span class="mkt-cap">{{ mktCapEos }}</span>
+              Market Cap: <span class="mkt-cap" >{{ coins.DISPLAY.EOS.USD.MKTCAP }}</span>
             </p>
+          </div>
           </div>
         </div>
 
         <div class="coinbox" id="btnNeo">
+            <div class="coincontent" v-if="coins.DISPLAY">
           <div class="coinimage">
             <img src="https://cdn.worldvectorlogo.com/logos/gas-1.svg" alt="
               Neo" />
           </div>
           <div class="price-container">
             <p>
-              <span class="price">{{ priceNeo }}</span>
+              <span class="price" >{{ coins.DISPLAY.NEO.USD.PRICE }}</span>
             </p>
           </div>
-          <div class="hr-hi-container">
-            <p>
-              High (24hr): <span class="hr-hi"> {{ hrHiNeo }}</span>
-            </p>
+          <div class="hr-vol-container">
+              <p>Change (24hr): <span class="hr-vol" v-bind:style="getColor(coins.RAW.NEO.USD.CHANGE24HOUR)">{{ coins.RAW.NEO.USD.CHANGE24HOUR | currency }}</span></p>
           </div>
-          <div class="hr-low-container">
-            <p>
-              Low (24hr): <span class="hr-low"> {{ hrLowNeo }}</span>
-            </p>
-          </div>
+          <div class="hr-vol-container">
+              <p>% Change (24hr): <span class="hr-vol" v-bind:style="getColor(coins.RAW.NEO.USD.CHANGEPCT24HOUR)">{{ coins.RAW.NEO.USD.CHANGEPCT24HOUR | currency('%', 2, { symbolOnLeft: false }) }}</span></p>
+            </div>
           <div class="box-page-line"></div>
           <div class="hr-vol-container">
             <p>
-              Volume (24hr): <span class="hr-vol">{{ volNeo }}</span>
+              Volume (24hr): <span class="hr-vol" >{{ coins.DISPLAY.NEO.USD.VOLUME24HOUR }}</span>
             </p>
           </div>
           <div class="mkt-cap-container">
             <p>
-              Market Cap: <span class="mkt-cap">{{ mktCapNeo }}</span>
+              Market Cap: <span class="mkt-cap">{{ coins.DISPLAY.NEO.USD.MKTCAP }}</span>
             </p>
+          </div>
           </div>
         </div>
 
         <div class="coinbox" id="btnDash">
+            <div class="coincontent" v-if="coins.DISPLAY">
           <div class="coinimage">
             <img src="https://cdn.worldvectorlogo.com/logos/dash-3.svg" alt="dash" />
           </div>
           <div class="price-container">
             <p>
-              <span class="price">{{ priceDash }}</span>
+              <span class="price">{{ coins.DISPLAY.DASH.USD.PRICE }}</span>
             </p>
           </div>
-          <div class="hr-hi-container">
-            <p>
-              High (24hr): <span class="hr-hi"> {{ hrHiDash }}</span>
-            </p>
+          <div class="hr-vol-container">
+              <p>Change (24hr): <span class="hr-vol" v-bind:style="getColor(coins.RAW.DASH.USD.CHANGE24HOUR)">{{ coins.RAW.DASH.USD.CHANGE24HOUR | currency }}</span></p>
           </div>
-          <div class="hr-low-container">
-            <p>
-              Low (24hr): <span class="hr-low"> {{ hrLowDash }}</span>
-            </p>
-          </div>
+          <div class="hr-vol-container">
+              <p>% Change (24hr): <span class="hr-vol" v-bind:style="getColor(coins.RAW.DASH.USD.CHANGEPCT24HOUR)">{{ coins.RAW.DASH.USD.CHANGEPCT24HOUR | currency('%', 2, { symbolOnLeft: false }) }}</span></p>
+            </div>
           <div class="box-page-line"></div>
           <div class="hr-vol-container">
             <p>
-              Volume (24hr): <span class="hr-vol">{{ volDash }}</span>
+              Volume (24hr): <span class="hr-vol">{{ coins.DISPLAY.DASH.USD.VOLUME24HOUR }}</span>
             </p>
           </div>
           <div class="mkt-cap-container">
             <p>
-              Market Cap: <span class="mkt-cap">{{ mktCapDash }}</span>
+              Market Cap: <span class="mkt-cap" >{{ coins.DISPLAY.DASH.USD.MKTCAP }}</span>
             </p>
+          </div>
           </div>
         </div>
 
         <div class="coinbox" id="btnXmr">
+            <div class="coincontent" v-if="coins.DISPLAY">
           <div class="coinimage">
             <img src="https://cdn.worldvectorlogo.com/logos/monero.svg" alt="monero" />
           </div>
           <div class="price-container">
             <p>
-              <span class="price">{{ priceXmr }}</span>
+              <span class="price" >{{ coins.DISPLAY.XMR.USD.PRICE }}</span>
             </p>
           </div>
-          <div class="hr-hi-container">
-            <p>
-              High (24hr): <span class="hr-hi"> {{ hrHiXmr }}</span>
-            </p>
+          <div class="hr-vol-container">
+            <p>Change (24hr): <span class="hr-vol" v-bind:style="getColor(coins.RAW.XMR.USD.CHANGE24HOUR)" >{{ coins.DISPLAY.XMR.USD.CHANGE24HOUR }}</span></p>
           </div>
-          <div class="hr-low-container">
-            <p>
-              Low (24hr): <span class="hr-low"> {{ hrLowXmr }}</span>
-            </p>
-          </div>
+          <div class="hr-vol-container">
+              <p>% Change (24hr): <span class="hr-vol" v-bind:style="getColor(coins.RAW.XMR.USD.CHANGEPCT24HOUR)">{{ coins.RAW.XMR.USD.CHANGEPCT24HOUR | currency('%', 2, { symbolOnLeft: false }) }}</span></p>
+            </div>
           <div class="box-page-line"></div>
           <div class="hr-vol-container">
             <p>
-              Volume (24hr): <span class="hr-vol">{{ volXmr }}</span>
+              Volume (24hr): <span class="hr-vol" >{{ coins.DISPLAY.XMR.USD.VOLUME24HOUR }}</span>
             </p>
           </div>
           <div class="mkt-cap-container">
             <p>
-              Market Cap: <span class="mkt-cap">{{ mktCapXmr }}</span>
+              Market Cap: <span class="mkt-cap" >{{ coins.DISPLAY.XMR.USD.MKTCAP }}</span>
             </p>
+          </div>
           </div>
         </div>
       </div>
     </div>
+
     <div class="popup" id="popupBtc">
       <div class="popup-content">
         <div class="detail-header">
           <span class="closeBtn" id="closeBtnBtc">&times;</span>
           <div class="pop-up-price-container">
-            <div class="price-detail">
-              <h1>{{ priceBtc }}</h1>
+            <div class="price-detail" v-if="coins.DISPLAY">
+              <h1>{{ coins.DISPLAY.BTC.USD.PRICE }}</h1>
             </div>
             <div class="lastupdated">
-              <h3>Last Update: <span class="lastupdated-bold">{{ updBtc }}</span></h3>
+              <h3>Last Update: <span class="lastupdated-bold" v-bind:style="getColorUpdate(coins.DISPLAY.BTC.USD.LASTUPDATE)" v-if="coins.DISPLAY">{{ coins.DISPLAY.BTC.USD.LASTUPDATE
+                  }}</span></h3>
             </div>
           </div>
           <div class="coin-nameimage-container">
@@ -362,19 +346,19 @@
             </div>
           </div>
         </div>
-        <div class="detail-main-container">
+        <div class="detail-main-container" v-if="coins.DISPLAY">
           <div class="detail-main">
-            <p>Circulating Supply: <span class="hr-hi">{{ splyBtc }}</span></p>
-            </p>
+            <p>Change (24hr): <span class="hr-vol" v-bind:style="getColor(coins.RAW.BTC.USD.CHANGE24HOUR)" v-if="coins.DISPLAY" >{{ coins.DISPLAY.BTC.USD.CHANGE24HOUR }}</span></p>
+            <p>% Change (24hr): <span class="hr-vol" v-bind:style="getColor(coins.RAW.BTC.USD.CHANGEPCT24HOUR)" v-if="coins.DISPLAY" >{{ coins.RAW.BTC.USD.CHANGEPCT24HOUR | currency('%', 2, { symbolOnLeft: false }) }}</span></p>
             <div class="detail-page-line"></div>
-            <p>High (24hr): <span class="hr-hi">{{ hrHiBtc }}</span></p>
-            <p>Low (24hr): <span class="hr-low">{{ hrLowBtc }}</span></p>
+            <p>High (24hr): <span class="hr-hi" v-if="coins.DISPLAY">{{ coins.DISPLAY.BTC.USD.HIGH24HOUR }}</span></p>
+            <p>Low (24hr): <span class="hr-low" v-if="coins.DISPLAY">{{ coins.DISPLAY.BTC.USD.LOW24HOUR }}</span></p>
             <div class="detail-page-line"></div>
-            <p>Volume (24hr): <span class="hr-vol">{{ volBtc }}</span></p>
-            <p>Change (24hr): <span class="hr-vol">{{ chgBtc }}</span></p>
+            <p>Volume (24hr): <span class="hr-vol" v-if="coins.DISPLAY">{{ coins.DISPLAY.BTC.USD.VOLUME24HOUR }}</span></p>
+            <p>Market Cap: <span class="mkt-cap" v-if="coins.DISPLAY">{{ coins.DISPLAY.BTC.USD.MKTCAP }}</span></p>
+            <p>Circulating Supply: <span class="hr-hi" v-if="coins.DISPLAY">{{ coins.DISPLAY.BTC.USD.SUPPLY }}</span></p>
             <div class="detail-page-line"></div>
-            <p>Market Cap: <span class="mkt-cap">{{ mktCapBtc }}</span></p>
-            <p>Last Market:<span class="hr-vol"> {{ mktBtc }}</span></p>
+            <p>Last Market:<span class="hr-vol" v-if="coins.DISPLAY"> {{ coins.DISPLAY.BTC.USD.LASTMARKET }}</span></p>
           </div>
         </div>
       </div>
@@ -385,12 +369,13 @@
         <div class="detail-header">
           <span class="closeBtn" id="closeBtnEth">&times;</span>
           <div class="pop-up-price-container">
-            <div class="price-detail">
-              <h1>{{ priceEth }}</h1>
+            <div class="price-detail" v-if="coins.DISPLAY">
+              <h1>{{ coins.DISPLAY.ETH.USD.PRICE }}</h1>
             </div>
             <div class="lastupdated">
-              <h3>Last Update: <span class="lastupdated-bold">{{ updEth }}</span></h3>
-            </div>
+                <h3>Last Update: <span class="lastupdated-bold" v-bind:style="getColorUpdate(coins.DISPLAY.ETH.USD.LASTUPDATE)" v-if="coins.DISPLAY">{{ coins.DISPLAY.ETH.USD.LASTUPDATE
+                    }}</span></h3>
+              </div>
           </div>
           <div class="coin-nameimage-container">
             <div class="coinimage-detail">
@@ -402,19 +387,19 @@
           </div>
         </div>
         <div class="detail-main-container">
-          <div class="detail-main">
-            <p>Circulating Supply: <span class="hr-hi">{{ splyEth }}</span></p>
-            </p>
-            <div class="detail-page-line"></div>
-            <p>High (24hr): <span class="hr-hi">{{ hrHiEth }}</span></p>
-            <p>Low (24hr): <span class="hr-low">{{ hrLowEth }}</span></p>
-            <div class="detail-page-line"></div>
-            <p>Volume (24hr): <span class="hr-vol">{{ volEth }}</span></p>
-            <p>Change (24hr): <span class="hr-vol">{{ chgEth }}</span></p>
-            <div class="detail-page-line"></div>
-            <p>Market Cap: <span class="mkt-cap">{{ mktCapEth }}</span></p>
-            <p>Last Market:<span class="hr-vol"> {{ mktEth }}</span></p>
-          </div>
+            <div class="detail-main">
+                <p>Change (24hr): <span class="hr-vol" v-bind:style="getColor(coins.RAW.ETH.USD.CHANGE24HOUR)" v-if="coins.DISPLAY" >{{ coins.DISPLAY.ETH.USD.CHANGE24HOUR }}</span></p>
+                <p>% Change (24hr): <span class="hr-vol" v-bind:style="getColor(coins.RAW.ETH.USD.CHANGEPCT24HOUR)" v-if="coins.DISPLAY" >{{ coins.RAW.ETH.USD.CHANGEPCT24HOUR | currency('%', 2, { symbolOnLeft: false }) }}</span></p>
+                <div class="detail-page-line"></div>
+                <p>High (24hr): <span class="hr-hi" v-if="coins.DISPLAY">{{ coins.DISPLAY.ETH.USD.HIGH24HOUR }}</span></p>
+                <p>Low (24hr): <span class="hr-low" v-if="coins.DISPLAY">{{ coins.DISPLAY.ETH.USD.LOW24HOUR }}</span></p>
+                <div class="detail-page-line"></div>
+                <p>Volume (24hr): <span class="hr-vol" v-if="coins.DISPLAY">{{ coins.DISPLAY.ETH.USD.VOLUME24HOUR }}</span></p>
+                <p>Market Cap: <span class="mkt-cap" v-if="coins.DISPLAY">{{ coins.DISPLAY.ETH.USD.MKTCAP }}</span></p>
+                <p>Circulating Supply: <span class="hr-hi" v-if="coins.DISPLAY">{{ coins.DISPLAY.ETH.USD.SUPPLY }}</span></p>
+                <div class="detail-page-line"></div>
+                <p>Last Market:<span class="hr-vol" v-if="coins.DISPLAY"> {{ coins.DISPLAY.ETH.USD.LASTMARKET }}</span></p>
+              </div>
         </div>
       </div>
     </div>
@@ -424,12 +409,13 @@
         <div class="detail-header">
           <span class="closeBtn" id="closeBtnLtc">&times;</span>
           <div class="pop-up-price-container">
-            <div class="price-detail">
-              <h1>{{ priceLtc }}</h1>
+            <div class="price-detail" v-if="coins.DISPLAY">
+              <h1>{{ coins.DISPLAY.LTC.USD.PRICE }}</h1>
             </div>
             <div class="lastupdated">
-              <h3>Last Update: <span class="lastupdated-bold">{{ updLtc }}</span></h3>
-            </div>
+                <h3>Last Update: <span class="lastupdated-bold" v-bind:style="getColorUpdate(coins.DISPLAY.LTC.USD.LASTUPDATE)" v-if="coins.DISPLAY">{{ coins.DISPLAY.LTC.USD.LASTUPDATE
+                    }}</span></h3>
+              </div>
           </div>
           <div class="coin-nameimage-container">
             <div class="coinimage-detail">
@@ -441,19 +427,19 @@
           </div>
         </div>
         <div class="detail-main-container">
-          <div class="detail-main">
-            <p>Circulating Supply: <span class="hr-hi">{{ splyLtc }}</span></p>
-            </p>
-            <div class="detail-page-line"></div>
-            <p>High (24hr): <span class="hr-hi">{{ hrHiLtc }}</span></p>
-            <p>Low (24hr): <span class="hr-low">{{ hrLowLtc }}</span></p>
-            <div class="detail-page-line"></div>
-            <p>Volume (24hr): <span class="hr-vol">{{ volLtc }}</span></p>
-            <p>Change (24hr): <span class="hr-vol">{{ chgLtc }}</span></p>
-            <div class="detail-page-line"></div>
-            <p>Market Cap: <span class="mkt-cap">{{ mktCapLtc }}</span></p>
-            <p>Last Market:<span class="hr-vol"> {{ mktLtc }}</span></p>
-          </div>
+            <div class="detail-main">
+                <p>Change (24hr): <span class="hr-vol" v-bind:style="getColor(coins.RAW.LTC.USD.CHANGE24HOUR)" v-if="coins.DISPLAY" >{{ coins.DISPLAY.LTC.USD.CHANGE24HOUR }}</span></p>
+                <p>% Change (24hr): <span class="hr-vol" v-bind:style="getColor(coins.RAW.LTC.USD.CHANGEPCT24HOUR)" v-if="coins.DISPLAY" >{{ coins.RAW.LTC.USD.CHANGEPCT24HOUR | currency('%', 2, { symbolOnLeft: false }) }}</span></p>
+                <div class="detail-page-line"></div>
+                <p>High (24hr): <span class="hr-hi" v-if="coins.DISPLAY">{{ coins.DISPLAY.LTC.USD.HIGH24HOUR }}</span></p>
+                <p>Low (24hr): <span class="hr-low" v-if="coins.DISPLAY">{{ coins.DISPLAY.LTC.USD.LOW24HOUR }}</span></p>
+                <div class="detail-page-line"></div>
+                <p>Volume (24hr): <span class="hr-vol" v-if="coins.DISPLAY">{{ coins.DISPLAY.LTC.USD.VOLUME24HOUR }}</span></p>
+                <p>Market Cap: <span class="mkt-cap" v-if="coins.DISPLAY">{{ coins.DISPLAY.LTC.USD.MKTCAP }}</span></p>
+                <p>Circulating Supply: <span class="hr-hi" v-if="coins.DISPLAY">{{ coins.DISPLAY.LTC.USD.SUPPLY }}</span></p>
+                <div class="detail-page-line"></div>
+                <p>Last Market:<span class="hr-vol" v-if="coins.DISPLAY"> {{ coins.DISPLAY.LTC.USD.LASTMARKET }}</span></p>
+              </div>
         </div>
       </div>
     </div>
@@ -463,12 +449,13 @@
         <div class="detail-header">
           <span class="closeBtn" id="closeBtnXrp">&times;</span>
           <div class="pop-up-price-container">
-            <div class="price-detail">
-              <h1>{{ priceXrp }}</h1>
+            <div class="price-detail" v-if="coins.DISPLAY">
+              <h1>{{ coins.DISPLAY.XRP.USD.PRICE }}</h1>
             </div>
             <div class="lastupdated">
-              <h3>Last Update: <span class="lastupdated-bold">{{ updXrp }}</span></h3>
-            </div>
+                <h3>Last Update: <span class="lastupdated-bold" v-bind:style="getColorUpdate(coins.DISPLAY.XRP.USD.LASTUPDATE)" v-if="coins.DISPLAY">{{ coins.DISPLAY.XRP.USD.LASTUPDATE
+                    }}</span></h3>
+              </div>
           </div>
           <div class="coin-nameimage-container">
             <div class="coinimage-detail">
@@ -480,19 +467,19 @@
           </div>
         </div>
         <div class="detail-main-container">
-          <div class="detail-main">
-            <p>Circulating Supply: <span class="hr-hi">{{ splyXrp }}</span></p>
-            </p>
-            <div class="detail-page-line"></div>
-            <p>High (24hr): <span class="hr-hi">{{ hrHiXrp }}</span></p>
-            <p>Low (24hr): <span class="hr-low">{{ hrLowXrp }}</span></p>
-            <div class="detail-page-line"></div>
-            <p>Volume (24hr): <span class="hr-vol">{{ volXrp }}</span></p>
-            <p>Change (24hr): <span class="hr-vol">{{ chgXrp }}</span></p>
-            <div class="detail-page-line"></div>
-            <p>Market Cap: <span class="mkt-cap">{{ mktCapXrp }}</span></p>
-            <p>Last Market:<span class="hr-vol"> {{ mktXrp }}</span></p>
-          </div>
+            <div class="detail-main">
+                <p>Change (24hr): <span class="hr-vol" v-bind:style="getColor(coins.RAW.XRP.USD.CHANGE24HOUR)" v-if="coins.DISPLAY" >{{ coins.DISPLAY.XRP.USD.CHANGE24HOUR }}</span></p>
+                <p>% Change (24hr): <span class="hr-vol" v-bind:style="getColor(coins.RAW.XRP.USD.CHANGEPCT24HOUR)" v-if="coins.DISPLAY" >{{ coins.RAW.XRP.USD.CHANGEPCT24HOUR | currency('%', 2, { symbolOnLeft: false }) }}</span></p>
+                <div class="detail-page-line"></div>
+                <p>High (24hr): <span class="hr-hi" v-if="coins.DISPLAY">{{ coins.DISPLAY.XRP.USD.HIGH24HOUR }}</span></p>
+                <p>Low (24hr): <span class="hr-low" v-if="coins.DISPLAY">{{ coins.DISPLAY.XRP.USD.LOW24HOUR }}</span></p>
+                <div class="detail-page-line"></div>
+                <p>Volume (24hr): <span class="hr-vol" v-if="coins.DISPLAY">{{ coins.DISPLAY.XRP.USD.VOLUME24HOUR }}</span></p>
+                <p>Market Cap: <span class="mkt-cap" v-if="coins.DISPLAY">{{ coins.DISPLAY.XRP.USD.MKTCAP }}</span></p>
+                <p>Circulating Supply: <span class="hr-hi" v-if="coins.DISPLAY">{{ coins.DISPLAY.XRP.USD.SUPPLY }}</span></p>
+                <div class="detail-page-line"></div>
+                <p>Last Market:<span class="hr-vol" v-if="coins.DISPLAY"> {{ coins.DISPLAY.XRP.USD.LASTMARKET }}</span></p>
+              </div>
         </div>
       </div>
     </div>
@@ -502,12 +489,13 @@
         <div class="detail-header">
           <span class="closeBtn" id="closeBtnOmg">&times;</span>
           <div class="pop-up-price-container">
-            <div class="price-detail">
-              <h1>{{ priceOmg }}</h1>
+            <div class="price-detail" v-if="coins.DISPLAY">
+              <h1>{{ coins.DISPLAY.OMG.USD.PRICE }}</h1>
             </div>
             <div class="lastupdated">
-              <h3>Last Update: <span class="lastupdated-bold">{{ updOmg }}</span></h3>
-            </div>
+                <h3>Last Update: <span class="lastupdated-bold" v-bind:style="getColorUpdate(coins.DISPLAY.OMG.USD.LASTUPDATE)" v-if="coins.DISPLAY">{{ coins.DISPLAY.OMG.USD.LASTUPDATE
+                    }}</span></h3>
+              </div>
           </div>
           <div class="coin-nameimage-container">
             <div class="coinimage-detail">
@@ -519,19 +507,19 @@
           </div>
         </div>
         <div class="detail-main-container">
-          <div class="detail-main">
-            <p>Circulating Supply: <span class="hr-hi">{{ splyOmg }}</span></p>
-            </p>
-            <div class="detail-page-line"></div>
-            <p>High (24hr): <span class="hr-hi">{{ hrHiOmg }}</span></p>
-            <p>Low (24hr): <span class="hr-low">{{ hrLowOmg }}</span></p>
-            <div class="detail-page-line"></div>
-            <p>Volume (24hr): <span class="hr-vol">{{ volOmg }}</span></p>
-            <p>Change (24hr): <span class="hr-vol">{{ chgOmg }}</span></p>
-            <div class="detail-page-line"></div>
-            <p>Market Cap: <span class="mkt-cap">{{ mktCapOmg }}</span></p>
-            <p>Last Market:<span class="hr-vol"> {{ mktOmg }}</span></p>
-          </div>
+            <div class="detail-main">
+                <p>Change (24hr): <span class="hr-vol" v-bind:style="getColor(coins.RAW.OMG.USD.CHANGE24HOUR)" v-if="coins.DISPLAY" >{{ coins.DISPLAY.OMG.USD.CHANGE24HOUR }}</span></p>
+                <p>% Change (24hr): <span class="hr-vol" v-bind:style="getColor(coins.RAW.OMG.USD.CHANGEPCT24HOUR)" v-if="coins.DISPLAY" >{{ coins.RAW.OMG.USD.CHANGEPCT24HOUR | currency('%', 2, { symbolOnLeft: false }) }}</span></p>
+                <div class="detail-page-line"></div>
+                <p>High (24hr): <span class="hr-hi" v-if="coins.DISPLAY">{{ coins.DISPLAY.OMG.USD.HIGH24HOUR }}</span></p>
+                <p>Low (24hr): <span class="hr-low" v-if="coins.DISPLAY">{{ coins.DISPLAY.OMG.USD.LOW24HOUR }}</span></p>
+                <div class="detail-page-line"></div>
+                <p>Volume (24hr): <span class="hr-vol" v-if="coins.DISPLAY">{{ coins.DISPLAY.OMG.USD.VOLUME24HOUR }}</span></p>
+                <p>Market Cap: <span class="mkt-cap" v-if="coins.DISPLAY">{{ coins.DISPLAY.OMG.USD.MKTCAP }}</span></p>
+                <p>Circulating Supply: <span class="hr-hi" v-if="coins.DISPLAY">{{ coins.DISPLAY.OMG.USD.SUPPLY }}</span></p>
+                <div class="detail-page-line"></div>
+                <p>Last Market:<span class="hr-vol" v-if="coins.DISPLAY"> {{ coins.DISPLAY.OMG.USD.LASTMARKET }}</span></p>
+              </div>
         </div>
       </div>
     </div>
@@ -541,12 +529,13 @@
         <div class="detail-header">
           <span class="closeBtn" id="closeBtnEos">&times;</span>
           <div class="pop-up-price-container">
-            <div class="price-detail">
-              <h1>{{ priceEos }}</h1>
+            <div class="price-detail" v-if="coins.DISPLAY">
+              <h1>{{ coins.DISPLAY.EOS.USD.PRICE }}</h1>
             </div>
             <div class="lastupdated">
-              <h3>Last Update: <span class="lastupdated-bold">{{ updEos }}</span></h3>
-            </div>
+                <h3>Last Update: <span class="lastupdated-bold" v-bind:style="getColorUpdate(coins.DISPLAY.EOS.USD.LASTUPDATE)" v-if="coins.DISPLAY">{{ coins.DISPLAY.EOS.USD.LASTUPDATE
+                    }}</span></h3>
+              </div>
           </div>
           <div class="coin-nameimage-container">
             <div class="coinimage-detail">
@@ -558,19 +547,19 @@
           </div>
         </div>
         <div class="detail-main-container">
-          <div class="detail-main">
-            <p>Circulating Supply: <span class="hr-hi">{{ splyEos }}</span></p>
-            </p>
-            <div class="detail-page-line"></div>
-            <p>High (24hr): <span class="hr-hi">{{ hrHiEos }}</span></p>
-            <p>Low (24hr): <span class="hr-low">{{ hrLowEos }}</span></p>
-            <div class="detail-page-line"></div>
-            <p>Volume (24hr): <span class="hr-vol">{{ volEos }}</span></p>
-            <p>Change (24hr): <span class="hr-vol">{{ chgEos }}</span></p>
-            <div class="detail-page-line"></div>
-            <p>Market Cap: <span class="mkt-cap">{{ mktCapEos }}</span></p>
-            <p>Last Market:<span class="hr-vol"> {{ mktEos }}</span></p>
-          </div>
+            <div class="detail-main">
+                <p>Change (24hr): <span class="hr-vol" v-bind:style="getColor(coins.RAW.EOS.USD.CHANGE24HOUR)" v-if="coins.DISPLAY" >{{ coins.DISPLAY.EOS.USD.CHANGE24HOUR }}</span></p>
+                <p>% Change (24hr): <span class="hr-vol" v-bind:style="getColor(coins.RAW.EOS.USD.CHANGEPCT24HOUR)" v-if="coins.DISPLAY" >{{ coins.RAW.EOS.USD.CHANGEPCT24HOUR | currency('%', 2, { symbolOnLeft: false }) }}</span></p>
+                <div class="detail-page-line"></div>
+                <p>High (24hr): <span class="hr-hi" v-if="coins.DISPLAY">{{ coins.DISPLAY.EOS.USD.HIGH24HOUR }}</span></p>
+                <p>Low (24hr): <span class="hr-low" v-if="coins.DISPLAY">{{ coins.DISPLAY.EOS.USD.LOW24HOUR }}</span></p>
+                <div class="detail-page-line"></div>
+                <p>Volume (24hr): <span class="hr-vol" v-if="coins.DISPLAY">{{ coins.DISPLAY.EOS.USD.VOLUME24HOUR }}</span></p>
+                <p>Market Cap: <span class="mkt-cap" v-if="coins.DISPLAY">{{ coins.DISPLAY.EOS.USD.MKTCAP }}</span></p>
+                <p>Circulating Supply: <span class="hr-hi" v-if="coins.DISPLAY">{{ coins.DISPLAY.EOS.USD.SUPPLY }}</span></p>
+                <div class="detail-page-line"></div>
+                <p>Last Market:<span class="hr-vol" v-if="coins.DISPLAY"> {{ coins.DISPLAY.EOS.USD.LASTMARKET }}</span></p>
+              </div>
         </div>
       </div>
     </div>
@@ -580,12 +569,13 @@
         <div class="detail-header">
           <span class="closeBtn" id="closeBtnNeo">&times;</span>
           <div class="pop-up-price-container">
-            <div class="price-detail">
-              <h1>{{ priceNeo }}</h1>
+            <div class="price-detail" v-if="coins.DISPLAY">
+              <h1>{{ coins.DISPLAY.NEO.USD.PRICE }}</h1>
             </div>
             <div class="lastupdated">
-              <h3>Last Update: <span class="lastupdated-bold">{{ updNeo }}</span></h3>
-            </div>
+                <h3>Last Update: <span class="lastupdated-bold" v-bind:style="getColorUpdate(coins.DISPLAY.NEO.USD.LASTUPDATE)" v-if="coins.DISPLAY">{{ coins.DISPLAY.NEO.USD.LASTUPDATE
+                    }}</span></h3>
+              </div>
           </div>
           <div class="coin-nameimage-container">
             <div class="coinimage-detail">
@@ -597,19 +587,19 @@
           </div>
         </div>
         <div class="detail-main-container">
-          <div class="detail-main">
-            <p>Circulating Supply: <span class="hr-hi">{{ splyNeo }}</span></p>
-            </p>
-            <div class="detail-page-line"></div>
-            <p>High (24hr): <span class="hr-hi">{{ hrHiNeo }}</span></p>
-            <p>Low (24hr): <span class="hr-low">{{ hrLowNeo }}</span></p>
-            <div class="detail-page-line"></div>
-            <p>Volume (24hr): <span class="hr-vol">{{ volNeo }}</span></p>
-            <p>Change (24hr): <span class="hr-vol">{{ chgNeo }}</span></p>
-            <div class="detail-page-line"></div>
-            <p>Market Cap: <span class="mkt-cap">{{ mktCapNeo }}</span></p>
-            <p>Last Market:<span class="hr-vol"> {{ mktNeo }}</span></p>
-          </div>
+            <div class="detail-main">
+                <p>Change (24hr): <span class="hr-vol" v-bind:style="getColor(coins.RAW.NEO.USD.CHANGE24HOUR)" v-if="coins.DISPLAY" >{{ coins.DISPLAY.NEO.USD.CHANGE24HOUR }}</span></p>
+                <p>% Change (24hr): <span class="hr-vol" v-bind:style="getColor(coins.RAW.NEO.USD.CHANGEPCT24HOUR)" v-if="coins.DISPLAY" >{{ coins.RAW.NEO.USD.CHANGEPCT24HOUR | currency('%', 2, { symbolOnLeft: false }) }}</span></p>
+                <div class="detail-page-line"></div>
+                <p>High (24hr): <span class="hr-hi" v-if="coins.DISPLAY">{{ coins.DISPLAY.NEO.USD.HIGH24HOUR }}</span></p>
+                <p>Low (24hr): <span class="hr-low" v-if="coins.DISPLAY">{{ coins.DISPLAY.NEO.USD.LOW24HOUR }}</span></p>
+                <div class="detail-page-line"></div>
+                <p>Volume (24hr): <span class="hr-vol" v-if="coins.DISPLAY">{{ coins.DISPLAY.NEO.USD.VOLUME24HOUR }}</span></p>
+                <p>Market Cap: <span class="mkt-cap" v-if="coins.DISPLAY">{{ coins.DISPLAY.NEO.USD.MKTCAP }}</span></p>
+                <p>Circulating Supply: <span class="hr-hi" v-if="coins.DISPLAY">{{ coins.DISPLAY.NEO.USD.SUPPLY }}</span></p>
+                <div class="detail-page-line"></div>
+                <p>Last Market:<span class="hr-vol" v-if="coins.DISPLAY"> {{ coins.DISPLAY.NEO.USD.LASTMARKET }}</span></p>
+              </div>
         </div>
       </div>
     </div>
@@ -619,12 +609,13 @@
         <div class="detail-header">
           <span class="closeBtn" id="closeBtnDash">&times;</span>
           <div class="pop-up-price-container">
-            <div class="price-detail">
-              <h1>{{ priceDash }}</h1>
+            <div class="price-detail" v-if="coins.DISPLAY">
+              <h1>{{ coins.DISPLAY.DASH.USD.PRICE }}</h1>
             </div>
             <div class="lastupdated">
-              <h3>Last Update: <span class="lastupdated-bold">{{ updDash }}</span></h3>
-            </div>
+                <h3>Last Update: <span class="lastupdated-bold" v-bind:style="getColorUpdate(coins.DISPLAY.DASH.USD.LASTUPDATE)" v-if="coins.DISPLAY">{{ coins.DISPLAY.DASH.USD.LASTUPDATE
+                    }}</span></h3>
+              </div>
           </div>
           <div class="coin-nameimage-container">
             <div class="coinimage-detail">
@@ -636,19 +627,19 @@
           </div>
         </div>
         <div class="detail-main-container">
-          <div class="detail-main">
-            <p>Circulating Supply: <span class="hr-hi">{{ splyDash }}</span></p>
-            </p>
-            <div class="detail-page-line"></div>
-            <p>High (24hr): <span class="hr-hi">{{ hrHiDash }}</span></p>
-            <p>Low (24hr): <span class="hr-low">{{ hrLowDash }}</span></p>
-            <div class="detail-page-line"></div>
-            <p>Volume (24hr): <span class="hr-vol">{{ volDash }}</span></p>
-            <p>Change (24hr): <span class="hr-vol">{{ chgDash }}</span></p>
-            <div class="detail-page-line"></div>
-            <p>Market Cap: <span class="mkt-cap">{{ mktCapDash }}</span></p>
-            <p>Last Market:<span class="hr-vol"> {{ mktDash }}</span></p>
-          </div>
+            <div class="detail-main">
+                <p>Change (24hr): <span class="hr-vol" v-bind:style="getColor(coins.RAW.DASH.USD.CHANGE24HOUR)" v-if="coins.DISPLAY" >{{ coins.DISPLAY.DASH.USD.CHANGE24HOUR }}</span></p>
+                <p>% Change (24hr): <span class="hr-vol" v-bind:style="getColor(coins.RAW.DASH.USD.CHANGEPCT24HOUR)" v-if="coins.DISPLAY" >{{ coins.RAW.DASH.USD.CHANGEPCT24HOUR | currency('%', 2, { symbolOnLeft: false }) }}</span></p>
+                <div class="detail-page-line"></div>
+                <p>High (24hr): <span class="hr-hi" v-if="coins.DISPLAY">{{ coins.DISPLAY.DASH.USD.HIGH24HOUR }}</span></p>
+                <p>Low (24hr): <span class="hr-low" v-if="coins.DISPLAY">{{ coins.DISPLAY.DASH.USD.LOW24HOUR }}</span></p>
+                <div class="detail-page-line"></div>
+                <p>Volume (24hr): <span class="hr-vol" v-if="coins.DISPLAY">{{ coins.DISPLAY.DASH.USD.VOLUME24HOUR }}</span></p>
+                <p>Market Cap: <span class="mkt-cap" v-if="coins.DISPLAY">{{ coins.DISPLAY.DASH.USD.MKTCAP }}</span></p>
+                <p>Circulating Supply: <span class="hr-hi" v-if="coins.DISPLAY">{{ coins.DISPLAY.DASH.USD.SUPPLY }}</span></p>
+                <div class="detail-page-line"></div>
+                <p>Last Market:<span class="hr-vol" v-if="coins.DISPLAY"> {{ coins.DISPLAY.DASH.USD.LASTMARKET }}</span></p>
+              </div>
         </div>
       </div>
     </div>
@@ -658,12 +649,13 @@
         <div class="detail-header">
           <span class="closeBtn" id="closeBtnXmr">&times;</span>
           <div class="pop-up-price-container">
-            <div class="price-detail">
-              <h1>{{ priceXmr }}</h1>
+            <div class="price-detail" v-if="coins.DISPLAY">
+              <h1>{{ coins.DISPLAY.XMR.USD.PRICE }}</h1>
             </div>
             <div class="lastupdated">
-              <h3>Last Update: <span class="lastupdated-bold">{{ updXmr }}</span></h3>
-            </div>
+                <h3>Last Update: <span class="lastupdated-bold" v-bind:style="getColorUpdate(coins.DISPLAY.XMR.USD.LASTUPDATE)" v-if="coins.DISPLAY">{{ coins.DISPLAY.XMR.USD.LASTUPDATE
+                    }}</span></h3>
+              </div>
           </div>
           <div class="coin-nameimage-container">
             <div class="coinimage-detail">
@@ -675,29 +667,33 @@
           </div>
         </div>
         <div class="detail-main-container">
-          <div class="detail-main">
-            <p>Circulating Supply: <span class="hr-hi">{{ splyXmr }}</span></p>
-            </p>
-            <div class="detail-page-line"></div>
-            <p>High (24hr): <span class="hr-hi">{{ hrHiXmr }}</span></p>
-            <p>Low (24hr): <span class="hr-low">{{ hrLowXmr }}</span></p>
-            <div class="detail-page-line"></div>
-            <p>Volume (24hr): <span class="hr-vol">{{ volXmr }}</span></p>
-            <p>Change (24hr): <span class="hr-vol">{{ chgXmr }}</span></p>
-            <div class="detail-page-line"></div>
-            <p>Market Cap: <span class="mkt-cap">{{ mktCapXmr }}</span></p>
-            <p>Last Market:<span class="hr-vol"> {{ mktXmr }}</span></p>
-          </div>
+            <div class="detail-main">
+                <p>Change (24hr): <span class="hr-vol" v-bind:style="getColor(coins.RAW.XMR.USD.CHANGE24HOUR)" v-if="coins.DISPLAY" >{{ coins.DISPLAY.XMR.USD.CHANGE24HOUR }}</span></p>
+                <p>% Change (24hr): <span class="hr-vol" v-bind:style="getColor(coins.RAW.XMR.USD.CHANGEPCT24HOUR)" v-if="coins.DISPLAY" >{{ coins.RAW.XMR.USD.CHANGEPCT24HOUR | currency('%', 2, { symbolOnLeft: false }) }}</span></p>
+                <div class="detail-page-line"></div>
+                <p>High (24hr): <span class="hr-hi" v-if="coins.DISPLAY">{{ coins.DISPLAY.XMR.USD.HIGH24HOUR }}</span></p>
+                <p>Low (24hr): <span class="hr-low" v-if="coins.DISPLAY">{{ coins.DISPLAY.XMR.USD.LOW24HOUR }}</span></p>
+                <div class="detail-page-line"></div>
+                <p>Volume (24hr): <span class="hr-vol" v-if="coins.DISPLAY">{{ coins.DISPLAY.XMR.USD.VOLUME24HOUR }}</span></p>
+                <p>Market Cap: <span class="mkt-cap" v-if="coins.DISPLAY">{{ coins.DISPLAY.XMR.USD.MKTCAP }}</span></p>
+                <p>Circulating Supply: <span class="hr-hi" v-if="coins.DISPLAY">{{ coins.DISPLAY.XMR.USD.SUPPLY }}</span></p>
+                <div class="detail-page-line"></div>
+                <p>Last Market:<span class="hr-vol" v-if="coins.DISPLAY"> {{ coins.DISPLAY.XMR.USD.LASTMARKET }}</span></p>
+              </div>
         </div>
       </div>
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script type="text/javascript" src="js/vue.js"></script>
-  <script type="text/javascript" src="js/burger.js"></script>
   <script type="text/javascript" src="js/popup.js"></script>
+  <script type="text/javascript" src="js/burger.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue2-filters/dist/vue2-filters.min.js"></script>
+  <script type="text/javascript" src="js/vue.js"></script>
+
+
+
 </body>
 
 </html>
