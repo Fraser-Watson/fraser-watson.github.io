@@ -305,11 +305,13 @@ ul {
 }
 
 .pop-up-price-container h1{
+ text-align: right;
  margin:0;
  font-size: 30px;
 }
 
 .pop-up-price-container h3{
+  text-align: right;
   margin:10px 0 0 0;
   font-size: 18px;
   font-weight: 400;
@@ -764,7 +766,7 @@ ul {
     background: #fafafa;
     position: relative;
     border-radius: 10px;
-    background: -webkit-linear-gradient(top, #EBEBEB 20%, white 1%);
+    background: -webkit-linear-gradient(top, #EBEBEB 25%, white 1%);
     transition: 0.1s;
     margin-left: 8px;
     margin-right: 8px;
@@ -839,6 +841,7 @@ ul {
   /* --- Rates --- */
 
   .coinbox {
+    background: -webkit-linear-gradient(top, #EBEBEB 22%, white 1%);
     width: 180px;
     height: 375px;
     margin-left: 8px;
@@ -866,6 +869,58 @@ ul {
     height: 3px;
    
   }
+
+  /* popup window */
+
+.popup-content{
+  width: 1000px;
+  height: auto;
+  background: -webkit-linear-gradient(top, #EBEBEB 29%, white 1%);
+}
+
+.detail-header{
+  height: 150px;
+}
+
+.pop-up-price-container{
+  float: right;
+  margin: 60px 5px 40px 5px;
+}
+
+.pop-up-price-container h1{
+ margin:0;
+ font-size: 30px;
+}
+
+.pop-up-price-container h3{
+  margin:10px 0 0 0;
+  font-size: 18px;
+ }
+
+.coin-nameimage-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.coin-nameimage-container img{
+  margin: 25px 25px 5px 25px; 
+}
+
+.coin-name-detail h1{
+  margin: 0;
+  font-size: 25px;
+  text-align: center;
+}
+
+.detail-main{
+  margin: 70px 35px 35px 35px;
+  text-align: center;
+}
+
+.detail-page-line {
+  margin-left: auto;
+  margin-right: auto;
+}
 
   /*--- News ---*/
 
@@ -982,14 +1037,7 @@ ul {
   .coinbox {
     width: 300px;
     height: auto;
-    background: #fafafa;
-    position: relative;
-    border-radius: 10px;
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-bottom: 50px;
     background: -webkit-linear-gradient(top, #EBEBEB 25%, white 1%);
-    transition: 0.1s;
   }
 
   .coinbox p{
@@ -1007,4 +1055,34 @@ ul {
     height: 100px;
     width: 100px;
   }
+
+   /* popup window */
+
+.popup-content{
+  width: 100%;
+  height: auto;
+  margin: 5px;
+  background: -webkit-linear-gradient(top, #EBEBEB 25%, white 1%);
+}
+
+.pop-up-price-container{
+  margin-top: 45px;
+}
+.pop-up-price-container h1{
+ margin:0;
+ font-size: 1.7em;
+ text-align: right;
+}
+
+.coin-nameimage-container img{
+  margin: 25px 25px 5px 25px; 
+  height: 75px;
+  width: 75px;
+}
+
+.lastupdated{
+width: 90px;
+height: auto;
+}
+
 }
