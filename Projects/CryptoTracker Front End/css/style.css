@@ -141,7 +141,7 @@ ul {
 .footercontainer{
   background-color: white;
   height: 150px;
-  margin: 0;
+  margin: 100px 0 0 0 ;
 }
 
 .footercontent{
@@ -607,6 +607,7 @@ ul {
 
 .wallet-balance {
   margin-left: 10px;
+  text-align: center;
 }
 
 .wallet-balance h2 {
@@ -615,6 +616,7 @@ ul {
 }
 
 .wallet-desc {
+  text-align: center;
   margin: 10px;
 }
 
@@ -624,20 +626,17 @@ ul {
 }
 
 .wallet-graph {
-  margin-left: auto;
-  margin-right: auto;
+  text-align: center;
 }
 
 .wallet-graph img {
-  margin-top: 30px;
-  margin-left: 13px;
-  margin-right: auto;
+  width: 86%;
 }
 
 /* Wallet user values */
 
 .wallet-box {
-  width: 1200px;
+  width: 1400px;
   height: 100px;
   background: #fafafa;
   position: relative;
