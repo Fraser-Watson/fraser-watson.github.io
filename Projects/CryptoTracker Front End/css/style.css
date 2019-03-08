@@ -840,11 +840,11 @@ ul {
 
   .coinbox {
     width: 180px;
-    height: 390px;
+    height: 375px;
     background: #fafafa;
     position: relative;
     border-radius: 10px;
-    background: -webkit-linear-gradient(top, #EBEBEB 25%, white 1%);
+    background: -webkit-linear-gradient(top, #EBEBEB 20%, white 1%);
     transition: 0.1s;
     margin-left: 8px;
     margin-right: 8px;
@@ -859,6 +859,11 @@ ul {
 
   .price {
     font-size: 1.5em;
+  }
+
+  .coinimage img{
+    height: 75px;
+    width: 75px;
   }
 
   /*--- News ---*/
