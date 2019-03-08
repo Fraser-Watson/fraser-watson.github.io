@@ -520,9 +520,17 @@ ul {
   background: #fafafa;
   position: relative;
   border-radius: 5px;
-  -webkit-box-shadow: 5px 5px 100px -22px rgba(0, 0, 0, 0.13);
-  -moz-box-shadow: 5px 5px 100px -22px rgba(0, 0, 0, 0.13);
-  box-shadow: 5px 5px 100px -22px rgba(0, 0, 0, 0.13);
+  -webkit-box-shadow: 20px 20px 37px 1px rgba(224,224,224,1);
+  -moz-box-shadow: 20px 20px 37px 1px rgba(224,224,224,1);
+  box-shadow: 20px 20px 37px 1px rgba(224,224,224,1);
+  transition: all 0.5s ease;
+}
+
+.news-coinbox:hover{
+  transform: translate3d(0px, -4px, 0px);
+  -webkit-box-shadow: 30px 30px 60px 10px rgba(224,224,224,1);
+  -moz-box-shadow: 30px 30px 60px 10px rgba(224,224,224,1);
+  box-shadow: 30px 30px 60px 10px rgba(224,224,224,1);
 }
 
 .news-coin-image img {
