@@ -42,6 +42,7 @@ ul {
   margin-top: 10px;
 }
 
+
 /* --- nav bar --- */
 
 .navbar {
@@ -132,6 +133,66 @@ ul {
 
 .burger-open i{
   font-size: 30px;
+}
+
+/* --- Footer ---*/
+
+
+.footercontainer{
+  background-color: white;
+  height: 150px;
+  margin: 0;
+}
+
+.footercontent{
+  height: 70px;
+  padding: 40px 0 40px 0;
+  margin: 0 5% 0 5%;
+}
+
+.copyright {
+  float: left;
+  margin-left: 15px;
+}
+
+.copyright p{
+ color: #949494;
+}
+
+.contacts, .contacts a{
+  display: flex;
+  list-style-type: none;
+  font-size: 32px;
+  color: rgb(87, 185, 238);
+  float: right;
+  text-decoration: none;
+  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s;
+}
+
+.contacts li{
+  margin: 15px;
+}
+
+.contacts li a:hover{
+  opacity: 0.7;
+}
+
+.copyright{
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.logofooter img{
+  height: 32px;
+  float: left;
+  margin-top: 16px;
+  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s;
+}
+
+.logofooter img:hover{
+  opacity: 0.7;
 }
 
 /* --- Title ---*/
@@ -837,6 +898,59 @@ ul {
     display: none;
   }
 
+
+  /* --- Footer --- */
+
+  .footercontainer{
+    height: auto;
+    margin: 0;
+  }
+  
+  .footercontent{
+    height: auto;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .contacts, .contacts a{
+    justify-content: center;
+    float: none;
+  }
+
+  .copyright{
+    float: none;
+    text-align: center;
+  }
+  
+  .logofooter{
+    text-align: center;
+  }
+
+  .logofooter img{
+    float: none;
+  }
+  
+  
+  /* --- Title ---*/
+  
+  .title {
+    text-align: center;
+    font-size: 20px;
+  }
+  
+  .title h1{
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .icon {
+    text-align: center;
+    margin-right: 30%;
+    margin-left: 30%;
+    margin-top: 50px;
+    float: none;
+  }
+  
 
   /* --- Rates --- */
 
