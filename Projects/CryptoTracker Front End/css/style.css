@@ -866,6 +866,12 @@ ul {
     width: 75px;
   }
 
+  .box-page-line {
+    width: 50px;
+    height: 3px;
+   
+  }
+
   /*--- News ---*/
 
   /* Coin Boxes */
