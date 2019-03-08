@@ -349,9 +349,9 @@ ul {
   border-radius: 10px;
   margin: 25px;
   background: -webkit-linear-gradient(top, #EBEBEB 25%, white 1%);
-  -webkit-box-shadow: 30px 30px 100px -22px rgba(0, 0, 0, 0.20);
-  -moz-box-shadow: 30px 30px 100px -22px rgba(0, 0, 0, 0.20);
-  box-shadow: 30px 30px 100px -22px rgba(0, 0, 0, 0.20);
+  -webkit-box-shadow: 30px 30px 60px 10px rgba(0,0,0,0.15);
+  -moz-box-shadow: 30px 30px 60px 10px rgba(0,0,0,0.15);
+  box-shadow: 30px 30px 60px 10px rgba(0,0,0,0.15);
   animation-name:popupopen;
   animation-duration: 0.5s;
 }
@@ -754,7 +754,7 @@ ul {
     margin-right: 15px;
     margin-bottom: 50px;
     background: -webkit-linear-gradient(top, #EBEBEB 25%, white 1%);
-    transition: 0.1s;
+    transition: all 0.5s ease;
   }
 
 
@@ -834,7 +834,7 @@ ul {
     position: relative;
     border-radius: 10px;
     background: -webkit-linear-gradient(top, #EBEBEB 25%, white 1%);
-    transition: 0.1s;
+    transition: all 0.5s ease;
     margin-left: 8px;
     margin-right: 8px;
     margin-bottom: 40px;
