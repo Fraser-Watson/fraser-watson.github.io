@@ -841,17 +841,12 @@ ul {
   .coinbox {
     width: 180px;
     height: 375px;
-    background: #fafafa;
-    position: relative;
-    border-radius: 10px;
-    background: -webkit-linear-gradient(top, #EBEBEB 20%, white 1%);
-    transition: 0.1s;
     margin-left: 8px;
     margin-right: 8px;
   }
 
   .coinbox p{
-    font-size: 1.05em;
+    font-size: 1.1em;
     text-align: center;
     margin-left: 8px;
     margin-right: 8px;
@@ -979,5 +974,37 @@ ul {
 @media only screen and (min-width: 630px){
   .burger-open{
     display: none;
+  }
+  
+}
+
+@media only screen and (max-width: 408px){
+  .coinbox {
+    width: 300px;
+    height: auto;
+    background: #fafafa;
+    position: relative;
+    border-radius: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 50px;
+    background: -webkit-linear-gradient(top, #EBEBEB 25%, white 1%);
+    transition: 0.1s;
+  }
+
+  .coinbox p{
+    font-size: 1.3em;
+    text-align: center;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+
+  .coincontent{
+    margin-bottom: 25px;
+  }
+
+  .coinimage img{
+    height: 100px;
+    width: 100px;
   }
 }
