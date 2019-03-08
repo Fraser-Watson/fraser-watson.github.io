@@ -16,13 +16,13 @@ body {
 /* global */
 
 .container {
-  width: 1200px;
+  width: 1350px;
   margin: auto;
   overflow: hidden;
 }
 
 .container-body {
-  width: 1200px;
+  width: 1400px;
   margin: auto;
 }
 
@@ -137,19 +137,21 @@ ul {
 /* --- Title ---*/
 
 .title {
+  text-align: center;
   font-size: 20px;
-  margin-top: 50px;
-  margin-left: 1%;
 }
 
 .title h1{
   font-weight: 600;
+  margin: 0;
 }
 
 .icon {
-  float: left;
-  margin-right: 20px;
-  margin-left: 13px;
+  text-align: center;
+  margin-right: 30%;
+  margin-left: 30%;
+  margin-top: 50px;
+  float: none;
 }
 
 /* --- Rates --- */
@@ -641,35 +643,14 @@ ul {
 
 /* --- mobile views ---*/
 
-@media only screen and (max-width: 1199px) {
+@media only screen and (max-width: 1420px) {
   .container-body {
     width: 100%;
   }
 
   .container {
-    width: 100%;
+    width: 95%;
   }
-
-    /* Title */
-
-    .title {
-      text-align: center;
-      margin-right: 30%;
-      margin-left: 30%;
-      margin-top: 0;
-    }
-  
-    .title h1 {
-      margin: 0;
-    }
-  
-    .icon {
-      text-align: center;
-      margin-right: 30%;
-      margin-left: 30%;
-      margin-top: 50px;
-      float: none;
-    }
 
   /* navbar */
 
@@ -778,7 +759,7 @@ ul {
   }
 
   .coinbox {
-    width: 300px;
+    width: 250px;
     height: 405px;
     background: #fafafa;
     position: relative;
@@ -854,32 +835,12 @@ ul {
     display: none;
   }
 
-  /* Title */
-
-  .title {
-    text-align: center;
-    margin-right: 30%;
-    margin-left: 30%;
-    margin-top: 0;
-  }
-
-  .title h1 {
-    margin: 0;
-  }
-
-  .icon {
-    text-align: center;
-    margin-right: 30%;
-    margin-left: 30%;
-    margin-top: 50px;
-    float: none;
-  }
 
   /* --- Rates --- */
 
   .coinbox {
-    width: 300px;
-    height: 405px;
+    width: 180px;
+    height: 390px;
     background: #fafafa;
     position: relative;
     border-radius: 10px;
@@ -887,6 +848,17 @@ ul {
     transition: 0.1s;
     margin-left: 8px;
     margin-right: 8px;
+  }
+
+  .coinbox p{
+    font-size: 1.1em;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .price {
+    font-size: 1.5em;
   }
 
   /*--- News ---*/
