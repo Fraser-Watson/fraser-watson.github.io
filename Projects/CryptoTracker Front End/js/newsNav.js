@@ -1,15 +1,15 @@
-function onTabClick(event){
-    let activeTabs = document.querySelectorAll('.active');
+const tabs = document.querySelector(".news-coin-container");
+const panels = document.querySelectorAll(".panel");
 
-    for( let i =0; i < activeTabs.length; i++){
-        activeTabs[i].className = activeTabs[i].className.replace('active', '');
+tabs.addEventListener("click", function(e){
+    if(e.target.tagName == "LI"){
+        const targetPanel = document.querySelector(e.target.dataset.target);
+        panels.forEach(function(panel){
+            if (panel == targetPanel){
+                panel.classList.add("active");
+            } else {
+                panel.classList.remove("active");
+            }
+        })
     }
-
-    event.target.parentElement.parentElement.parentElement.className += ' active';
-    document.getElementById(event.target.parentElement.parentElement.parentElement.href.split('#')[1])
-    document.getElementById(event.target.parentElement.parentElement.parentElement.href.split('#')[1]).className += ' active';
-}
-
-const element = document.getElementById('nav-tab');
-
-element.addEventListener('click', onTabClick, false);
+})
