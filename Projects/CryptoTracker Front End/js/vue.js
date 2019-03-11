@@ -2,15 +2,25 @@
 const CRYPTOCOMPARE_API_URI = "https://min-api.cryptocompare.com";
 
 const API_PARAMETERS = "/data/pricemultifull?fsyms=BTC,ETH,LTC,XRP,OMG,EOS,NEO,DASH,XMR&tsyms=USD&api_key=0bf19dd98d2e5dba83157ffb931d95419799e96b6edf0a1f30a6f934f3a72469"
+const API_NEWS_PARAMETERS = "/data/v2/news/?categories=?"
+const API_NEWS_BTC_PARAMETERS = API_NEWS_PARAMETERS+"Bitcoin,Mining,Ledger&excludeCategories=eth,ethereum,ltc,litecoin,ripple,xrp,monero,xmr"
+const API_NEWS_ETH_PARAMETERS = API_NEWS_PARAMETERS+"eth,ethereum,ledger&excludeCategories=bitcoin,btc,xrp,ltc,monero,xmr"
+const API_NEWS_LTC_PARAMETERS = API_NEWS_PARAMETERS+"ltc,litecoin,ledger,mining,&excludeCategories=bitcoin,btc,xrp,monero,xmr,ethereum,eth"
+const API_NEWS_XRP_PARAMETERS = API_NEWS_PARAMETERS+"xrp,ripple,xripple"
 
-const UPDATE_INTERVAL = 30 * 1000;
+
+const UPDATE_INTERVAL = 60 * 1000;
 
 let app = new Vue({
   el: "#app",
   mixins: [Vue2Filters.mixin],
   data: {
     coins: {},
-    coinData: {}
+    coinData: {},
+    n_btc: {},
+    n_eth: {},
+    n_ltc: {},
+    n_xrp: {}
   },
   methods: {
 
@@ -26,6 +36,58 @@ let app = new Vue({
         });
     },
 
+    getNewsBtc: function() {
+        let self = this;
+  
+        axios.get(CRYPTOCOMPARE_API_URI + API_NEWS_BTC_PARAMETERS)
+
+          .then((resp) => {
+            this.n_btc = resp.data;
+          })
+          .catch((err) => {
+            console.error(err);
+          });
+      },
+
+      getNewsEth: function() {
+        let self = this;
+  
+        axios.get(CRYPTOCOMPARE_API_URI + API_NEWS_ETH_PARAMETERS)
+
+          .then((resp) => {
+            this.n_eth = resp.data;
+          })
+          .catch((err) => {
+            console.error(err);
+          });
+      },
+
+      getNewsLtc: function() {
+        let self = this;
+  
+        axios.get(CRYPTOCOMPARE_API_URI + API_NEWS_LTC_PARAMETERS)
+
+          .then((resp) => {
+            this.n_ltc = resp.data;
+          })
+          .catch((err) => {
+            console.error(err);
+          });
+      },
+
+      getNewsXrp: function() {
+        let self = this;
+  
+        axios.get(CRYPTOCOMPARE_API_URI + API_NEWS_XRP_PARAMETERS)
+
+          .then((resp) => {
+            this.n_xrp = resp.data;
+          })
+          .catch((err) => {
+            console.error(err);
+          });
+      },
+
     getColor: (num) => {
       return num > 0 ? "color:#78C31D;" : "color:red;";
     },
@@ -37,12 +99,18 @@ let app = new Vue({
 
   created: function () {
     this.getCoins();
+    this.getNewsBtc();
+    this.getNewsEth();
+    this.getNewsLtc();
+    this.getNewsXrp();
   }
 });
 
 setInterval(() => {
   app.getCoins();
 }, UPDATE_INTERVAL);
+
+
 
 
 var popupBtc = document.getElementById("popupBtc");
@@ -207,3 +275,4 @@ function clickOutsideXmr(e) {
         popupXmr.style.display = 'none';
     }
 }
+

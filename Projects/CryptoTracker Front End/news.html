@@ -10,7 +10,7 @@
   <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
 
   <script type="text/javascript" src="js/burger.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
   <title>CryptoTracker</title>
 </head>
 
@@ -80,7 +80,6 @@
 
           
           <div class="news-coin-eth">
-              
             <div class="news-coinbox">
               <div class="news-coin-image">
                 <div class="datatarget"><li data-target ="#eth"></li>
@@ -114,7 +113,7 @@
         </ul>
         <div class="panel active" id="btc">
         <div class="news-flex">
-          <div class="news-content-container">
+          <div class="news-content-container" v-if="n_btc.Data">
             <div class="news-content-title">
               <h2>
                 <span class="news-coin-name">Bitcoin</span>
@@ -126,20 +125,18 @@
 
             <div class="news-content-grid">
               <div class="news-story-image">
-                <img src="https://news.bitcoin.com/wp-content/uploads/2019/02/shutterstock_758302231-1520x1024.jpg" alt="bitcoin" />
+                <img v-bind:src="n_btc.Data[0].imageurl" />
               </div>
 
               <div class="news-story-text">
                 <div class="news-story-title">
                   <h3>
-                    Survey: Nearly Half of Millennial Traders Have More Faith in Crypto Than Stock Market
+                    {{n_btc.Data[0].title}}
                   </h3>
                 </div>
                 <div class="news-story-preview">
                   <p>
-                    Nearly half of millennial traders have more faith in cryptocurrency exchanges than they do in
-                    traditional ones. They are
-                    also enthusiastic about the prospect of traditional financial institutions offering crypto assets.
+                    {{n_btc.Data[0].body}}
                   </p>
                 </div>
               </div>
@@ -148,23 +145,18 @@
             <div class="page-line"></div>
             <div class="news-content-grid">
               <div class="news-story-image">
-                <img src="https://news.bitcoin.com/wp-content/uploads/2019/02/shutterstock_561383218_1000-1520x1024.jpg"
-                  alt="bitcoin" />
+                <img v-bind:src="n_btc.Data[1].imageurl" />
               </div>
 
               <div class="news-story-text">
                 <div class="news-story-title">
                   <h3>
-                    Coinbase Wallet App Adds Bitcoin Cash Support
+                    {{n_btc.Data[1].title}}
                   </h3>
                 </div>
                 <div class="news-story-preview">
                   <p>
-                    Coinbase announced on Tuesday that users of its wallet app can now directly store their bitcoin
-                    cash. The app update will
-                    be rolled out to all iOS and Android users in the next few weeks. Both Cashaddr and legacy address
-                    formats
-                    are supported alongside Bitcoin Cash Testnet for developers.
+                    {{n_btc.Data[1].body}}
                   </p>
                 </div>
               </div>
@@ -172,22 +164,18 @@
             <div class="page-line"></div>
             <div class="news-content-grid">
               <div class="news-story-image">
-                <img src="https://news.bitcoin.com/wp-content/uploads/2019/02/bank-of-spain-1520x1024.jpg" alt="bitcoin" />
+                <img v-bind:src="n_btc.Data[2].imageurl" />
               </div>
 
               <div class="news-story-text">
                 <div class="news-story-title">
                   <h3>
-                    Bank of Spain Report: Bitcoin Is a Solution for a System Without Censorship
+                    {{n_btc.Data[2].title}}
                   </h3>
                 </div>
                 <div class="news-story-preview">
                   <p>
-                    A recent report published by the Bank of Spain states that Bitcoin is a solution for the creation
-                    of a system without censorship.
-                    This is in contrast to public comments made by most central bankers who are prone to attack
-                    cryptocurrency
-                    with little insight into why it is needed.
+                    {{n_btc.Data[2].body}}
                   </p>
                 </div>
               </div>
@@ -198,7 +186,7 @@
 
       <div class="panel" id="eth">
           <div class="news-flex">
-            <div class="news-content-container">
+            <div class="news-content-container" v-if="n_eth.Data">
               <div class="news-content-title">
                 <h2>
                   <span class="news-coin-name">Ethereum</span>
@@ -210,20 +198,18 @@
   
               <div class="news-content-grid">
                 <div class="news-story-image">
-                  <img src="https://news.bitcoin.com/wp-content/uploads/2019/02/shutterstock_758302231-1520x1024.jpg" alt="bitcoin" />
+                  <img v-bind:src="n_eth.Data[0].imageurl" />
                 </div>
   
                 <div class="news-story-text">
                   <div class="news-story-title">
                     <h3>
-                      Survey: Nearly Half of Millennial Traders Have More Faith in Crypto Than Stock Market
+                      {{n_eth.Data[0].title}}
                     </h3>
                   </div>
                   <div class="news-story-preview">
                     <p>
-                      Nearly half of millennial traders have more faith in cryptocurrency exchanges than they do in
-                      traditional ones. They are
-                      also enthusiastic about the prospect of traditional financial institutions offering crypto assets.
+                      {{n_eth.Data[0].body}}
                     </p>
                   </div>
                 </div>
@@ -232,23 +218,18 @@
               <div class="page-line"></div>
               <div class="news-content-grid">
                 <div class="news-story-image">
-                  <img src="https://news.bitcoin.com/wp-content/uploads/2019/02/shutterstock_561383218_1000-1520x1024.jpg"
-                    alt="bitcoin" />
+                  <img v-bind:src="n_eth.Data[1].imageurl" />
                 </div>
   
                 <div class="news-story-text">
                   <div class="news-story-title">
                     <h3>
-                      Coinbase Wallet App Adds Bitcoin Cash Support
+                      {{n_eth.Data[1].title}}
                     </h3>
                   </div>
                   <div class="news-story-preview">
                     <p>
-                      Coinbase announced on Tuesday that users of its wallet app can now directly store their bitcoin
-                      cash. The app update will
-                      be rolled out to all iOS and Android users in the next few weeks. Both Cashaddr and legacy address
-                      formats
-                      are supported alongside Bitcoin Cash Testnet for developers.
+                      {{n_eth.Data[1].body}}
                     </p>
                   </div>
                 </div>
@@ -256,22 +237,18 @@
               <div class="page-line"></div>
               <div class="news-content-grid">
                 <div class="news-story-image">
-                  <img src="https://news.bitcoin.com/wp-content/uploads/2019/02/bank-of-spain-1520x1024.jpg" alt="bitcoin" />
+                  <img v-bind:src="n_eth.Data[2].imageurl" />
                 </div>
   
                 <div class="news-story-text">
                   <div class="news-story-title">
                     <h3>
-                      Bank of Spain Report: Bitcoin Is a Solution for a System Without Censorship
+                      {{n_eth.Data[2].title}}
                     </h3>
                   </div>
                   <div class="news-story-preview">
                     <p>
-                      A recent report published by the Bank of Spain states that Bitcoin is a solution for the creation
-                      of a system without censorship.
-                      This is in contrast to public comments made by most central bankers who are prone to attack
-                      cryptocurrency
-                      with little insight into why it is needed.
+                      {{n_eth.Data[2].body}}
                     </p>
                   </div>
                 </div>
@@ -283,7 +260,7 @@
 
         <div class="panel" id="ltc">
             <div class="news-flex">
-              <div class="news-content-container">
+              <div class="news-content-container" v-if="n_ltc.Data">
                 <div class="news-content-title">
                   <h2>
                     <span class="news-coin-name">Litecoin</span>
@@ -295,20 +272,18 @@
     
                 <div class="news-content-grid">
                   <div class="news-story-image">
-                    <img src="https://news.bitcoin.com/wp-content/uploads/2019/02/shutterstock_758302231-1520x1024.jpg" alt="bitcoin" />
+                    <img v-bind:src="n_ltc.Data[0].imageurl" />
                   </div>
     
                   <div class="news-story-text">
                     <div class="news-story-title">
                       <h3>
-                        Survey: Nearly Half of Millennial Traders Have More Faith in Crypto Than Stock Market
+                        {{n_ltc.Data[0].title}}
                       </h3>
                     </div>
                     <div class="news-story-preview">
                       <p>
-                        Nearly half of millennial traders have more faith in cryptocurrency exchanges than they do in
-                        traditional ones. They are
-                        also enthusiastic about the prospect of traditional financial institutions offering crypto assets.
+                        {{n_ltc.Data[0].body}}
                       </p>
                     </div>
                   </div>
@@ -317,23 +292,18 @@
                 <div class="page-line"></div>
                 <div class="news-content-grid">
                   <div class="news-story-image">
-                    <img src="https://news.bitcoin.com/wp-content/uploads/2019/02/shutterstock_561383218_1000-1520x1024.jpg"
-                      alt="bitcoin" />
+                    <img v-bind:src="n_ltc.Data[1].imageurl" />
                   </div>
     
                   <div class="news-story-text">
                     <div class="news-story-title">
                       <h3>
-                        Coinbase Wallet App Adds Bitcoin Cash Support
+                        {{n_ltc.Data[1].title}}
                       </h3>
                     </div>
                     <div class="news-story-preview">
                       <p>
-                        Coinbase announced on Tuesday that users of its wallet app can now directly store their bitcoin
-                        cash. The app update will
-                        be rolled out to all iOS and Android users in the next few weeks. Both Cashaddr and legacy address
-                        formats
-                        are supported alongside Bitcoin Cash Testnet for developers.
+                        {{n_ltc.Data[1].body}}
                       </p>
                     </div>
                   </div>
@@ -341,22 +311,18 @@
                 <div class="page-line"></div>
                 <div class="news-content-grid">
                   <div class="news-story-image">
-                    <img src="https://news.bitcoin.com/wp-content/uploads/2019/02/bank-of-spain-1520x1024.jpg" alt="bitcoin" />
+                    <img v-bind:src="n_ltc.Data[2].imageurl" />
                   </div>
     
                   <div class="news-story-text">
                     <div class="news-story-title">
                       <h3>
-                        Bank of Spain Report: Bitcoin Is a Solution for a System Without Censorship
+                        {{n_ltc.Data[2].title}}
                       </h3>
                     </div>
                     <div class="news-story-preview">
                       <p>
-                        A recent report published by the Bank of Spain states that Bitcoin is a solution for the creation
-                        of a system without censorship.
-                        This is in contrast to public comments made by most central bankers who are prone to attack
-                        cryptocurrency
-                        with little insight into why it is needed.
+                        {{n_ltc.Data[2].body}}
                       </p>
                     </div>
                   </div>
@@ -367,7 +333,7 @@
   
           <div class="panel" id="xrp">
               <div class="news-flex">
-                <div class="news-content-container">
+                <div class="news-content-container" v-if="n_xrp.Data">
                   <div class="news-content-title">
                     <h2>
                       <span class="news-coin-name">Ripple</span>
@@ -379,20 +345,18 @@
       
                   <div class="news-content-grid">
                     <div class="news-story-image">
-                      <img src="https://news.bitcoin.com/wp-content/uploads/2019/02/shutterstock_758302231-1520x1024.jpg" alt="bitcoin" />
+                      <img v-bind:src="n_xrp.Data[0].imageurl" />
                     </div>
       
                     <div class="news-story-text">
                       <div class="news-story-title">
                         <h3>
-                          Survey: Nearly Half of Millennial Traders Have More Faith in Crypto Than Stock Market
+                          {{n_xrp.Data[0].title}}
                         </h3>
                       </div>
                       <div class="news-story-preview">
                         <p>
-                          Nearly half of millennial traders have more faith in cryptocurrency exchanges than they do in
-                          traditional ones. They are
-                          also enthusiastic about the prospect of traditional financial institutions offering crypto assets.
+                          {{n_xrp.Data[0].body}}
                         </p>
                       </div>
                     </div>
@@ -401,23 +365,18 @@
                   <div class="page-line"></div>
                   <div class="news-content-grid">
                     <div class="news-story-image">
-                      <img src="https://news.bitcoin.com/wp-content/uploads/2019/02/shutterstock_561383218_1000-1520x1024.jpg"
-                        alt="bitcoin" />
+                      <img v-bind:src="n_xrp.Data[1].imageurl" />
                     </div>
       
                     <div class="news-story-text">
                       <div class="news-story-title">
                         <h3>
-                          Coinbase Wallet App Adds Bitcoin Cash Support
+                          {{n_xrp.Data[1].title}}
                         </h3>
                       </div>
                       <div class="news-story-preview">
                         <p>
-                          Coinbase announced on Tuesday that users of its wallet app can now directly store their bitcoin
-                          cash. The app update will
-                          be rolled out to all iOS and Android users in the next few weeks. Both Cashaddr and legacy address
-                          formats
-                          are supported alongside Bitcoin Cash Testnet for developers.
+                          {{n_xrp.Data[1].body}}
                         </p>
                       </div>
                     </div>
@@ -425,22 +384,18 @@
                   <div class="page-line"></div>
                   <div class="news-content-grid">
                     <div class="news-story-image">
-                      <img src="https://news.bitcoin.com/wp-content/uploads/2019/02/bank-of-spain-1520x1024.jpg" alt="bitcoin" />
+                      <img v-bind:src="n_xrp.Data[2].imageurl" />
                     </div>
       
                     <div class="news-story-text">
                       <div class="news-story-title">
                         <h3>
-                          Bank of Spain Report: Bitcoin Is a Solution for a System Without Censorship
+                          {{n_xrp.Data[2].title}}
                         </h3>
                       </div>
                       <div class="news-story-preview">
                         <p>
-                          A recent report published by the Bank of Spain states that Bitcoin is a solution for the creation
-                          of a system without censorship.
-                          This is in contrast to public comments made by most central bankers who are prone to attack
-                          cryptocurrency
-                          with little insight into why it is needed.
+                          {{n_xrp.Data[2].body}}
                         </p>
                       </div>
                     </div>
@@ -448,13 +403,11 @@
                 </div>
               </div>
             </div>
-    
-
       </div>
     </div>
   </div>
   <footer>
-      <div class="footercontainer">
+      <div class="footercontainer fade animate fadeIn delay3">
         <div class="footercontent">
             <div class="logofooter">
                 <a href="index.html"><img src="./img/logo.png" alt="CryptoTracker" /></a>
@@ -476,7 +429,14 @@
       </div>
     </footer>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue2-filters/dist/vue2-filters.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script type="text/javascript" src="js/vue.js"></script>
   <script type="text/javascript" src="js/newsNav.js"></script>
+
+
 </body>
 
 </html>
