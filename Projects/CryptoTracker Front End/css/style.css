@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700');
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   font-weight: 300;
   font-family: 'Roboto Condensed', sans-serif;
@@ -11,6 +15,22 @@ body {
   margin: 0;
   background-color: #f2f4f7;
   color: #424242;
+}
+
+ li{
+  list-style-type: none;
+}
+
+/*-----------*/
+
+
+
+.tab-pane{
+ display:none;
+}
+
+.tab-pane.active{
+  display: block;
 }
 
 /* global */
