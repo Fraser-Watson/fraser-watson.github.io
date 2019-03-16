@@ -622,12 +622,14 @@ ul {
   letter-spacing: 0px;
   font-size: 1.1em;
   /*overflow: hidden;*/
-  overflow: none;
+  overflow: hidden;
   text-overflow: "ellipsis";
   display: -webkit-box;
   -webkit-line-clamp: 4; /* number of lines to show */
   -webkit-box-orient: vertical;
 }
+
+
 
 .news-story-text {
   margin-left: 25px;
