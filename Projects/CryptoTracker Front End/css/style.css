@@ -18,6 +18,14 @@ li{
   list-style-type: none;
 }
 
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+}
+
+a{
+  text-decoration: none;
+}
 
 
 /*-----------*/
@@ -633,6 +641,23 @@ ul {
 
 .news-story-text {
   margin-left: 25px;
+}
+
+.news-story-image {
+  -webkit-box-shadow: 20px 20px 37px 1px rgba(0,0,0,0.15);
+  -moz-box-shadow: 20px 20px 37px 1px rgba(0,0,0,0.15);
+  box-shadow: 20px 20px 37px 1px rgba(0,0,0,0.15);
+  text-decoration: none;
+  font-size: 0px;
+  color: transparent;
+  transition: all 0.5s ease;
+}
+
+.news-story-image:hover  {
+  -webkit-box-shadow: 30px 30px 60px 10px rgba(0,0,0,0.15);
+  -moz-box-shadow: 30px 30px 60px 10px rgba(0,0,0,0.15);
+  box-shadow: 30px 30px 60px 10px rgba(0,0,0,0.15);
+  transform: translate3d(0px, -4px, 0px);
 }
 
 .news-story-image img {

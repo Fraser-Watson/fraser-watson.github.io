@@ -125,7 +125,9 @@
 
             <div class="news-content-grid">
               <div class="news-story-image">
-                <img v-bind:src="n_btc.Data[0].imageurl" />
+                <a href="n_btc.Data[0].url" target="_blank">
+                <img v-bind:src="n_btc.Data[0].imageurl"/>
+                </a>
               </div>
 
               <div class="news-story-text">
@@ -145,7 +147,9 @@
             <div class="page-line"></div>
             <div class="news-content-grid">
               <div class="news-story-image">
+                  <a v-bind:href="n_btc.Data[1].url" target="_blank">
                 <img v-bind:src="n_btc.Data[1].imageurl" />
+                </a>
               </div>
 
               <div class="news-story-text">
@@ -164,7 +168,9 @@
             <div class="page-line"></div>
             <div class="news-content-grid">
               <div class="news-story-image">
+                  <a v-bind:href="n_btc.Data[2].url" target="_blank">
                 <img v-bind:src="n_btc.Data[2].imageurl" />
+                </a>
               </div>
 
               <div class="news-story-text">
@@ -198,7 +204,9 @@
   
               <div class="news-content-grid">
                 <div class="news-story-image">
+                    <a v-bind:href="n_eth.Data[0].url" target="_blank">
                   <img v-bind:src="n_eth.Data[0].imageurl" />
+                  </a>
                 </div>
   
                 <div class="news-story-text">
@@ -218,7 +226,9 @@
               <div class="page-line"></div>
               <div class="news-content-grid">
                 <div class="news-story-image">
+                    <a v-bind:href="n_eth.Data[1].url" target="_blank">
                   <img v-bind:src="n_eth.Data[1].imageurl" />
+                  </a>
                 </div>
   
                 <div class="news-story-text">
@@ -237,7 +247,9 @@
               <div class="page-line"></div>
               <div class="news-content-grid">
                 <div class="news-story-image">
+                    <a v-bind:href="n_eth.Data[2].url" target="_blank">
                   <img v-bind:src="n_eth.Data[2].imageurl" />
+                  </a>
                 </div>
   
                 <div class="news-story-text">
@@ -272,7 +284,9 @@
     
                 <div class="news-content-grid">
                   <div class="news-story-image">
+                      <a v-bind:href="n_ltc.Data[0].url" target="_blank">
                     <img v-bind:src="n_ltc.Data[0].imageurl" />
+                    </a>
                   </div>
     
                   <div class="news-story-text">
@@ -292,7 +306,9 @@
                 <div class="page-line"></div>
                 <div class="news-content-grid">
                   <div class="news-story-image">
+                      <a v-bind:href="n_ltc.Data[1].url" target="_blank">
                     <img v-bind:src="n_ltc.Data[1].imageurl" />
+                    </a>
                   </div>
     
                   <div class="news-story-text">
@@ -311,7 +327,9 @@
                 <div class="page-line"></div>
                 <div class="news-content-grid">
                   <div class="news-story-image">
+                      <a v-bind:href="n_ltc.Data[2].url" target="_blank">
                     <img v-bind:src="n_ltc.Data[2].imageurl" />
+                    </a>
                   </div>
     
                   <div class="news-story-text">
@@ -345,7 +363,9 @@
       
                   <div class="news-content-grid">
                     <div class="news-story-image">
+                        <a v-bind:href="n_xrp.Data[0].url" target="_blank">
                       <img v-bind:src="n_xrp.Data[0].imageurl" />
+                      </a>
                     </div>
       
                     <div class="news-story-text">
@@ -365,7 +385,9 @@
                   <div class="page-line"></div>
                   <div class="news-content-grid">
                     <div class="news-story-image">
+                        <a v-bind:href="n_xrp.Data[1].url" target="_blank">
                       <img v-bind:src="n_xrp.Data[1].imageurl" />
+                      </a>
                     </div>
       
                     <div class="news-story-text">
@@ -384,7 +406,9 @@
                   <div class="page-line"></div>
                   <div class="news-content-grid">
                     <div class="news-story-image">
+                        <a v-bind:href="n_xrp.Data[2].url" target="_blank">
                       <img v-bind:src="n_xrp.Data[2].imageurl" />
+                      </a>
                     </div>
       
                     <div class="news-story-text">

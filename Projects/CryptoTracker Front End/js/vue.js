@@ -106,11 +106,12 @@ let app = new Vue({
   }
 });
 
+
+/* -------- BEGIN PLAIN JS -------- */
+
 setInterval(() => {
   app.getCoins();
 }, UPDATE_INTERVAL);
-
-
 
 
 var popupBtc = document.getElementById("popupBtc");
