@@ -641,16 +641,23 @@ ul {
 
 .news-story-text {
   margin-left: 25px;
+
 }
 
 .news-story-image {
-
+  width: 230px;
+  height: 227px;
   text-decoration: none;
   transition: all 0.5s ease;
+  -webkit-box-shadow: 20px 20px 37px 1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 20px 20px 37px 1px rgba(0, 0, 0 ,0.1);
+  box-shadow: 20px 20px 37px 1px rgba(0, 0, 0, 0.1);
 }
 
 .news-story-image:hover  {
-
+  -webkit-box-shadow: 30px 30px 60px 10px rgba(0, 0, 0 , 0.1);
+  -moz-box-shadow: 30px 30px 60px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 30px 30px 60px 10px rgba(0, 0, 0, 0.1);
   transform: translate3d(0px, -4px, 0px);
 }
 
@@ -818,6 +825,7 @@ ul {
   .news-content-container {
     width: 87%;
   }
+  
 
   /* --- Wallet --- */
 
@@ -1158,7 +1166,7 @@ ul {
 
   .news-story-text {
     margin: 0;
-    margin-top: 10px;
+    margin-top: 20px;
     text-align: center;
   }
 
