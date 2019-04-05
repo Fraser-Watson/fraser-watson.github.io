@@ -346,8 +346,8 @@
             </div>
           </div>
         </div>
-        <div class="detail-main-container" v-if="coins.DISPLAY">
-          <div class="detail-main">
+        <div class="detail-main-container">
+        <div class="detail-main" v-if="coins.DISPLAY">
             <p>Change (24hr): <span class="hr-vol" v-bind:style="getColor(coins.RAW.BTC.USD.CHANGE24HOUR)" v-if="coins.DISPLAY" >{{ coins.DISPLAY.BTC.USD.CHANGE24HOUR }}</span></p>
             <p>% Change (24hr): <span class="hr-vol" v-bind:style="getColor(coins.RAW.BTC.USD.CHANGEPCT24HOUR)" v-if="coins.DISPLAY" >{{ coins.RAW.BTC.USD.CHANGEPCT24HOUR | currency('%', 2, { symbolOnLeft: false }) }}</span></p>
             <div class="detail-page-line"></div>
@@ -359,8 +359,14 @@
             <p>Circulating Supply: <span class="hr-hi" v-if="coins.DISPLAY">{{ coins.DISPLAY.BTC.USD.SUPPLY }}</span></p>
             <div class="detail-page-line"></div>
             <p>Last Market:<span class="hr-vol" v-if="coins.DISPLAY"> {{ coins.DISPLAY.BTC.USD.LASTMARKET }}</span></p>
-          </div>
         </div>
+        </div>
+        <div class="graph-container">
+            <div id="wrap">
+                <line-chart></line-chart>
+              </div>
+        </div>
+
       </div>
     </div>
 
@@ -707,12 +713,19 @@
     </footer>
   </div>
 
-  <script type="text/javascript" src="js/popup.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.6/vue.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+  <script src="https://unpkg.com/vue-chartjs@3.0.1-rc2/dist/vue-chartjs.js"></script>
   <script type="text/javascript" src="js/burger.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue2-filters/dist/vue2-filters.min.js"></script>
   <script type="text/javascript" src="js/vue.js"></script>
+
+
+
+
 
  
     

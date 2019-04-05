@@ -9,7 +9,40 @@ const API_NEWS_LTC_PARAMETERS = API_NEWS_PARAMETERS+"ltc,litecoin,ledger,mining,
 const API_NEWS_XRP_PARAMETERS = API_NEWS_PARAMETERS+"xrp,ripple,xripple"
 
 
-const UPDATE_INTERVAL = 60 * 1000;
+const UPDATE_INTERVAL = 10 * 1000;
+
+Vue.component('line-chart', {
+    extends: VueChartJs.Line,
+    data: () => ({
+      chardata: {
+        datacollection: {
+          labels: ['11 days', '10 days', '9 days', '8 days', '7 days', '6 days', '5 days', '4 days', '3 days', '2 days', 'Today'],
+          datasets: [{
+            label: 'Value',
+            borderColor: '#FC2525',
+            pointBackgroundColor: 'white',
+            borderWidth: 1,
+            pointBorderColor: 'white',
+            backgroundColor: this.gradient,
+            data: [3698.19, 3795.19, 3814.21, 3844.21, 3884.21, 3784.21, 3753.21, 3997.21, 4121.43, 4050.22, 4011.31]
+          }]
+        }
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false
+      }
+    }),
+    
+    mounted() {
+      this.gradient = this.$refs.canvas.getContext('2d').createLinearGradient(0, 0, 0, 450)
+      this.gradient.addColorStop(0, 'rgba(247,108,6, 0.9)')
+      this.gradient.addColorStop(0.5, 'rgba(247,108,6, 0.25)');
+      this.gradient.addColorStop(1, 'rgba(247,108,6, 0)');
+    }
+  })
+  
+  
 
 let app = new Vue({
   el: "#app",
@@ -20,7 +53,7 @@ let app = new Vue({
     n_btc: {},
     n_eth: {},
     n_ltc: {},
-    n_xrp: {}
+    n_xrp: {},
   },
   methods: {
 
@@ -88,6 +121,10 @@ let app = new Vue({
           });
       },
 
+      changeData: function() {
+        this.dataChart = [6, 6, 3, 5, 5, 6,7];
+      },
+
     getColor: (num) => {
       return num > 0 ? "color:#78C31D;" : "color:red;";
     },
@@ -109,6 +146,7 @@ let app = new Vue({
 
 /* -------- BEGIN PLAIN JS -------- */
 
+
 setInterval(() => {
   app.getCoins();
 }, UPDATE_INTERVAL);
@@ -120,8 +158,26 @@ var closeBtnBtc = document.getElementById("closeBtnBtc");
 btnBtc.addEventListener('click', openPopupBtc);
 closeBtnBtc.addEventListener('click', closePopupBtc);
 window.addEventListener('click', clickOutsideBtc);
+window.addEventListener('resize', function() {
+    //Created a wrapper, but changing the values of the div that ChartJS automatically created.
+    //Yes, you still need to create the wrapper anyway!
+  
+    //Position relative is necessary according to the docs
+    document.getElementById('wrap').children[0].style.position = "relative";
+    document.getElementById('wrap').children[0].style.height = window.innerHeight + "px";
+    document.getElementById('wrap').children[0].style.width = window.innerWidth + "px";
+    //Do not allow for the container to go above the "max-width/max-height" of popup-container
+    if (window.innerWidth > 1)
+      document.getElementById('wrap').children[0].style.width = "100%";
+    if (window.innerHeight > 1)
+      document.getElementById('wrap').children[0].style.height = "100%";
+    //Re-render the chart
+    app.$children[0].renderChart(app.$children[0].chardata.datacollection, app.$children[0].options)
+  })
 function openPopupBtc() {
     popupBtc.style.display = 'flex';
+      //Render the chart
+    app.$children[0].renderChart(app.$children[0].chardata.datacollection, app.$children[0].options)
 }
 function closePopupBtc() {
     popupBtc.style.display = 'none';

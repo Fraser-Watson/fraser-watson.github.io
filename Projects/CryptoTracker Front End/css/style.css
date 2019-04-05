@@ -370,7 +370,7 @@ ul {
   overflow: auto;
   background: #00000070;
   display: none;
-	justify-content: center;
+	justify-content: center; 
   align-items: center;
   animation-name:popupopen;
   animation-duration: 0.5s;
@@ -382,12 +382,24 @@ ul {
   background-color: #EBEBEB;
   border-radius: 10px;
   margin: 25px;
-  background: -webkit-linear-gradient(top, #EBEBEB 25%, white 1%);
+  background: -webkit-linear-gradient(top, #EBEBEB 23%, white 1%);
   -webkit-box-shadow: 30px 30px 60px 10px rgba(0,0,0,0.15);
   -moz-box-shadow: 30px 30px 60px 10px rgba(0,0,0,0.15);
   box-shadow: 30px 30px 60px 10px rgba(0,0,0,0.15);
   animation-name:popupopen;
   animation-duration: 0.5s;
+}
+
+.graph-container{
+margin: 55px 35px 45px 0;
+height: 400px;
+width: calc(100% - 380px);
+float: right;
+display: block;
+}
+
+#wrap {
+  height: 400px;
 }
 
 .detail-header{
@@ -421,7 +433,7 @@ ul {
 
 .coin-nameimage-container{
   display: flex;
-  float: left;
+
 }
 
 .coin-nameimage-container img{
@@ -438,11 +450,14 @@ ul {
   color: #63b860;
 }
 
-.detail-main{
+.detail-main-container{
+  position: static;
+  float: left;
   margin: 35px;
 }
 
-.detail-main p{
+
+.detail-main-container p{
   font-size: 20px;
   font-weight: 400;
 }
@@ -1058,7 +1073,9 @@ ul {
 .popup-content{
   width: 1000px;
   height: auto;
-  background: -webkit-linear-gradient(top, #EBEBEB 29%, white 1%);
+  /*background: -webkit-linear-gradient(top, #EBEBEB 20%, white 1%);*/
+  background: -webkit-linear-gradient(top, #EBEBEB 27%, white 1%);
+
 }
 
 .detail-header{
@@ -1083,6 +1100,7 @@ ul {
 .coin-nameimage-container{
   display: flex;
   flex-direction: column;
+  float:left;
 }
 
 .coin-nameimage-container img{
@@ -1100,11 +1118,27 @@ ul {
   text-align: center;
 }
 
+.detail-main-container{
+  float:none;
+}
+
 .detail-page-line {
   margin-left: auto;
   margin-right: auto;
 }
 
+.graph-container{
+  display:none;
+  /*
+  margin: 10px 15px 45px 15px;
+  height: 200px;
+  width: 90%;
+  */
+  }  
+
+ #wrap {
+   height: 250px;
+ }
   /*--- News ---*/
 
   /* Coin Boxes */
@@ -1235,6 +1269,38 @@ ul {
   
 }
 
+@media only screen and (max-width: 420px){
+.coin-nameimage-container img{
+  margin: 25px 25px 5px 25px; 
+  height: 75px;
+  width: 75px;
+}
+
+.detail-main{
+  margin: 0;
+}
+
+.detail-main-container p {
+  /*font-size: 15px;*/
+  font-weight: 400;
+}
+
+.detail-main-container {
+  margin: 19px 35px 10px 35px;
+}
+
+.popup-content {
+  background: -webkit-linear-gradient(top, #EBEBEB 26%, white 1%);
+  /*background: -webkit-linear-gradient(top, #EBEBEB 20%, white 1%);*/
+}
+
+.pop-up-price-container {
+  float: right;
+  margin: 50px 5px 40px 5px;
+}
+
+}
+
 @media only screen and (max-width: 408px){
   .coinbox {
     width: 300px;
@@ -1264,7 +1330,7 @@ ul {
   width: 100%;
   height: auto;
   margin: 5px;
-  background: -webkit-linear-gradient(top, #EBEBEB 25%, white 1%);
+  /*background: -webkit-linear-gradient(top, #EBEBEB 20%, white 1%);*/
 }
 
 .pop-up-price-container{
