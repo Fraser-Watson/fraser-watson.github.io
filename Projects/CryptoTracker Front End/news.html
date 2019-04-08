@@ -11,48 +11,38 @@
 
   <script type="text/javascript" src="js/burger.js"></script>
 
-  <title>CryptoTracker</title>
+  <title>News | CryptoTracker</title>
 </head>
 
 <body>
   <div id="app">
-    <header class="navbar">
-      <div class="container">
-        <div class="logo">
-          <a href="index.html">
-            <img src="./img/logo.png" alt="CryptoTracker" />
-          </a>
-        </div>
-        <div class="nav">
-          <ul>
-            <li>
+      <header class="navbar">
+          <div class="container">
+            <div class="logo">
+              <a href="index.html"><img src="./img/logo.png" alt="CryptoTracker" /></a>
+            </div>
+            <div class="nav">
+              <ul>
+                <li><a href="index.html">Rates</a></li>
+                <li class="current"><a href="#">News</a></li>
+                <li><a href="wallet.html">Wallet</a></li>
+                <li><a href="user.html"><div class="signInImageSmall"></div></i></a></li>
+                <span class="burger-open">
+                  <a href="#" onclick="openBurgerMenu()">
+                    <i class="fas fa-bars"> </i>
+                  </a>
+                </span>
+              </ul>
+            </div>
+            <div id="burger-menu" class="burger-nav">
+              <a href="#" class="btn-close" onclick="closeBurgerMenu()">&times;</a>
               <a href="index.html">Rates</a>
-            </li>
-            <li class="current">
-              <a href="#">News</a>
-            </li>
-            <li>
+              <a href="news.html">News</a>
               <a href="wallet.html">Wallet</a>
-            </li>
-            <li>
-              <a href="#">User</a>
-            </li>
-            <span class="burger-open">
-              <a href="#" onclick="openBurgerMenu()">
-                <i class="fas fa-bars"> </i>
-              </a>
-            </span>
-          </ul>
-        </div>
-        <div id="burger-menu" class="burger-nav">
-          <a href="#" class="btn-close" onclick="closeBurgerMenu()">&times;</a>
-          <a href="index.html">Rates</a>
-          <a href="#">News</a>
-          <a href="wallet.html">Wallet</a>
-          <a href="#">User</a>
-        </div>
-      </div>
-    </header>
+              <a href="user.html">Account</a>
+            </div>
+          </div>
+        </header>
 
     <div class="container-body">
       <div class="icon">
