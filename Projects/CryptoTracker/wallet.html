@@ -1,41 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="css/style.css"
-    />
-    <script type="text/javascript" src="js/burger.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <title>Wallet | CryptoTracker</title>
-  </head>
 
-  <body>
-    <div id="app">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+
+  <title>Wallet | CryptoTracker</title>
+</head>
+
+<body>
+  <div id="app">
     <header class="navbar">
       <div class="container">
         <div class="logo">
-          <a href="index.html"
-            ><img src="./img/logo.png" alt="CryptoTracker"
-          /></a>
+          <a href="index.html"><img src="./img/logo.png" alt="CryptoTracker" /></a>
         </div>
         <div class="nav">
           <ul>
             <li><a href="index.html">Rates</a></li>
             <li><a href="news.html">News</a></li>
             <li class="current"><a href="#">Wallet</a></li>
-            <li><a href="user.html"><div class="signInImageSmall"></div></i></a></li>
+            <li><a href="user.html">
+                <div class="signInImageSmall"></div></i>
+              </a></li>
             <span class="burger-open">
               <a href="#" onclick="openBurgerMenu()">
                 <i class="fas fa-bars"> </i>
@@ -69,7 +60,9 @@
       </div>
 
       <div class="fade animate fadeIn delay3 wallet-graph">
-        <img src="img/graph.png" alt="Graph" />
+        <div id="wallet-graph">
+          <line-chart-2></line-chart-2>
+        </div>
       </div>
 
       <div class="page-line"></div>
@@ -77,10 +70,7 @@
       <div class="fade animate fadeIn delay3 wallet-box-container">
         <div class="wallet-box">
           <div class="wallet-box-icon">
-            <img
-              src="https://cdn.worldvectorlogo.com/logos/bitcoin.svg"
-              alt="bitcoin"
-            />
+            <img src="https://cdn.worldvectorlogo.com/logos/bitcoin.svg" alt="bitcoin" />
           </div>
           <div class="wallet-box-left">
             <div class="wallet-box-name">
@@ -88,10 +78,7 @@
             </div>
             <div class="wallet-box-value">
               <p>
-                <span class="user-owned">0.05BTC</span> (<span
-                  class="fiat-value"
-                  >$169.91</span
-                >)
+                <span class="user-owned">0.05BTC</span> (<span class="fiat-value">$169.91</span>)
               </p>
             </div>
           </div>
@@ -107,10 +94,7 @@
 
         <div class="wallet-box">
           <div class="wallet-box-icon">
-            <img
-              src="http://introtocrypto.com/wp-content/uploads/2017/08/ether@2x.png"
-              alt="ethereum"
-            />
+            <img src="http://introtocrypto.com/wp-content/uploads/2017/08/ether@2x.png" alt="ethereum" />
           </div>
           <div class="wallet-box-left">
             <div class="wallet-box-name">
@@ -118,10 +102,7 @@
             </div>
             <div class="wallet-box-value">
               <p>
-                <span class="user-owned">0.05BTC</span> (<span
-                  class="fiat-value"
-                  >$169.91</span
-                >)
+                <span class="user-owned">0.05BTC</span> (<span class="fiat-value">$169.91</span>)
               </p>
             </div>
           </div>
@@ -137,10 +118,7 @@
 
         <div class="wallet-box">
           <div class="wallet-box-icon">
-            <img
-              src="https://cdn.worldvectorlogo.com/logos/litecoin.svg"
-              alt="litecoin"
-            />
+            <img src="https://cdn.worldvectorlogo.com/logos/litecoin.svg" alt="litecoin" />
           </div>
           <div class="wallet-box-left">
             <div class="wallet-box-name">
@@ -148,10 +126,7 @@
             </div>
             <div class="wallet-box-value">
               <p>
-                <span class="user-owned">0.05BTC</span> (<span
-                  class="fiat-value"
-                  >$169.91</span
-                >)
+                <span class="user-owned">0.05BTC</span> (<span class="fiat-value">$169.91</span>)
               </p>
             </div>
           </div>
@@ -167,10 +142,7 @@
 
         <div class="wallet-box">
           <div class="wallet-box-icon">
-            <img
-              src="https://bitcoinist.com/wp-content/uploads/2016/08/Ripple-logo.png"
-              alt="ripple"
-            />
+            <img src="https://bitcoinist.com/wp-content/uploads/2016/08/Ripple-logo.png" alt="ripple" />
           </div>
           <div class="wallet-box-left">
             <div class="wallet-box-name">
@@ -178,10 +150,7 @@
             </div>
             <div class="wallet-box-value">
               <p>
-                <span class="user-owned">0.05BTC</span> (<span
-                  class="fiat-value"
-                  >$169.91</span
-                >)
+                <span class="user-owned">0.05BTC</span> (<span class="fiat-value">$169.91</span>)
               </p>
             </div>
           </div>
@@ -197,10 +166,7 @@
 
         <div class="wallet-box">
           <div class="wallet-box-icon">
-            <img
-              src="https://cdn.worldvectorlogo.com/logos/omisego.svg"
-              alt="stellar"
-            />
+            <img src="https://cdn.worldvectorlogo.com/logos/omisego.svg" alt="stellar" />
           </div>
           <div class="wallet-box-left">
             <div class="wallet-box-name">
@@ -208,10 +174,7 @@
             </div>
             <div class="wallet-box-value">
               <p>
-                <span class="user-owned">0.05BTC</span> (<span
-                  class="fiat-value"
-                  >$169.91</span
-                >)
+                <span class="user-owned">0.05BTC</span> (<span class="fiat-value">$169.91</span>)
               </p>
             </div>
           </div>
@@ -227,27 +190,37 @@
       </div>
     </div>
     <footer>
-        <div class="footercontainer">
-          <div class="footercontent">
-              <div class="logofooter">
-                  <a href="index.html"><img src="./img/logo.png" alt="CryptoTracker" /></a>
-                </div>
-            <div class="copyright">
-              <p>&copy; Copyright 2019 Fraser Watson. <br/> Designed & developed by Fraser Watson.</p>
-            </div>
-            <div class="contacts">
-              <li><a href="https://www.linkedin.com/in/fraserjohnwatson/"><i class="fab fa-linkedin-in"></a></i>
-              </li>
-              <li><a href="https://www.behance.net/fraserjohnwatson">
+      <div class="footercontainer">
+        <div class="footercontent">
+          <div class="logofooter">
+            <a href="index.html"><img src="./img/logo.png" alt="CryptoTracker" /></a>
+          </div>
+          <div class="copyright">
+            <p>&copy; Copyright 2019 Fraser Watson. <br /> Designed & developed by Fraser Watson.</p>
+          </div>
+          <div class="contacts">
+            <li><a href="https://www.linkedin.com/in/fraserjohnwatson/"><i class="fab fa-linkedin-in"></a></i>
+            </li>
+            <li><a href="https://www.behance.net/fraserjohnwatson">
                 <i class="fab fa-behance"></i></a>
-              </li>
-              <li><a href="fraserjohnwatson@gmail.com">
+            </li>
+            <li><a href="fraserjohnwatson@gmail.com">
                 <i class="fas fa-at"></i></a>
-              </li>
-            </div>
+            </li>
           </div>
         </div>
-      </footer>
+      </div>
+    </footer>
   </div>
-  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.6/vue.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+  <script src="https://unpkg.com/vue-chartjs@3.0.1-rc2/dist/vue-chartjs.js"></script>
+  <script type="text/javascript" src="js/burger.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue2-filters/dist/vue2-filters.min.js"></script>
+  <script type="text/javascript" src="js/vue.js"></script>
+
+</body>
+
 </html>
