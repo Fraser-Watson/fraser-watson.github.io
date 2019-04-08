@@ -604,6 +604,10 @@ ul {
   margin-bottom: 50px;
   margin-left: 20px;
   background: #fafafa;
+  background-image: url(../img/ribbon.png);
+  background-repeat:no-repeat;
+  background-position: 95% 0%;
+  background-size: 7%;
   position: relative;
   border-radius: 5px;
   -webkit-box-shadow: 5px 5px 100px -22px rgba(0, 0, 0, 0.13);
@@ -1060,6 +1064,8 @@ input[type="password"] {
     height: auto;
     margin-left: 10px;
     width: 86%;
+    background-position: 95% 0%;
+    background-size: 10%;
   }
 
   .news-story-preview p {
@@ -1070,8 +1076,6 @@ input[type="password"] {
     -webkit-box-orient: vertical;
   }
 
-  .page-line-news {
-  }
 }
 
 @media only screen and (max-width: 630px) {
@@ -1267,6 +1271,8 @@ input[type="password"] {
     margin-left: 3%;
     text-align: center;
     height: auto;
+    background-position: 95% 0%;
+    background-size: 15%;
   }
 
   .news-content-title {
