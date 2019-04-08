@@ -634,9 +634,7 @@ ul {
 
 .news-content-grid {
   display: flex;
-  margin-left: 35px;
-  margin-right: 35px;
-  margin-bottom: 20px;
+  margin: 40px 35px 40px 35px;
 }
 
 .news-story-preview p {
@@ -680,6 +678,15 @@ ul {
   letter-spacing: -0.5px;
   font-size: 28px;
   margin: 0;
+}
+
+.page-line-news {
+  width: 60%;
+  height: 3px;
+  background: #e2e2e2;
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* --- Wallet --- */
@@ -1063,15 +1070,7 @@ input[type="password"] {
     -webkit-box-orient: vertical;
   }
 
-  .page-line {
-    width: 60%;
-    height: 3px;
-    background: #e2e2e2;
-    margin-top: 0px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 50px;
-    margin-top: 10px;
+  .page-line-news {
   }
 }
 
