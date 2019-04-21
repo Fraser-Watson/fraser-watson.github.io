@@ -741,7 +741,6 @@ ul {
 .news-story-source p{
   display: none;
   float:right;
-  margin: 36px 0 0 5px;
   font-size:0.8em;
 }
 
@@ -1128,9 +1127,13 @@ input[type="password"] {
     -webkit-box-orient: vertical;
   }
   
+  .news-story-source{
+    margin-top:10px;
+  }
+
   .news-story-source p{
     display:block;
-    margin: 0;
+    margin:0;
     color:#ababab;
   }
 

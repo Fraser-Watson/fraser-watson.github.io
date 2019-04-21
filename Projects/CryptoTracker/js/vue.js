@@ -5,29 +5,31 @@ const API_PARAMETERS =
 
 const API_NEWS_PARAMETERS = "/data/v2/news/?categories=?";
 
-const API_NEWS_MINING_PARAMETERS =
-  API_NEWS_PARAMETERS +
-  "cryptocurrency mining,Bitcoin,Mining,Ledger,Wallet,Attack,Antminer,Bitmain&excludeCategories=eth,ethereum,ltc,litecoin,ripple,xrp,monero,xmr";
-
 const API_NEWS_BTC_PARAMETERS =
   API_NEWS_PARAMETERS +
-  "Bitcoin,Ledger&excludeCategories=eth,ethereum,ltc,litecoin,ripple,xrp,monero,xmr,neo,eos,dash,omg";
+  "Bitcoin,Ledger&excludeCategories=eth,ethereum,ltc,litecoin,ripple,xrp,monero,xmr,neo,eos,dash,omg,tron,trx";
 
 const API_NEWS_ETH_PARAMETERS =
   API_NEWS_PARAMETERS +
-  "eth,ethereum,ledger&excludeCategories=bitcoin,btc,xrp,ltc,monero,xmr,neo,eos,dash,omg";
+  "eth,ethereum,ledger&excludeCategories=bitcoin,btc,xrp,ltc,monero,xmr,neo,eos,dash,omg,tron,trx";
 
 const API_NEWS_LTC_PARAMETERS =
   API_NEWS_PARAMETERS +
-  "ltc,litecoin,ledger,mining&excludeCategories=bitcoin,btc,xrp,monero,xmr,ethereum,eth,blockchain,china,neo";
+  "ltc,litecoin,ledger,mining&excludeCategories=bitcoin,btc,xrp,monero,xmr,ethereum,eth,blockchain,china,neo,tron,trx";
+
+  const API_NEWS_XRP_PARAMETERS =
+  API_NEWS_PARAMETERS +
+  "xrp,ripple&excludeCategories=bitcoin,btc,monero,xmr,ethereum,eth,blockchain,china,neo,tron,trx";
+
+  const API_NEWS_MINING_PARAMETERS =
+  API_NEWS_PARAMETERS +
+  "cryptocurrency mining,Bitcoin,Mining,Ledger,Wallet,Attack,Antminer,Bitmain&excludeCategories=eth,ethereum,ltc,litecoin,ripple,xrp,monero,xmr";
 
 const API_NEWS_OTHER_PARAMETERS =
   API_NEWS_PARAMETERS +
-  "neo,omg,eos,monero,xmr,&excludeCategories=bitcoin,btc,xrp,ethereum,eth,litecoin,ltc,ripple";
+  "neo,omg,eos,monero,xmr,tron,trx&excludeCategories=bitcoin,btc,xrp,ethereum,eth,litecoin,ltc,ripple";
 
-const API_NEWS_XRP_PARAMETERS =
-  API_NEWS_PARAMETERS +
-  "xrp,ripple&excludeCategories=bitcoin,btc,monero,xmr,ethereum,eth,blockchain,china,neo";
+
 
 const UPDATE_INTERVAL = 10 * 1000;
 
