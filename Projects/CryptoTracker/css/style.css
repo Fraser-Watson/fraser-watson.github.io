@@ -686,6 +686,7 @@ ul {
 
 .news-story-text {
   margin-left: 25px;
+  position: relative;
 }
 
 .news-story-image {
@@ -723,6 +724,25 @@ ul {
   margin-top: 0px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.news-story-source{
+  position: absolute;
+  bottom:0;
+}
+
+.news-story-source img{
+  height:50px;
+  width:50px;
+  margin: 0 0 -5px 0;
+  border-radius: 5px;
+}
+
+.news-story-source p{
+  display: none;
+  float:right;
+  margin: 36px 0 0 5px;
+  font-size:0.8em;
 }
 
 /* --- Wallet --- */
@@ -1107,6 +1127,16 @@ input[type="password"] {
     -webkit-line-clamp: 3; /* number of lines to show */
     -webkit-box-orient: vertical;
   }
+  
+  .news-story-source p{
+    display:block;
+    margin: 0;
+    color:#ababab;
+  }
+
+  .news-story-source img{
+    display:none;
+  }
 
 }
 
@@ -1382,6 +1412,9 @@ input[type="password"] {
     -webkit-box-orient: vertical;
   }
 
+  .news-story-source {
+    display:none;
+  }
   /* --- Wallet --- */
 
   .wallet-balance h2 {

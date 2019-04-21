@@ -1,7 +1,7 @@
 const CRYPTOCOMPARE_API_URI = "https://min-api.cryptocompare.com";
 
-const API_PARAMETERS = 
-"/data/pricemultifull?fsyms=BTC,ETH,LTC,XRP,OMG,EOS,NEO,DASH,XMR&tsyms=USD&api_key=0bf19dd98d2e5dba83157ffb931d95419799e96b6edf0a1f30a6f934f3a72469";
+const API_PARAMETERS =
+  "/data/pricemultifull?fsyms=BTC,ETH,LTC,XRP,OMG,EOS,NEO,DASH,XMR&tsyms=USD&api_key=0bf19dd98d2e5dba83157ffb931d95419799e96b6edf0a1f30a6f934f3a72469";
 
 const API_NEWS_PARAMETERS = "/data/v2/news/?categories=?";
 
@@ -21,11 +21,13 @@ const API_NEWS_LTC_PARAMETERS =
   API_NEWS_PARAMETERS +
   "ltc,litecoin,ledger,mining&excludeCategories=bitcoin,btc,xrp,monero,xmr,ethereum,eth,blockchain,china,neo";
 
-  const API_NEWS_OTHER_PARAMETERS =
+const API_NEWS_OTHER_PARAMETERS =
   API_NEWS_PARAMETERS +
   "neo,omg,eos,monero,xmr,&excludeCategories=bitcoin,btc,xrp,ethereum,eth,litecoin,ltc,ripple";
-  
-const API_NEWS_XRP_PARAMETERS = API_NEWS_PARAMETERS + "xrp,ripple&excludeCategories=bitcoin,btc,monero,xmr,ethereum,eth,blockchain,china,neo";
+
+const API_NEWS_XRP_PARAMETERS =
+  API_NEWS_PARAMETERS +
+  "xrp,ripple&excludeCategories=bitcoin,btc,monero,xmr,ethereum,eth,blockchain,china,neo";
 
 const UPDATE_INTERVAL = 10 * 1000;
 
