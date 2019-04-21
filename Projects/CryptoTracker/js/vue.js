@@ -1,18 +1,31 @@
 const CRYPTOCOMPARE_API_URI = "https://min-api.cryptocompare.com";
 
-const API_PARAMETERS =
-  "/data/pricemultifull?fsyms=BTC,ETH,LTC,XRP,OMG,EOS,NEO,DASH,XMR&tsyms=USD&api_key=0bf19dd98d2e5dba83157ffb931d95419799e96b6edf0a1f30a6f934f3a72469";
+const API_PARAMETERS = 
+"/data/pricemultifull?fsyms=BTC,ETH,LTC,XRP,OMG,EOS,NEO,DASH,XMR&tsyms=USD&api_key=0bf19dd98d2e5dba83157ffb931d95419799e96b6edf0a1f30a6f934f3a72469";
+
 const API_NEWS_PARAMETERS = "/data/v2/news/?categories=?";
+
+const API_NEWS_MINING_PARAMETERS =
+  API_NEWS_PARAMETERS +
+  "cryptocurrency mining,Bitcoin,Mining,Ledger,Wallet,Attack,Antminer,Bitmain&excludeCategories=eth,ethereum,ltc,litecoin,ripple,xrp,monero,xmr";
+
 const API_NEWS_BTC_PARAMETERS =
   API_NEWS_PARAMETERS +
-  "Bitcoin,Mining,Ledger&excludeCategories=eth,ethereum,ltc,litecoin,ripple,xrp,monero,xmr";
+  "Bitcoin,Ledger&excludeCategories=eth,ethereum,ltc,litecoin,ripple,xrp,monero,xmr,neo,eos,dash,omg";
+
 const API_NEWS_ETH_PARAMETERS =
   API_NEWS_PARAMETERS +
-  "eth,ethereum,ledger&excludeCategories=bitcoin,btc,xrp,ltc,monero,xmr";
+  "eth,ethereum,ledger&excludeCategories=bitcoin,btc,xrp,ltc,monero,xmr,neo,eos,dash,omg";
+
 const API_NEWS_LTC_PARAMETERS =
   API_NEWS_PARAMETERS +
-  "ltc,litecoin,ledger,mining,&excludeCategories=bitcoin,btc,xrp,monero,xmr,ethereum,eth";
-const API_NEWS_XRP_PARAMETERS = API_NEWS_PARAMETERS + "xrp,ripple,xripple";
+  "ltc,litecoin,ledger,mining&excludeCategories=bitcoin,btc,xrp,monero,xmr,ethereum,eth,blockchain,china,neo";
+
+  const API_NEWS_OTHER_PARAMETERS =
+  API_NEWS_PARAMETERS +
+  "neo,omg,eos,monero,xmr,&excludeCategories=bitcoin,btc,xrp,ethereum,eth,litecoin,ltc,ripple";
+  
+const API_NEWS_XRP_PARAMETERS = API_NEWS_PARAMETERS + "xrp,ripple&excludeCategories=bitcoin,btc,monero,xmr,ethereum,eth,blockchain,china,neo";
 
 const UPDATE_INTERVAL = 10 * 1000;
 
@@ -122,7 +135,9 @@ let app = new Vue({
     n_btc: {},
     n_eth: {},
     n_ltc: {},
-    n_xrp: {}
+    n_xrp: {},
+    n_mining: {},
+    n_other: {}
   },
   methods: {
     getCoins: function() {
@@ -194,6 +209,34 @@ let app = new Vue({
         });
     },
 
+    getNewsMining: function() {
+      let self = this;
+
+      axios
+        .get(CRYPTOCOMPARE_API_URI + API_NEWS_MINING_PARAMETERS)
+
+        .then(resp => {
+          this.n_mining = resp.data;
+        })
+        .catch(err => {
+          console.error(err);
+        });
+    },
+
+    getNewsOther: function() {
+      let self = this;
+
+      axios
+        .get(CRYPTOCOMPARE_API_URI + API_NEWS_OTHER_PARAMETERS)
+
+        .then(resp => {
+          this.n_other = resp.data;
+        })
+        .catch(err => {
+          console.error(err);
+        });
+    },
+
     changeData: function() {
       this.dataChart = [6, 6, 3, 5, 5, 6, 7];
     },
@@ -209,14 +252,14 @@ let app = new Vue({
 
   created: function() {
     this.getCoins();
+    this.getNewsMining();
     this.getNewsBtc();
     this.getNewsEth();
     this.getNewsLtc();
     this.getNewsXrp();
+    this.getNewsOther();
   }
 });
-
-/* -------- BEGIN PLAIN JS -------- */
 
 setInterval(() => {
   app.getCoins();

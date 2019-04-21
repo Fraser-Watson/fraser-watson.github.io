@@ -57,8 +57,8 @@
         <ul class="news-coin-container">
 
 
-          <div class="news-coin-btc">
 
+          <div class="news-coin-btc">
             <div class="news-coinbox">
               <div class="news-coin-image">
                 <div class="datatarget">
@@ -106,7 +106,33 @@
               </div>
             </div>
           </div>
+
+          <div class="news-coin-mining">
+            <div class="news-coinbox">
+              <div class="news-coin-image">
+                <div class="datatarget">
+                  <li data-target="#mining"></li>
+                </div>
+                <img src="img/mining.png" alt="mining" />
+              </div>
+            </div>
+          </div>
+
+          <div class="news-coin-other">
+            <div class="news-coinbox">
+              <div class="news-coin-image">
+                <div class="datatarget">
+                  <li data-target="#other"></li>
+                </div>
+                <img src="img/other.png" alt="other" />
+              </div>
+            </div>
+          </div>
+
+
         </ul>
+
+
         <div class="panel active" id="btc">
           <div class="news-flex">
             <div class="news-content-container" v-if="n_btc.Data">
@@ -423,6 +449,166 @@
             </div>
           </div>
         </div>
+
+        <div class="panel" id="mining">
+          <div class="news-flex">
+            <div class="news-content-container" v-if="n_btc.Data">
+              <div class="news-content-title">
+                <h2>
+                  <span class="news-coin-name">Mining</span>
+                </h2>
+                <div class="news-inthe">
+                  <p>In The News:</p>
+                </div>
+              </div>
+
+              <div class="news-content-grid">
+                <div class="news-story-image">
+                  <a v-bind:href="n_mining.Data[0].url" target="_blank">
+                    <img v-bind:src="n_mining.Data[0].imageurl" />
+                  </a>
+                </div>
+
+                <div class="news-story-text">
+                  <div class="news-story-title">
+                    <h3>
+                      {{n_mining.Data[0].title}}
+                    </h3>
+                  </div>
+                  <div class="news-story-preview">
+                    <p>
+                      {{n_mining.Data[0].body}}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="page-line-news"></div>
+              <div class="news-content-grid">
+                <div class="news-story-image">
+                  <a v-bind:href="n_mining.Data[1].url" target="_blank">
+                    <img v-bind:src="n_mining.Data[1].imageurl" />
+                  </a>
+                </div>
+
+                <div class="news-story-text">
+                  <div class="news-story-title">
+                    <h3>
+                      {{n_mining.Data[1].title}}
+                    </h3>
+                  </div>
+                  <div class="news-story-preview">
+                    <p>
+                      {{n_mining.Data[1].body}}
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="page-line-news"></div>
+              <div class="news-content-grid">
+                <div class="news-story-image">
+                  <a v-bind:href="n_mining.Data[2].url" target="_blank">
+                    <img v-bind:src="n_mining.Data[2].imageurl" />
+                  </a>
+                </div>
+
+                <div class="news-story-text">
+                  <div class="news-story-title">
+                    <h3>
+                      {{n_mining.Data[2].title}}
+                    </h3>
+                  </div>
+                  <div class="news-story-preview">
+                    <p>
+                      {{n_mining.Data[2].body}}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="panel" id="other">
+          <div class="news-flex">
+            <div class="news-content-container" v-if="n_other.Data">
+              <div class="news-content-title">
+                <h2>
+                  <span class="news-coin-name">Other Coins</span>
+                </h2>
+                <div class="news-inthe">
+                  <p>In The News:</p>
+                </div>
+              </div>
+
+              <div class="news-content-grid">
+                <div class="news-story-image">
+                  <a v-bind:href="n_other.Data[0].url" target="_blank">
+                    <img v-bind:src="n_other.Data[0].imageurl" />
+                  </a>
+                </div>
+
+                <div class="news-story-text">
+                  <div class="news-story-title">
+                    <h3>
+                      {{n_other.Data[0].title}}
+                    </h3>
+                  </div>
+                  <div class="news-story-preview">
+                    <p>
+                      {{n_other.Data[0].body}}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="page-line-news"></div>
+              <div class="news-content-grid">
+                <div class="news-story-image">
+                  <a v-bind:href="n_other.Data[1].url" target="_blank">
+                    <img v-bind:src="n_other.Data[1].imageurl" />
+                  </a>
+                </div>
+
+                <div class="news-story-text">
+                  <div class="news-story-title">
+                    <h3>
+                      {{n_other.Data[1].title}}
+                    </h3>
+                  </div>
+                  <div class="news-story-preview">
+                    <p>
+                      {{n_other.Data[1].body}}
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="page-line-news"></div>
+              <div class="news-content-grid">
+                <div class="news-story-image">
+                  <a v-bind:href="n_other.Data[2].url" target="_blank">
+                    <img v-bind:src="n_other.Data[2].imageurl" />
+                  </a>
+                </div>
+
+                <div class="news-story-text">
+                  <div class="news-story-title">
+                    <h3>
+                      {{n_other.Data[2].title}}
+                    </h3>
+                  </div>
+                  <div class="news-story-preview">
+                    <p>
+                      {{n_other.Data[2].body}}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
