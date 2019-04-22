@@ -16,7 +16,6 @@ body {
   margin: 0;
   background-color: #f2f4f7;
   color: #424242;
-
   position: relative;
   padding-bottom: 6rem;
   min-height: 100%;
@@ -1118,6 +1117,7 @@ input[type="password"] {
     background-position: 95% 0%;
     background-size: 10%;
   }
+
 
   .news-story-preview p {
     overflow: hidden;
