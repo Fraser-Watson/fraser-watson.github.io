@@ -1456,6 +1456,7 @@ input[type="password"] {
 
   .wallet-box-left {
     margin-top: 26px;
+    width:120px;
   }
 
   /* --- Sign In --- */

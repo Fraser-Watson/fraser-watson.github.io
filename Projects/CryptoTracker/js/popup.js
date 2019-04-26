@@ -6,15 +6,14 @@ closeBtnBtc.addEventListener("click", closePopupBtc);
 window.addEventListener("click", clickOutsideBtc);
 window.addEventListener("resize", function() {
   //Created a wrapper, but changing the values of the div that ChartJS automatically created.
-  //Yes, you still need to create the wrapper anyway!
+  //We still need to create the wrapper anyway!
 
   //Position relative is necessary according to the docs
   document.getElementById("wrap").children[0].style.position = "relative";
   document.getElementById("wrap").children[0].style.height =
-    window.innerHeight + "px";
+    window.innerHeight;
   document.getElementById("wrap").children[0].style.width =
-    window.innerWidth + "px";
-  //Do not allow for the container to go above the "max-width/max-height" of popup-container
+    window.innerWidth;
   if (window.innerWidth > 1)
     document.getElementById("wrap").children[0].style.width = "100%";
   if (window.innerHeight > 1)
