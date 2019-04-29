@@ -422,7 +422,7 @@ ul {
 .graph-container {
   margin: 55px 35px 45px 0;
   height: 400px;
-  width: calc(100% - 380px);
+  width: calc(100% - 405px);
   float: right;
   display: block;
 }
@@ -485,7 +485,7 @@ text-align: center;
 .detail-main-container {
   position: static;
   float: left;
-  margin: 35px;
+  margin: 35px 20px 35px 35px;
 }
 
 .detail-main-container p {
