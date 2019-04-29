@@ -427,6 +427,10 @@ ul {
   display: block;
 }
 
+.graph-container h3 {
+text-align: center;
+}
+
 #wrap {
   height: 400px;
 }
