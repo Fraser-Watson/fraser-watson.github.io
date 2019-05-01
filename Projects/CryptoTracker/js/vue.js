@@ -7,29 +7,27 @@ const API_NEWS_PARAMETERS = "/data/v2/news/?categories=?";
 
 const API_NEWS_BTC_PARAMETERS =
   API_NEWS_PARAMETERS +
-  "Bitcoin,Ledger&excludeCategories=eth,ethereum,ltc,litecoin,ripple,xrp,monero,xmr,neo,eos,dash,omg,tron,trx,ada,cardano,vet,vechain,altcoins,altcoin,headlines,news,mining";
+  "BTC,Bitcoin,Satoshi&excludeCategories=ETH,Ethereum,LTC,Litecoin,XRP,Ripple,XMR,Monero,NEO,EOS,DASH,OMG,Tron,TRX,ADA,VET,VeChain,Waves,Trading,Exchange,blockchain news,news";
 
 const API_NEWS_ETH_PARAMETERS =
   API_NEWS_PARAMETERS +
-  "eth,ethereum,ledger&excludeCategories=bitcoin,btc,xrp,ltc,monero,xmr,neo,eos,dash,omg,tron,trx,ada,cardano,vet,vechain,altcoin,altcoins,headlines,news,mining";
+  "ETH,Ethereum,Vitalik,Foundation&excludeCategories=BTC,Bitcoin,LTC,Litecoin,XRP,Ripple,XMR,Monero,NEO,EOS,DASH,OMG,Tron,TRX,ADA,VET,VeChain,Waves,blockchain news,news";
 
 const API_NEWS_LTC_PARAMETERS =
   API_NEWS_PARAMETERS +
-  "ltc,litecoin&excludeCategories=bitcoin,btc,xrp,monero,xmr,ethereum,eth,blockchain,china,neo,tron,trx,ada,cardano,vet,vechain,altcoin,altcoins,headlines,bat";
+  "LTC,Litecoin,ledger,Charlie Lee&excludeCategories=BTC,Bitcoin,ETH,Ethereum,XRP,Ripple,XMR,Monero,NEO,EOS,DASH,OMG,Tron,TRX,ADA,VET,VeChain,Waves,Trading,Exchange,blockchain news,news";
 
-  const API_NEWS_XRP_PARAMETERS =
+const API_NEWS_XRP_PARAMETERS =
   API_NEWS_PARAMETERS +
-  "xrp,ripple&excludeCategories=bitcoin,btc,monero,xmr,ethereum,eth,blockchain,china,neo,tron,trx,dash,ada,cardano,vet,vechain,altcoin,altcoins,headlines,news,mining,eos,banking";
+  "XRP,Ripple,Arthur Britt,David Schwartz,Ryan Fugger,Brad Garlinghouse,ledger&excludeCategories=BTC,Bitcoin,ETH,Ethereum,LTC,Litecoin,XMR,Monero,NEO,EOS,DASH,OMG,Tron,TRX,ADA,VET,VeChain";
 
-  const API_NEWS_MINING_PARAMETERS =
+const API_NEWS_MINING_PARAMETERS =
   API_NEWS_PARAMETERS +
-  "cryptocurrency mining,Bitcoin,Mining,Ledger,Wallet,Attack,Antminer,Bitmain&excludeCategories=eth,ethereum,ltc,litecoin,ripple,xrp,monero,xmr,etn,electroneum,xlm,stellar lumens,ada,cardano,vet,vechain";
+  "cryptocurrency Mining,Mining,Ledger,Wallet,Attack,Antminer,Bitmain&excludeCategories=trx";
 
 const API_NEWS_OTHER_PARAMETERS =
   API_NEWS_PARAMETERS +
-  "altcoin,altcoins,vet,vechain,ada,cardano,neo,omg,eos,monero,xmr,tron,trx&excludeCategories=bitcoin,btc,xrp,ethereum,eth,litecoin,ltc,ripple";
-
-
+  "blockchain news,tether,trading,altcoin,altcoins,vet,vechain,ada,cardano,neo,omg,eos,monero,xmr,tron,trx&excludeCategories=bitcoin,btc,xrp,ethereum,eth,litecoin,ltc,ripple";
 
 const UPDATE_INTERVAL = 10 * 1000;
 
