@@ -101,15 +101,17 @@ ul {
 /* --- nav bar --- */
 
 .navbar {
-  background: white;
-  padding: 10px 0 10px 0;
-  width:100%;
-  position: fixed;
-  top:0;
-  z-index: 1;
-  -webkit-box-shadow: 0px 10px 14px 0px rgba(0,0,0,0.05);
-  -moz-box-shadow: 0px 10px 14px 0px rgba(0,0,0,0.05);
-  box-shadow: 0px 10px 14px 0px rgba(0,0,0,0.05);
+    background: #ffffffe3;
+    padding: 10px 0 10px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    -webkit-box-shadow: 0px 10px 14px 0px rgba(0,0,0,0.05);
+    -moz-box-shadow: 0px 10px 14px 0px rgba(0,0,0,0.05);
+    box-shadow: 0px 10px 14px 0px rgba(0,0,0,0.05);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 }
 
 .navbar .logo img {
