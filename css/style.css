@@ -6,7 +6,7 @@
     width: 100%;
     float: left;
     height: 100vh;
-    background: #333333 url(../images/header.png);
+    background: #333333 url(../images/header.webp);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -54,7 +54,7 @@
 .arrowDown {
     height: 50px;
     width: 50px;
-    background: url(../images/arrowdown.png);
+    background: url(../images/arrowdown.webp);
     background-position: center;
     background-size: cover;
 }
@@ -212,21 +212,21 @@
     }
 }
 .uni .projectIcon {
-    background: #ffffff url(../images/uni.png);
+    background: #ffffff url(../images/uni.webp);
     background-size: 60%; 
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .ybm .projectIcon {
-    background: #4B6DB7 url(../images/ybm.png);
+    background: #4B6DB7 url(../images/ybm.webp);
     background-size: 60%; 
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .personal .projectIcon {
-    background: #ababab url(../images/user.png);
+    background: #ababab url(../images/user.webp);
     background-size: 60%; 
     background-position: center;
     background-repeat: no-repeat;
