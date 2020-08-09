@@ -21,7 +21,7 @@
     }
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1366px) {
     .fullWidthImage {
         background-attachment: scroll;
     }
