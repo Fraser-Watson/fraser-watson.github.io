@@ -263,7 +263,7 @@
 
   .last .projectContainer:last-of-type {
     padding: 0;
-    max-height: 335px;
+    min-height: 335px;
   }
 
   .project {
