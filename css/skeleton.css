@@ -187,10 +187,10 @@ a:hover {
 
 /* Safari Fix */
 @media not all and (min-resolution:.001dpcm) { @media {
-  .safariOnly a:hover { 
+  a:hover { 
       background: unset;
       color:#EB2068; 
-      -webkit-text-fill-color: unset;
+      -webkit-text-fill-color:#EB2068;
   }
 }}
 
