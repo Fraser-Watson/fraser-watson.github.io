@@ -178,6 +178,7 @@ p {
 a {
   color: #888888; display:inline-block; }
 a:hover { 
+  background: #EB2068;
   background: linear-gradient(90deg, rgba(191,38,117,1) 0%, rgba(252,29,100,1) 100%); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; }
