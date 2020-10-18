@@ -178,13 +178,22 @@ p {
 a {
   color: #888888; display:inline-block; }
 a:hover { 
-  background: #EB2068;
   background: linear-gradient(90deg, rgba(191,38,117,1) 0%, rgba(252,29,100,1) 100%); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; }
 .projectContainer a {
   display: inline !important;
 }
+
+/* Safari Fixes */
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)
+{ @media {
+  a:hover { 
+    color: #EB2068;
+    background: unset;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset; }
+}}
 
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
