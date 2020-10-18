@@ -185,15 +185,18 @@ a:hover {
   display: inline !important;
 }
 
+
 /* Safari Fixes */
-@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)
-{ @media {
+
+@media not all and (min-resolution:.001dpcm){ @supports (-webkit-appearance:none) {
   a:hover { 
     color: #EB2068;
     background: unset;
     -webkit-background-clip: unset;
-    -webkit-text-fill-color: unset; }
-}}
+    -webkit-text-fill-color: unset; 
+  }
+  }
+
 
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
