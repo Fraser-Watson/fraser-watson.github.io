@@ -185,6 +185,15 @@ a:hover {
   display: inline !important;
 }
 
+/* Safari Fix */
+@media not all and (min-resolution:.001dpcm) { @media {
+  a:hover { 
+      background: unset;
+      color:#EB2068; 
+      -webkit-text-fill-color: unset;
+  }
+}}
+
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .button,
