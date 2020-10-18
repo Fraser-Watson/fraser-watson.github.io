@@ -185,19 +185,6 @@ a:hover {
   display: inline !important;
 }
 
-
-/* Safari Fixes */
-
-@media not all and (min-resolution:.001dpcm){ @supports (-webkit-appearance:none) {
-  a:hover { 
-    color: #EB2068;
-    background: unset;
-    -webkit-background-clip: unset;
-    -webkit-text-fill-color: unset; 
-  }
-  }
-
-
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .button,
