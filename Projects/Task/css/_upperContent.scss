@@ -37,6 +37,8 @@ $box2: #FFE6C7;
         height: 700px;
         margin-right: 133px;
         background: url(../assets/touchLeft.png);
+        background-size: cover;
+        background-position: center;
     }
     .right {
         float: right;
@@ -86,6 +88,8 @@ $box2: #FFE6C7;
         margin-top: 165px;
         position: relative;
         background: url(../assets/resourcesRight.png);
+        background-size: cover;
+        background-position: center;
     }
     .resourcesButton {
         margin-top: 30px;

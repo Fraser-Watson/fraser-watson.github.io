@@ -27,6 +27,8 @@ $accentVariant: #EAF2FF;
     .left {
         .image {
             background: url(../assets/feature1.png);
+            background-size: cover;
+            background-position: center;
         }
         .text {
             background: url(../assets/featureBubble.png);
@@ -38,6 +40,8 @@ $accentVariant: #EAF2FF;
     .right {
         .image {
             background: url(../assets/feature2.png);
+            background-size: cover;
+            background-position: center;
         }
         .text {
             background: url(../assets/featureBubbleVariant.png);

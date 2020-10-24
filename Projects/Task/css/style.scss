@@ -11,6 +11,7 @@ $tertiary: #FFE6C7;
 @use 'upperContent';
 @use 'lowerContent';
 @use 'footer';
+@use 'responsive';
 
 
 /*Fonts*/ 
@@ -51,6 +52,7 @@ body {
     font-weight: 400;
     color: $primary;
     margin: 0;
+    overflow-x: hidden;
 }
 .container {
     position: relative;
@@ -86,6 +88,14 @@ body {
     box-sizing: border-box; 
 }
 
+/*Responsive Core Styles*/
+@media screen and (max-width: 650px) { 
+    .siteGridSmall, .siteGridMedium {
+        padding: 0;
+    }
+}
+
+
 /*Text Styling*/ 
 
 a, a:visited {
@@ -115,10 +125,78 @@ h2 { font-size: 6rem; letter-spacing: 1rem; line-height: 6.2rem; }
 h3 { font-size: 4rem; letter-spacing: 0.5rem; line-height: 4rem; }
 h4 { font-size: 3rem; }
 h5 { font-size: 1.7rem; line-height: 1.2em; letter-spacing: 2px;}
-
+.stayConnected h5 { margin-bottom: 10px; }
 .underlineBold { font-weight: 600; text-decoration: underline; }
 .stroke { background: url(../assets/stroke.png); background-repeat: no-repeat; background-position: right 0 bottom 15px;}
 
+/*Responsive Font Sizing*/
+
+@media screen and (max-width: 1070px) { 
+    h1 { font-size: 8rem; line-height: 9rem; letter-spacing: 0.6rem; }
+    h2 { font-size: 5rem; letter-spacing: 0.5rem; line-height: 5rem; }
+}
+@media screen and (max-width: 650px) { 
+    h1 { font-size: 8rem; line-height: 9rem; letter-spacing: 0.6rem; }
+    h2 { font-size: 4rem; letter-spacing: 0.3rem; line-height: 4rem; }
+    h3 { letter-spacing: 0.3rem; }
+    .heroOverlay { .textMiddle { p { font-size: 1.2rem; }}}
+}
+@media screen and (max-width: 550px) { 
+    h1 { font-size: 6rem; line-height: 6rem; letter-spacing: 0.4rem; }
+}
+@media screen and (max-width: 450px) { 
+    h1 { font-size: 5rem; line-height: 5rem; letter-spacing: 0.3rem; }
+}
+/*Input Style*/ 
+input[type="text"] {
+    height: 20px;
+    border: 0;
+    padding: 10px 20px;
+    width: calc(100% - 40px);
+}
+button, .input[type="submit"] {
+    margin-left: -50px;
+    height: 30px;
+    border: 0;
+    padding: 10px 20px;
+    background: #ffffff url(../assets/submit.png);
+    background-size: 22px 11px;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    border: 0;
+    -webkit-appearance: none;
+    transition: 0.5s ease;
+    &:hover{
+        background-position: right;
+    }
+}
+::-webkit-input-placeholder {
+    @include bodyFont();
+    color: #121E3C;
+}
+:-moz-placeholder {
+    @include bodyFont();
+    color: #121E3C;
+    opacity: 1;
+}
+::-moz-placeholder { 
+    @include bodyFont();
+    color: #121E3C;
+    opacity: 1;
+}
+:-ms-input-placeholder { 
+    @include bodyFont();
+    color: #121E3C;
+}
+::-ms-input-placeholder { 
+    @include bodyFont();
+    color: #121E3C;
+}
+::placeholder {
+    @include bodyFont();
+    color: #121E3C;
+}
 
 /*Buttons*/ 
 

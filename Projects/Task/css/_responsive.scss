@@ -1,0 +1,365 @@
+$pastel1: #CFF2EC;
+$pastel2: #FFE6C7;
+$pastel3: #EAF2FF;
+/* Responsive */ 
+
+
+@media screen and (max-width: 1240px) { 
+    .heroOverlay {
+        margin-left: 20px;
+    }
+    .getInTouchBar {
+        .left {
+            margin-right: 64px;
+            width: 450px;
+            height: 600px;
+        }
+        .right {
+            float: left;
+            width: calc(100% - 633px);
+        }
+    }
+    .resourcesBar {
+        margin-bottom: 0;
+        .right {
+            float: right;
+            width: 500px;
+            height: 400px;
+            margin-top: 170px;
+            margin-left: 18px;
+        }
+        .left {
+            width: 492px;
+            margin-top: 225px;
+        }
+        .behind {
+            height: 655px;
+        }
+    }
+    .aboutBar {
+        margin: 110px 0;
+    }
+    .featureBar {
+        .behind {
+            height: 415px;
+        }
+        .inner {
+            justify-content: space-around;
+        }
+        .image, .left, .right {
+            width: 430px;
+        }
+        .image {
+            width: 430px;
+            height: 300px;
+        }
+    }
+}
+
+@media screen and (max-width: 1150px) { 
+        .getInTouchBar {
+            .right {
+                float: left;
+                width: 350px;
+            }
+        .resourcesBar {
+            .left {
+                width: 350px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1070px) { 
+
+    .resourcesBar {
+        br {
+            display: none;
+        }
+        .left {
+            width: 400px;
+        }
+        .right {
+            width: 460px;
+        }
+    }
+    .featureBar {
+        padding: 0;
+        .title {
+            width: 100%;
+        }
+        .behind {
+            height: 415px;
+        }
+        .inner {
+            justify-content: space-around;
+        }
+        .image, .left, .right {
+            width: 360px;
+        }
+        .image {
+            width: 360px;
+            height: 250px;
+        }
+        .left, .right {
+            .text {
+                background-size: 350px 195px;
+                background-position: -75px 0;
+                padding: 75px 0;
+            }
+            .bodyText {
+                width: 100%;
+            }
+        }
+        .left {
+            .text {
+                background-position: -30px 0;
+            }
+        }
+    }
+    .aboutBar {
+        .title {
+            padding: 86px 0px 10px 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1030px) { 
+    .getInTouchBar {
+        .behind {
+            width: 100%;
+            width: calc(100% - 20px);
+        }
+    }
+    .resourcesBar {
+        .behind {
+            left: 500px;
+            width: calc(100% - 520px);
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 940px) { 
+    .navMenu {
+        display: none;
+    }
+    .navBar .navSocial {
+        display: none;
+    }
+    .navBar {
+        .mobileMenuSocial {
+            display: flex;
+        }
+    }
+    .mobileMenuButton {
+        display: inline-block;
+    }
+    .navBar {
+        .mobileMenuBox {
+            display: inline-block;
+        }
+    }
+    .stayConnected {
+        display: none;
+    }
+    .getInTouchBar, .resourcesBar {
+        height: auto;
+        .left, .right {
+            width: 100%;
+            margin: 0;
+            text-align: center;
+            h2 {
+                width: 90%;
+                margin: 0 5%;
+            }
+        }
+        .behind {
+            display: none;
+        }
+        .believeButton, .resourcesButton {
+            display: flex;
+            justify-content: center;
+            margin-top: 0;
+        }
+        .believeBody, .resourcesBody {
+            width: 90%;
+            margin: 20px 5%;
+        }
+    }
+    .getInTouchBar {
+        margin: 150px 0 0 0;
+        background: $pastel1;
+        .left {
+            height: 300px;
+            width: 90%;
+            margin: -100px 5% 0 5%;
+        }
+        .right {
+            margin: 40px 0;
+        }
+        .behind {
+            display: none;
+        }
+        .mobileOrder {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .resourcesBar {
+        margin: 200px 0 0 0;
+        background: $pastel2;
+        .left {
+            margin: 40px 0;
+        }
+        .right {
+            height: 300px;
+            width: 90%;
+            margin: -100px 5% 0 5%;
+        }
+        .behind {
+            height: 613px;
+        }
+        .mobileOrder {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }
+    .badgesInner {
+        flex-wrap: wrap;
+        justify-content: center;
+        img {
+            margin: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .heroOverlay {
+        transform: scale(0.8);
+    }
+    .featureBar {
+        .inner {
+            justify-content: center;
+            flex-direction: column;
+        }
+        .left, .right {
+            position: relative;
+            width: 100%;
+            margin: 20px 0;
+            text-align: left;
+            .text {
+                background-size: 350px 195px;
+                width: calc(100% - 50px);
+                padding: 75px 0 50px 0;
+                margin: -115px auto 0 auto;
+            }
+            .image {
+                width: calc(100% - 50px);
+                margin: auto;
+            }
+            .title {
+                width: 50%;
+            }
+            &:after {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                height: 70%;
+                width: 100%;
+                background: $pastel3;
+                content: " ";
+                z-index: -1;
+            }
+        }
+        .left {
+            .text {
+                background-position: -30px 0;
+            }
+        }
+        .right {
+            .text {
+                background-position: -75px 0;
+            }
+        }
+        .behind {
+            display: none;
+        }
+    }
+}
+
+
+@media screen and (max-width: 650px) { 
+    .mobileMenu {
+        width: 100%;
+    }
+    .heroBar {
+        height: calc(100vh - 73px);
+        .outer {
+            height: 100%;
+        }
+    }
+    .heroOverlay {
+        width: 500px;
+        margin: auto;
+        transform: scale(1);
+        .inner {
+            padding: 40px 0 0 20px;
+            justify-content: center;
+        }
+
+        .textMiddle {
+            width: 215px;
+        }
+    }
+    .getInTouchBar {
+        .behind {
+
+        }
+    }
+}
+
+@media screen and (max-width: 550px) { 
+    .heroOverlay {
+        background-size: cover;
+        background-position: center;
+        width: 425px;
+        height: 297px;
+        .inner {
+            padding: 40px 0 0 40px;
+            margin-top: -70px;
+        }
+        .below {
+            display: inline-block;
+        }
+        .arrowDown {
+            float: left;
+            margin-top: 5px;
+        }
+        .textMiddle {
+            float: left;
+            width: calc(100% - 100px);
+            margin: 5px 0 10px 0;
+        }
+    }
+}
+@media screen and (max-width: 450px) { 
+    .heroOverlay {
+        background-size: cover;
+        background-position: center;
+        width: 375px;
+        height: 262px;
+        .textMiddle { p { margin: 0 0 0 30px }}
+    }
+}
+
+@media screen and (max-width: 350px) { 
+    .heroOverlay {      
+    width: 320px;
+    height: 224px; 
+    .heroOverlay .inner {
+        padding: 20px 0 0 20px;
+    }
+    }
+}

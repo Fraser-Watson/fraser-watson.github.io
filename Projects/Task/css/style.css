@@ -7,6 +7,9 @@
   right: 0;
   z-index: 10;
 }
+.stayConnected .inner {
+  padding: 20px 30px;
+}
 
 .navBar {
   width: 100%;
@@ -29,6 +32,21 @@
 .navBar i {
   font-size: 2rem;
 }
+.navBar .navSocial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navBar .navSocial .socialIcon {
+  margin: 0;
+}
+.navBar .mobileMenuBox {
+  height: 43px;
+  display: none;
+}
+.navBar .mobileMenuBox .mobileMenu .closeButtonBox a {
+  font-size: 5rem;
+}
 
 .logo {
   height: 40px;
@@ -42,13 +60,76 @@
   margin: 10px 0;
 }
 
-.navSocial {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.mobileMenuButton {
+  display: none;
+  height: 45px;
+  width: 45px;
+  background: url(../assets/menuButton.png);
+  background-size: cover;
+  background-position: center;
 }
-.navSocial .socialIcon {
+
+.mobileMenu {
+  height: 100%;
+  width: 450px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: -100%;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  z-index: 999;
+}
+.mobileMenu .navSocial {
+  margin-left: 30px;
+  margin-top: 50px;
+  justify-content: flex-start;
+}
+.mobileMenu .navSocial .socialIcon {
   margin: 0;
+}
+.mobileMenu .closeButtonBox {
+  width: 64px;
+  float: right;
+}
+.mobileMenu .sideMenuLogo {
+  width: 200px;
+  width: 130px;
+  height: 95px;
+  background: url(../assets/nudgeminds.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 10px 0 0 40px;
+}
+.mobileMenu .sideMenuLinks ul {
+  list-style: none;
+  text-align: left;
+  margin-right: 35px;
+}
+.mobileMenu .sideMenuLinks ul li {
+  margin: 0px 0;
+  padding: 13px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+.mobileMenu .sideMenuLinks ul li:after {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  height: 38px;
+  width: 50px;
+  background: url(../assets/angleRight.png);
+  background-size: 22px 12px;
+  background-position: center;
+  background-repeat: no-repeat;
+  content: " ";
+  opacity: 0.7;
+}
+.mobileMenu .sideMenuLinks ul li a {
+  margin: 0;
+  font-size: 2rem;
 }
 
 /*Content Centering*/
@@ -154,6 +235,8 @@
   height: 700px;
   margin-right: 133px;
   background: url(../assets/touchLeft.png);
+  background-size: cover;
+  background-position: center;
 }
 .getInTouchBar .right {
   float: right;
@@ -202,6 +285,8 @@
   margin-top: 165px;
   position: relative;
   background: url(../assets/resourcesRight.png);
+  background-size: cover;
+  background-position: center;
 }
 .resourcesBar .resourcesButton {
   margin-top: 30px;
@@ -235,6 +320,8 @@
 }
 .featureBar .left .image {
   background: url(../assets/feature1.png);
+  background-size: cover;
+  background-position: center;
 }
 .featureBar .left .text {
   background: url(../assets/featureBubble.png);
@@ -244,6 +331,8 @@
 }
 .featureBar .right .image {
   background: url(../assets/feature2.png);
+  background-size: cover;
+  background-position: center;
 }
 .featureBar .right .text {
   background: url(../assets/featureBubbleVariant.png);
@@ -354,6 +443,339 @@
   margin: 0px 0 80px 0;
 }
 
+/* Responsive */
+@media screen and (max-width: 1240px) {
+  .heroOverlay {
+    margin-left: 20px;
+  }
+
+  .getInTouchBar .left {
+    margin-right: 64px;
+    width: 450px;
+    height: 600px;
+  }
+  .getInTouchBar .right {
+    float: left;
+    width: calc(100% - 633px);
+  }
+
+  .resourcesBar {
+    margin-bottom: 0;
+  }
+  .resourcesBar .right {
+    float: right;
+    width: 500px;
+    height: 400px;
+    margin-top: 170px;
+    margin-left: 18px;
+  }
+  .resourcesBar .left {
+    width: 492px;
+    margin-top: 225px;
+  }
+  .resourcesBar .behind {
+    height: 655px;
+  }
+
+  .aboutBar {
+    margin: 110px 0;
+  }
+
+  .featureBar .behind {
+    height: 415px;
+  }
+  .featureBar .inner {
+    justify-content: space-around;
+  }
+  .featureBar .image, .featureBar .left, .featureBar .right {
+    width: 430px;
+  }
+  .featureBar .image {
+    width: 430px;
+    height: 300px;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .getInTouchBar .right {
+    float: left;
+    width: 350px;
+  }
+  .getInTouchBar .resourcesBar .left {
+    width: 350px;
+  }
+}
+@media screen and (max-width: 1070px) {
+  .resourcesBar br {
+    display: none;
+  }
+  .resourcesBar .left {
+    width: 400px;
+  }
+  .resourcesBar .right {
+    width: 460px;
+  }
+
+  .featureBar {
+    padding: 0;
+  }
+  .featureBar .title {
+    width: 100%;
+  }
+  .featureBar .behind {
+    height: 415px;
+  }
+  .featureBar .inner {
+    justify-content: space-around;
+  }
+  .featureBar .image, .featureBar .left, .featureBar .right {
+    width: 360px;
+  }
+  .featureBar .image {
+    width: 360px;
+    height: 250px;
+  }
+  .featureBar .left .text, .featureBar .right .text {
+    background-size: 350px 195px;
+    background-position: -75px 0;
+    padding: 75px 0;
+  }
+  .featureBar .left .bodyText, .featureBar .right .bodyText {
+    width: 100%;
+  }
+  .featureBar .left .text {
+    background-position: -30px 0;
+  }
+
+  .aboutBar .title {
+    padding: 86px 0px 10px 0;
+  }
+}
+@media screen and (max-width: 1030px) {
+  .getInTouchBar .behind {
+    width: 100%;
+    width: calc(100% - 20px);
+  }
+
+  .resourcesBar .behind {
+    left: 500px;
+    width: calc(100% - 520px);
+  }
+}
+@media screen and (max-width: 940px) {
+  .navMenu {
+    display: none;
+  }
+
+  .navBar .navSocial {
+    display: none;
+  }
+
+  .navBar .mobileMenuSocial {
+    display: flex;
+  }
+
+  .mobileMenuButton {
+    display: inline-block;
+  }
+
+  .navBar .mobileMenuBox {
+    display: inline-block;
+  }
+
+  .stayConnected {
+    display: none;
+  }
+
+  .getInTouchBar, .resourcesBar {
+    height: auto;
+  }
+  .getInTouchBar .left, .getInTouchBar .right, .resourcesBar .left, .resourcesBar .right {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+  .getInTouchBar .left h2, .getInTouchBar .right h2, .resourcesBar .left h2, .resourcesBar .right h2 {
+    width: 90%;
+    margin: 0 5%;
+  }
+  .getInTouchBar .behind, .resourcesBar .behind {
+    display: none;
+  }
+  .getInTouchBar .believeButton, .getInTouchBar .resourcesButton, .resourcesBar .believeButton, .resourcesBar .resourcesButton {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+  }
+  .getInTouchBar .believeBody, .getInTouchBar .resourcesBody, .resourcesBar .believeBody, .resourcesBar .resourcesBody {
+    width: 90%;
+    margin: 20px 5%;
+  }
+
+  .getInTouchBar {
+    margin: 150px 0 0 0;
+    background: #CFF2EC;
+  }
+  .getInTouchBar .left {
+    height: 300px;
+    width: 90%;
+    margin: -100px 5% 0 5%;
+  }
+  .getInTouchBar .right {
+    margin: 40px 0;
+  }
+  .getInTouchBar .behind {
+    display: none;
+  }
+  .getInTouchBar .mobileOrder {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .resourcesBar {
+    margin: 200px 0 0 0;
+    background: #FFE6C7;
+  }
+  .resourcesBar .left {
+    margin: 40px 0;
+  }
+  .resourcesBar .right {
+    height: 300px;
+    width: 90%;
+    margin: -100px 5% 0 5%;
+  }
+  .resourcesBar .behind {
+    height: 613px;
+  }
+  .resourcesBar .mobileOrder {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .badgesInner {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .badgesInner img {
+    margin: 20px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .heroOverlay {
+    transform: scale(0.8);
+  }
+
+  .featureBar .inner {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .featureBar .left, .featureBar .right {
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+    text-align: left;
+  }
+  .featureBar .left .text, .featureBar .right .text {
+    background-size: 350px 195px;
+    width: calc(100% - 50px);
+    padding: 75px 0 50px 0;
+    margin: -115px auto 0 auto;
+  }
+  .featureBar .left .image, .featureBar .right .image {
+    width: calc(100% - 50px);
+    margin: auto;
+  }
+  .featureBar .left .title, .featureBar .right .title {
+    width: 50%;
+  }
+  .featureBar .left:after, .featureBar .right:after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 70%;
+    width: 100%;
+    background: #EAF2FF;
+    content: " ";
+    z-index: -1;
+  }
+  .featureBar .left .text {
+    background-position: -30px 0;
+  }
+  .featureBar .right .text {
+    background-position: -75px 0;
+  }
+  .featureBar .behind {
+    display: none;
+  }
+}
+@media screen and (max-width: 650px) {
+  .mobileMenu {
+    width: 100%;
+  }
+
+  .heroBar {
+    height: calc(100vh - 73px);
+  }
+  .heroBar .outer {
+    height: 100%;
+  }
+
+  .heroOverlay {
+    width: 500px;
+    margin: auto;
+    transform: scale(1);
+  }
+  .heroOverlay .inner {
+    padding: 40px 0 0 20px;
+    justify-content: center;
+  }
+  .heroOverlay .textMiddle {
+    width: 215px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .heroOverlay {
+    background-size: cover;
+    background-position: center;
+    width: 425px;
+    height: 297px;
+  }
+  .heroOverlay .inner {
+    padding: 40px 0 0 40px;
+    margin-top: -70px;
+  }
+  .heroOverlay .below {
+    display: inline-block;
+  }
+  .heroOverlay .arrowDown {
+    float: left;
+    margin-top: 5px;
+  }
+  .heroOverlay .textMiddle {
+    float: left;
+    width: calc(100% - 100px);
+    margin: 5px 0 10px 0;
+  }
+}
+@media screen and (max-width: 450px) {
+  .heroOverlay {
+    background-size: cover;
+    background-position: center;
+    width: 375px;
+    height: 262px;
+  }
+  .heroOverlay .textMiddle p {
+    margin: 0 0 0 30px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .heroOverlay {
+    width: 320px;
+    height: 224px;
+  }
+  .heroOverlay .heroOverlay .inner {
+    padding: 20px 0 0 20px;
+  }
+}
 /*Variables*/
 /*Fonts*/
 /*Core Styles*/
@@ -370,6 +792,7 @@ body {
   font-weight: 400;
   color: #121E3C;
   margin: 0;
+  overflow-x: hidden;
 }
 
 .container {
@@ -407,6 +830,12 @@ body {
   box-sizing: border-box;
 }
 
+/*Responsive Core Styles*/
+@media screen and (max-width: 650px) {
+  .siteGridSmall, .siteGridMedium {
+    padding: 0;
+  }
+}
 /*Text Styling*/
 a, a:visited {
   text-decoration: none;
@@ -475,6 +904,10 @@ h5 {
   letter-spacing: 2px;
 }
 
+.stayConnected h5 {
+  margin-bottom: 10px;
+}
+
 .underlineBold {
   font-weight: 600;
   text-decoration: underline;
@@ -484,6 +917,125 @@ h5 {
   background: url(../assets/stroke.png);
   background-repeat: no-repeat;
   background-position: right 0 bottom 15px;
+}
+
+/*Responsive Font Sizing*/
+@media screen and (max-width: 1070px) {
+  h1 {
+    font-size: 8rem;
+    line-height: 9rem;
+    letter-spacing: 0.6rem;
+  }
+
+  h2 {
+    font-size: 5rem;
+    letter-spacing: 0.5rem;
+    line-height: 5rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  h1 {
+    font-size: 8rem;
+    line-height: 9rem;
+    letter-spacing: 0.6rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+    letter-spacing: 0.3rem;
+    line-height: 4rem;
+  }
+
+  h3 {
+    letter-spacing: 0.3rem;
+  }
+
+  .heroOverlay .textMiddle p {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  h1 {
+    font-size: 6rem;
+    line-height: 6rem;
+    letter-spacing: 0.4rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  h1 {
+    font-size: 5rem;
+    line-height: 5rem;
+    letter-spacing: 0.3rem;
+  }
+}
+/*Input Style*/
+input[type=text] {
+  height: 20px;
+  border: 0;
+  padding: 10px 20px;
+  width: calc(100% - 40px);
+}
+
+button, .input[type=submit] {
+  margin-left: -50px;
+  height: 30px;
+  border: 0;
+  padding: 10px 20px;
+  background: #ffffff url(../assets/submit.png);
+  background-size: 22px 11px;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  border: 0;
+  -webkit-appearance: none;
+  transition: 0.5s ease;
+}
+button:hover, .input[type=submit]:hover {
+  background-position: right;
+}
+
+::-webkit-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #121E3C;
+}
+
+:-moz-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #121E3C;
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #121E3C;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #121E3C;
+}
+
+::-ms-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #121E3C;
+}
+
+::placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #121E3C;
 }
 
 /*Buttons*/

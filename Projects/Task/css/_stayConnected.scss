@@ -11,5 +11,8 @@ $tertiary: #FFE6C7;
     bottom: 0;
     right: 0;
     z-index: 10;
+    .inner {
+        padding: 20px 30px;
+    }
 }
 
