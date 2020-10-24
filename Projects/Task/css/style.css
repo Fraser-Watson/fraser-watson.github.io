@@ -162,6 +162,8 @@
   width: 25px;
   height: 7px;
   background: url(../assets/cornerIcon.png);
+  background-size: cover;
+  background-position: center;
   margin-bottom: 15px;
 }
 
@@ -701,6 +703,7 @@
     background-position: -30px 0;
   }
   .featureBar .right .text {
+    padding: 65px 0 50px 0;
     background-position: -75px 0;
   }
   .featureBar .behind {
@@ -765,6 +768,10 @@
   }
   .heroOverlay .textMiddle p {
     margin: 0 0 0 30px;
+  }
+
+  .featureBar .right .text {
+    background-position: -115px 0;
   }
 }
 @media screen and (max-width: 350px) {

@@ -280,6 +280,7 @@ $pastel3: #EAF2FF;
         }
         .right {
             .text {
+                padding: 65px 0 50px 0;
                 background-position: -75px 0;
             }
         }
@@ -351,6 +352,13 @@ $pastel3: #EAF2FF;
         width: 375px;
         height: 262px;
         .textMiddle { p { margin: 0 0 0 30px }}
+    }
+    .featureBar {
+        .right {
+            .text {
+                background-position: -115px 0;
+            }
+        }
     }
 }
 
