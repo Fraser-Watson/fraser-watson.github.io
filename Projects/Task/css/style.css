@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .stayConnected {
   height: 120px;
   width: 340px;
@@ -90,7 +91,7 @@
   margin: 0;
 }
 .mobileMenu .closeButtonBox {
-  width: 64px;
+  width: 77px;
   float: right;
 }
 .mobileMenu .sideMenuLogo {
@@ -785,6 +786,19 @@
 }
 /*Variables*/
 /*Fonts*/
+/*Fontawesome Icon Fix*/
+.fa-fix-instagram:before {
+  content: "";
+}
+
+.fa-fix-facebook-f:before {
+  content: "";
+}
+
+.fa-fix-linkedin-in:before {
+  content: "";
+}
+
 /*Core Styles*/
 html {
   font-size: 62.5%;
