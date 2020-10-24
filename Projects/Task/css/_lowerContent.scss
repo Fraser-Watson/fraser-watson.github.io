@@ -1,0 +1,72 @@
+$accentVariant: #EAF2FF;
+
+.aboutBar {
+    text-align: center;
+    float: left;
+    width: 100%;
+    margin: 160px 0 110px 0;
+    .title {
+        padding: 40px 0px 10px 0;
+        background: url(../assets/aboutBackground.png);
+        background-size: 207px 196px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+.featureBar {
+    float: left;
+    width: 100%;
+    margin: 0 0 125px 0;
+    padding: 0 0 65px 0;
+    position: relative;
+    .left, .right {
+        z-index: 3;
+        position: relative;
+        width: 500px;
+    }
+    .left {
+        .image {
+            background: url(../assets/feature1.png);
+        }
+        .text {
+            background: url(../assets/featureBubble.png);
+            background-size: 500px 350px;
+            background-position: -50px 0;
+            background-repeat: no-repeat;
+        }
+    }
+    .right {
+        .image {
+            background: url(../assets/feature2.png);
+        }
+        .text {
+            background: url(../assets/featureBubbleVariant.png);
+            background-size: 500px 350px;
+            background-position: -130px 0;
+            background-repeat: no-repeat;
+        }
+    }
+    .behind {
+        position: absolute;
+        width: 100%;
+        height: 426px;
+        background: $accentVariant;
+        bottom: 0;
+    }
+    .inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    
+    }
+    .image {
+        width: 500px;
+        height: 360px;
+    }
+    .text {
+        margin: -115px 0 0 0;
+        padding: 100px 0 0 0;
+    }
+    .title { width: 60%; }
+    .bodyText { width: 95%; }
+}

@@ -1,0 +1,546 @@
+.stayConnected {
+  height: 120px;
+  width: 340px;
+  background: #96D6D9;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.navBar {
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  background: #ffffff;
+  padding: 15px 0;
+  -webkit-box-shadow: 0px 5px 23px 0px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0px 5px 23px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 5px 23px 0px rgba(0, 0, 0, 0.05);
+}
+.navBar .container {
+  display: flex;
+  justify-content: space-between;
+}
+.navBar a, .navBar a:visited {
+  margin: 0 10px;
+  font-size: 1.5rem;
+}
+.navBar i {
+  font-size: 2rem;
+}
+
+.logo {
+  height: 40px;
+  width: 101px;
+  background: url(../assets/nudgeminds.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.navMenu {
+  margin: 10px 0;
+}
+
+.navSocial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navSocial .socialIcon {
+  margin: 0;
+}
+
+/*Content Centering*/
+.heroBar {
+  float: left;
+  width: 100%;
+  margin-top: 73px;
+  background: url("../assets/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.heroBar .outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 720px;
+}
+.heroBar .cornerText {
+  color: #ffffff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0 0 40px 20px;
+  width: 99px;
+  height: 70px;
+}
+.heroBar .cornerText .icon {
+  width: 25px;
+  height: 7px;
+  background: url(../assets/cornerIcon.png);
+  margin-bottom: 15px;
+}
+
+.cornerTextContainer {
+  position: relative;
+  width: 1360px;
+}
+
+.heroOverlay {
+  color: #ffffff;
+  width: auto;
+  height: 350px;
+  background: url(../assets/heroBubble.png);
+  background-size: 500px 350px;
+  background-repeat: no-repeat;
+  margin-left: -50px;
+}
+.heroOverlay .inner {
+  padding: 37px 0 0 50px;
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  justify-content: space-between;
+}
+.heroOverlay .below {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.heroOverlay .arrowDown {
+  background: url("../assets/arrowDown.png");
+  background-size: 17px 52px;
+  height: 52px;
+  width: 17px;
+  margin-top: 10px;
+}
+.heroOverlay .textMiddle {
+  width: 250px;
+  height: auto;
+}
+
+.behind {
+  position: absolute;
+  z-index: 2;
+}
+
+.getInTouchBar {
+  float: left;
+  width: 100%;
+  padding: 0;
+  height: 650px;
+  position: relative;
+}
+.getInTouchBar .behind {
+  top: 200px;
+  left: 0;
+  width: 980px;
+  height: 450px;
+  background: #CFF2EC;
+}
+.getInTouchBar .left, .getInTouchBar .right {
+  margin-top: 115px;
+  z-index: 3;
+  position: relative;
+}
+.getInTouchBar .left {
+  float: left;
+  z-index: 5;
+  width: 50%;
+  width: 500px;
+  height: 700px;
+  margin-right: 133px;
+  background: url(../assets/touchLeft.png);
+}
+.getInTouchBar .right {
+  float: right;
+  width: calc(100% - 633px);
+}
+.getInTouchBar .right .believeBody {
+  margin-top: 20px;
+}
+.getInTouchBar .believeButton {
+  margin-top: 50px;
+}
+
+.resourcesBar {
+  float: left;
+  width: 100%;
+  height: 743px;
+  position: relative;
+  margin-bottom: 83px;
+}
+.resourcesBar .behind {
+  top: 42px;
+  left: 530px;
+  width: 450px;
+  height: 783px;
+  background: #FFE6C7;
+}
+.resourcesBar .left, .resourcesBar .right {
+  z-index: 3;
+  position: relative;
+}
+.resourcesBar .left {
+  float: left;
+  z-index: 5;
+  width: 50%;
+  margin-top: 325px;
+  position: relative;
+}
+.resourcesBar .left .resourcesBody {
+  margin-top: 20px;
+}
+.resourcesBar .right {
+  float: right;
+  z-index: 5;
+  width: 582px;
+  height: 480px;
+  margin-top: 165px;
+  position: relative;
+  background: url(../assets/resourcesRight.png);
+}
+.resourcesBar .resourcesButton {
+  margin-top: 30px;
+}
+
+.aboutBar {
+  text-align: center;
+  float: left;
+  width: 100%;
+  margin: 160px 0 110px 0;
+}
+.aboutBar .title {
+  padding: 40px 0px 10px 0;
+  background: url(../assets/aboutBackground.png);
+  background-size: 207px 196px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.featureBar {
+  float: left;
+  width: 100%;
+  margin: 0 0 125px 0;
+  padding: 0 0 65px 0;
+  position: relative;
+}
+.featureBar .left, .featureBar .right {
+  z-index: 3;
+  position: relative;
+  width: 500px;
+}
+.featureBar .left .image {
+  background: url(../assets/feature1.png);
+}
+.featureBar .left .text {
+  background: url(../assets/featureBubble.png);
+  background-size: 500px 350px;
+  background-position: -50px 0;
+  background-repeat: no-repeat;
+}
+.featureBar .right .image {
+  background: url(../assets/feature2.png);
+}
+.featureBar .right .text {
+  background: url(../assets/featureBubbleVariant.png);
+  background-size: 500px 350px;
+  background-position: -130px 0;
+  background-repeat: no-repeat;
+}
+.featureBar .behind {
+  position: absolute;
+  width: 100%;
+  height: 426px;
+  background: #EAF2FF;
+  bottom: 0;
+}
+.featureBar .inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.featureBar .image {
+  width: 500px;
+  height: 360px;
+}
+.featureBar .text {
+  margin: -115px 0 0 0;
+  padding: 100px 0 0 0;
+}
+.featureBar .title {
+  width: 60%;
+}
+.featureBar .bodyText {
+  width: 95%;
+}
+
+.badgesBar {
+  float: left;
+  width: 100%;
+  margin: 0 0 100px 0;
+}
+
+.badgesInner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  vertical-align: middle;
+}
+.badgesInner img {
+  align-self: center;
+}
+
+.testimonialBar {
+  text-align: center;
+  float: left;
+  width: 100%;
+  margin: 50px 0;
+}
+
+.clientName .line {
+  width: 43px;
+  height: 4px;
+  background: url(../assets/underline.png);
+  background-size: cover;
+  background-position: center;
+  margin: auto;
+}
+
+.moreServices {
+  text-align: center;
+  float: left;
+  width: 100%;
+  margin: 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.moreServices .logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.moreServices .logos .nudgeOnline, .moreServices .logos .nudgeEdu {
+  width: 79px;
+  height: 31px;
+  margin: 0 10px;
+}
+.moreServices .logos .nudgeOnline {
+  background: url(../assets/nudgeOnline.png);
+  background-size: cover;
+  background-position: center;
+}
+.moreServices .logos .divider {
+  height: 50px;
+  width: 1px;
+  background: #121E3C;
+  margin: 0 10px;
+}
+.moreServices .logos .nudgeEdu {
+  background: url(../assets/nudgeEdu.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.address {
+  text-align: center;
+  float: left;
+  width: 100%;
+  margin: 0px 0 80px 0;
+}
+
+/*Variables*/
+/*Fonts*/
+/*Core Styles*/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5em;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #121E3C;
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.siteGrid {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.siteGridMedium {
+  position: relative;
+  width: 100%;
+  max-width: 775px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.siteGridSmall {
+  position: relative;
+  width: 100%;
+  max-width: 710px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/*Text Styling*/
+a, a:visited {
+  text-decoration: none;
+  color: #121E3C;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  margin: 20px 0;
+}
+
+.heroBar p {
+  font-size: 1.5rem;
+}
+
+.textMiddle p {
+  margin: 0 33px;
+}
+
+.cornerText p {
+  margin: 0;
+  font-family: bebas-neue-by-fontfabric, sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.2em;
+  letter-spacing: 2px;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: bebas-neue-by-fontfabric, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  letter-spacing: 1.5rem;
+}
+
+h1 {
+  font-size: 10rem;
+  line-height: 9rem;
+}
+
+h2 {
+  font-size: 6rem;
+  letter-spacing: 1rem;
+  line-height: 6.2rem;
+}
+
+h3 {
+  font-size: 4rem;
+  letter-spacing: 0.5rem;
+  line-height: 4rem;
+}
+
+h4 {
+  font-size: 3rem;
+}
+
+h5 {
+  font-size: 1.7rem;
+  line-height: 1.2em;
+  letter-spacing: 2px;
+}
+
+.underlineBold {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.stroke {
+  background: url(../assets/stroke.png);
+  background-repeat: no-repeat;
+  background-position: right 0 bottom 15px;
+}
+
+/*Buttons*/
+a.markerButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: bebas-neue-by-fontfabric, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0.3rem;
+  font-size: 2rem;
+  float: left;
+  width: 245px;
+  height: 66px;
+  background: url(../assets/markerButton.png);
+  background-size: cover;
+  background-position: center;
+}
+a.markerButton:hover {
+  filter: saturate(1.4);
+}
+
+a.buttonUnderline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: bebas-neue-by-fontfabric, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0.3rem;
+  font-size: 2rem;
+  float: left;
+  width: auto;
+  height: 50px;
+  background: url(../assets/buttonUnderline.png);
+  background-size: 86px 8px;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  font-size: 2rem;
+}
+a.buttonUnderline:hover {
+  filter: saturate(1.4);
+}
+
+/*Misc Styles*/
+.error, .success {
+  border: 2px solid green;
+  padding: 20px;
+}
+
+.success {
+  background: green;
+}
+
+.error {
+  background: red;
+}
+
+/*# sourceMappingURL=style.css.map */
