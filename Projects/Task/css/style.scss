@@ -159,57 +159,6 @@ h5 { font-size: 1.7rem; line-height: 1.2em; letter-spacing: 2px;}
     h1 { font-size: 5rem; line-height: 5rem; letter-spacing: 0.3rem; }
 }
 /*Input Style*/ 
-/* Removes awkward default styles on some inputs for iOS */
-input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="text"],
-input[type="tel"],
-input[type="url"],
-input[type="password"],
-textarea {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none; }
-textarea {
-    min-height: 150px;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    font-family: 'Poppins', sans-serif; 
-    color: #bfbfbf;
-}
-input[type="email"]:focus,
-input[type="number"]:focus,
-input[type="search"]:focus,
-input[type="text"]:focus,
-input[type="tel"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
-textarea:focus,
-select:focus {
-  border-bottom: 1px solid #ffffff;
-  outline: 0; }
-label,
-legend {
-  display: block;
-  margin-bottom: .5rem;
-  font-weight: 600; }
-fieldset {
-  padding: 0;
-  border-width: 0; }
-input[type="checkbox"],
-input[type="radio"] {
-  display: inline; }
-label > .label-body {
-  display: inline-block;
-  margin-left: .5rem;
-  font-weight: normal; }
-input[type="text"] {
-    height: 20px;
-    border: 0;
-    padding: 10px 20px;
-    width: calc(100% - 40px);
-}
 button, .input[type="submit"] {
     margin-left: -50px;
     height: 30px;
@@ -220,9 +169,13 @@ button, .input[type="submit"] {
     background-position: center;
     background-repeat: no-repeat;
     color: white;
-    border: 0;
-    -webkit-appearance: none;
     transition: 0.5s ease;
+    border: 0;
+    -webkit-border-radius:0; 
+    border-radius:0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     &:hover{
         background-position: right;
     }
