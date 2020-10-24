@@ -159,6 +159,15 @@ h5 { font-size: 1.7rem; line-height: 1.2em; letter-spacing: 2px;}
     h1 { font-size: 5rem; line-height: 5rem; letter-spacing: 0.3rem; }
 }
 /*Input Style*/ 
+input[type="text"] {
+    height: 20px;
+    border: 0;
+    padding: 10px 20px;
+    width: calc(100% - 40px);
+    -webkit-appearance: none;
+    -webkit-border-radius:0; 
+    border-radius:0;
+}
 button, .input[type="submit"] {
     margin-left: -50px;
     height: 30px;
@@ -169,13 +178,9 @@ button, .input[type="submit"] {
     background-position: center;
     background-repeat: no-repeat;
     color: white;
-    transition: 0.5s ease;
     border: 0;
-    -webkit-border-radius:0; 
-    border-radius:0;
     -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+    transition: 0.5s ease;
     &:hover{
         background-position: right;
     }
