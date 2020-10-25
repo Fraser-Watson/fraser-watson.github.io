@@ -32,13 +32,13 @@
 .navBar i {
   font-size: 2rem;
 }
-.navBar .navSocial {
+.navBar .navSm {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 44px;
 }
-.navBar .navSocial .socialIcon {
+.navBar .navSm .smIcon {
   margin: 0;
 }
 .navBar .mobileMenuBox {
@@ -82,12 +82,12 @@
   transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
   z-index: 999;
 }
-.mobileMenu .navSocial {
+.mobileMenu .navSm {
   margin-left: 30px;
   margin-top: 30px;
   justify-content: flex-start;
 }
-.mobileMenu .navSocial .socialIcon {
+.mobileMenu .navSm .smIcon {
   margin: 0;
 }
 .mobileMenu .closeButtonBox {
@@ -569,11 +569,11 @@
     display: none;
   }
 
-  .navBar .navSocial {
+  .navBar .navSm {
     display: none;
   }
 
-  .navBar .mobileMenuSocial {
+  .navBar .mobileMenuSm {
     display: flex;
   }
 
@@ -1093,7 +1093,7 @@ a.buttonUnderline:hover {
 }
 
 /*Social Media Buttons*/
-.socialButton .fb {
+.smButton .fb {
   background: url(../assets/fb.png);
   background-size: 8px 16px;
   height: 18px;
@@ -1102,7 +1102,7 @@ a.buttonUnderline:hover {
   background-position: center;
   margin: 0 11px;
 }
-.socialButton .ig {
+.smButton .ig {
   background: url(../assets/ig.png);
   background-size: 18px 18px;
   height: 18px;
@@ -1111,7 +1111,7 @@ a.buttonUnderline:hover {
   background-position: center;
   margin: 0 11px;
 }
-.socialButton .in {
+.smButton .in {
   background: url(../assets/in.png);
   background-size: 16px 16px;
   height: 18px;
