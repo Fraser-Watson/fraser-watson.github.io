@@ -1,12 +1,13 @@
 $primary: #121E3C;
 $accent: #96D6D9;
-$tertiary: #FFE6C7;
-
+$pastel1: #CFF2EC;
+$pastel2: #FFE6C7;
+$pastel3: #EAF2FF;
 
 .stayConnected {
     height: 120px;
     width: 340px;
-    background: #96D6D9;
+    background: $accent;
     position: fixed;
     bottom: 0;
     right: 0;

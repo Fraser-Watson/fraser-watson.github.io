@@ -1,4 +1,8 @@
-$accentVariant: #EAF2FF;
+$primary: #121E3C;
+$accent: #96D6D9;
+$pastel1: #CFF2EC;
+$pastel2: #FFE6C7;
+$pastel3: #EAF2FF;
 
 .aboutBar {
     text-align: center;
@@ -54,7 +58,7 @@ $accentVariant: #EAF2FF;
         position: absolute;
         width: 100%;
         height: 426px;
-        background: $accentVariant;
+        background: $pastel3;
         bottom: 0;
     }
     .inner {

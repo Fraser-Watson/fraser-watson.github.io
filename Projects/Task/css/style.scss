@@ -2,7 +2,9 @@
 
 $primary: #121E3C;
 $accent: #96D6D9;
-$tertiary: #FFE6C7;
+$pastel1: #CFF2EC;
+$pastel2: #FFE6C7;
+$pastel3: #EAF2FF;
 
 
 @use 'stayConnected';
@@ -32,17 +34,6 @@ $tertiary: #FFE6C7;
     font-style: normal;
     letter-spacing: 0.3rem;
     font-size: 2rem;
-}
-
-/*Fontawesome Icon Fix*/ 
-.fa-fix-instagram:before {
-    content: "\f16d";
-}
-.fa-fix-facebook-f:before {
-    content: "\f39e";
-}
-.fa-fix-linkedin-in:before {
-    content: "\f0e1";
 }
 
 /*Core Styles*/
@@ -187,29 +178,29 @@ button, .input[type="submit"] {
 }
 ::-webkit-input-placeholder {
     @include bodyFont();
-    color: #121E3C;
+    color:$primary;
 }
 :-moz-placeholder {
     @include bodyFont();
-    color: #121E3C;
+    color: $primary;
     opacity: 1;
 }
 ::-moz-placeholder { 
     @include bodyFont();
-    color: #121E3C;
+    color: $primary;
     opacity: 1;
 }
 :-ms-input-placeholder { 
     @include bodyFont();
-    color: #121E3C;
+    color: $primary;
 }
 ::-ms-input-placeholder { 
     @include bodyFont();
-    color: #121E3C;
+    color: $primary;
 }
 ::placeholder {
     @include bodyFont();
-    color: #121E3C;
+    color: $primary;
 }
 
 /*Buttons*/ 
@@ -250,24 +241,35 @@ a.buttonUnderline {
     }
 }
 
-
+/*Social Media Buttons*/
+@mixin socialSizing {
+    height: 18px;
+    width: 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 11px;
+}
+.socialButton {
+    .fb {
+        background: url(../assets/fb.png);
+        background-size: 8px 16px;
+        @include socialSizing;
+    }
+    .ig {
+        background: url(../assets/ig.png);
+        background-size: 18px 18px;
+        @include socialSizing;
+    }
+    .in {
+        background: url(../assets/in.png);
+        background-size: 16px 16px;
+        @include socialSizing;
+    }
+}
 
 /*Misc Styles*/ 
 @mixin shadow(){
     -webkit-box-shadow: 0px 5px 23px 0px rgba(0,0,0,0.15);
     -moz-box-shadow: 0px 5px 23px 0px rgba(0,0,0,0.15);
     box-shadow: 0px 5px 23px 0px rgba(0,0,0,0.15);
-}
-
-%message {
-    border: 2px solid green;
-    padding: 20px;
-}
-.success {
-    @extend %message;
-    background: green;
-}
-.error {
-    @extend %message;
-    background: red;
 }

@@ -1,9 +1,8 @@
 $primary: #121E3C;
 $accent: #96D6D9;
-$tertiary: #FFE6C7;
-
-$box1: #CFF2EC;
-$box2: #FFE6C7;
+$pastel1: #CFF2EC;
+$pastel2: #FFE6C7;
+$pastel3: #EAF2FF;
 
 .behind {
     position: absolute;
@@ -22,7 +21,7 @@ $box2: #FFE6C7;
         left: 0;
         width: 980px;
         height: 450px;
-        background: $box1;
+        background: $pastel1;
     }
     .left, .right {
         margin-top: 115px;
@@ -64,7 +63,7 @@ $box2: #FFE6C7;
         left: 530px;
         width: 450px;
         height: 783px;
-        background: $box2;
+        background: $pastel2;
     }
     .left, .right {
         z-index: 3;

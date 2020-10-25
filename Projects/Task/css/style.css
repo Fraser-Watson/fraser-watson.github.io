@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .stayConnected {
   height: 120px;
   width: 340px;
@@ -18,9 +17,9 @@
   z-index: 10;
   background: #ffffff;
   padding: 15px 0;
-  -webkit-box-shadow: 0px 5px 23px 0px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: 0px 5px 23px 0px rgba(0, 0, 0, 0.05);
-  box-shadow: 0px 5px 23px 0px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0px 5px 23px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 5px 23px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 5px 23px 0px rgba(0, 0, 0, 0.15);
 }
 .navBar .container {
   display: flex;
@@ -37,6 +36,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 44px;
 }
 .navBar .navSocial .socialIcon {
   margin: 0;
@@ -84,7 +84,7 @@
 }
 .mobileMenu .navSocial {
   margin-left: 30px;
-  margin-top: 50px;
+  margin-top: 30px;
   justify-content: flex-start;
 }
 .mobileMenu .navSocial .socialIcon {
@@ -786,19 +786,6 @@
 }
 /*Variables*/
 /*Fonts*/
-/*Fontawesome Icon Fix*/
-.fa-fix-instagram:before {
-  content: "";
-}
-
-.fa-fix-facebook-f:before {
-  content: "";
-}
-
-.fa-fix-linkedin-in:before {
-  content: "";
-}
-
 /*Core Styles*/
 html {
   font-size: 62.5%;
@@ -1105,18 +1092,35 @@ a.buttonUnderline:hover {
   filter: saturate(1.4);
 }
 
+/*Social Media Buttons*/
+.socialButton .fb {
+  background: url(../assets/fb.png);
+  background-size: 8px 16px;
+  height: 18px;
+  width: 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 11px;
+}
+.socialButton .ig {
+  background: url(../assets/ig.png);
+  background-size: 18px 18px;
+  height: 18px;
+  width: 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 11px;
+}
+.socialButton .in {
+  background: url(../assets/in.png);
+  background-size: 16px 16px;
+  height: 18px;
+  width: 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 11px;
+}
+
 /*Misc Styles*/
-.error, .success {
-  border: 2px solid green;
-  padding: 20px;
-}
-
-.success {
-  background: green;
-}
-
-.error {
-  background: red;
-}
 
 /*# sourceMappingURL=style.css.map */

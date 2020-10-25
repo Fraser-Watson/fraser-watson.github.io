@@ -1,9 +1,10 @@
+$primary: #121E3C;
+$accent: #96D6D9;
 $pastel1: #CFF2EC;
 $pastel2: #FFE6C7;
 $pastel3: #EAF2FF;
+
 /* Responsive */ 
-
-
 @media screen and (max-width: 1240px) { 
     .heroOverlay {
         margin-left: 20px;
@@ -312,11 +313,6 @@ $pastel3: #EAF2FF;
 
         .textMiddle {
             width: 215px;
-        }
-    }
-    .getInTouchBar {
-        .behind {
-
         }
     }
 }
