@@ -17,6 +17,7 @@
         @include contentCentering();
         width: 100%;
         height: 720px;
+        overflow: hidden;
     }
     .cornerText {
         color: #ffffff;
